@@ -1,0 +1,103 @@
+@import "tailwindcss";
+
+:root {
+  /* Default Light Theme */
+  --bg-page: #F7F8FA;
+  --bg-panel: #FFFFFF;
+  --bg-sidebar: #14243B;
+  --text-primary: #172033;
+  --text-secondary: #526174;
+  --text-sidebar: #F1F5F9;
+  --text-sidebar-muted: #94A3B8;
+  --border: #D9E1EB;
+  --border-sidebar: #1E293B;
+  --accent: #2563EB;
+  --accent-hover: #1D4ED8;
+  --accent-fg: #FFFFFF;
+
+  /* Semantic Status Tokens */
+  --success-bg: #ECFDF5;
+  --success-border: #A7F3D0;
+  --success-text: #065F46;
+
+  --warning-bg: #FFFBEB;
+  --warning-border: #FDE68A;
+  --warning-text: #92400E;
+
+  --error-bg: #FEF2F2;
+  --error-border: #FECACA;
+  --error-text: #991B1B;
+
+  /* Distinct incorrect response tokens (distinct from crimson accent) */
+  --incorrect-bg: #FFF1F2;
+  --incorrect-border: #FDA4AF;
+  --incorrect-text: #9F1239;
+  --incorrect-icon: #E11D48;
+
+  --ring-focus: #2563EB;
+}
+
+[data-theme="dark"] {
+  /* Crimson / Black Dark Theme */
+  --bg-page: #000000;
+  --bg-panel: #0F0F10;
+  --bg-sidebar: #0F0F10;
+  --text-primary: #EDEDED;
+  --text-secondary: #A6A6AE;
+  --text-sidebar: #EDEDED;
+  --text-sidebar-muted: #A6A6AE;
+  --border: #303036;
+  --border-sidebar: #222226;
+  --accent: #DC143C;
+  --accent-hover: #B01030;
+  --accent-fg: #FFFFFF;
+
+  --success-bg: #06281E;
+  --success-border: #047857;
+  --success-text: #34D399;
+
+  --warning-bg: #2E1A05;
+  --warning-border: #B45309;
+  --warning-text: #FBBF24;
+
+  --error-bg: #280B10;
+  --error-border: #991B1B;
+  --error-text: #F87171;
+
+  --incorrect-bg: #380D14;
+  --incorrect-border: #881337;
+  --incorrect-text: #FECDD3;
+  --incorrect-icon: #FB7185;
+
+  --ring-focus: #DC143C;
+}
+
+body {
+  background-color: var(--bg-page);
+  color: var(--text-primary);
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+code, pre, kbd {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+}
+
+/* Accessible focus ring */
+:focus-visible {
+  outline: 2px solid var(--ring-focus);
+  outline-offset: 2px;
+}
+
+/* Respect reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  *, ::before, ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

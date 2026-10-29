@@ -1,0 +1,4469 @@
+{
+  "schemaVersion": 1,
+  "bankId": "cisco-ccna-test-1",
+  "bankName": "CCNA Test 1 Question Bank",
+  "generatedAt": "2026-10-28T20:32:18.542Z",
+  "tags": [
+    {
+      "id": "tag-domain-1",
+      "kind": "domain",
+      "name": "1.0 Network Fundamentals",
+      "blueprintVersion": "CCNA 200-301 v1.1"
+    },
+    {
+      "id": "tag-domain-2",
+      "kind": "domain",
+      "name": "2.0 Network Access",
+      "blueprintVersion": "CCNA 200-301 v1.1"
+    },
+    {
+      "id": "tag-domain-3",
+      "kind": "domain",
+      "name": "3.0 IP Connectivity",
+      "blueprintVersion": "CCNA 200-301 v1.1"
+    },
+    {
+      "id": "tag-domain-4",
+      "kind": "domain",
+      "name": "4.0 IP Services",
+      "blueprintVersion": "CCNA 200-301 v1.1"
+    },
+    {
+      "id": "tag-domain-5",
+      "kind": "domain",
+      "name": "5.0 Security Fundamentals",
+      "blueprintVersion": "CCNA 200-301 v1.1"
+    },
+    {
+      "id": "tag-domain-6",
+      "kind": "domain",
+      "name": "6.0 Automation and Programmability",
+      "blueprintVersion": "CCNA 200-301 v1.1"
+    },
+    {
+      "id": "tag-topic-osi-tcp",
+      "kind": "topic",
+      "name": "TCP/IP and OSI Models",
+      "parentId": "tag-domain-1"
+    },
+    {
+      "id": "tag-topic-switch-config",
+      "kind": "topic",
+      "name": "Basic Device Configuration & IOS Modes",
+      "parentId": "tag-domain-2"
+    },
+    {
+      "id": "tag-topic-ipv4-addressing",
+      "kind": "topic",
+      "name": "IPv4 Addressing & Subnetting",
+      "parentId": "tag-domain-1"
+    },
+    {
+      "id": "tag-topic-security-basics",
+      "kind": "topic",
+      "name": "Network Security Basics",
+      "parentId": "tag-domain-5"
+    },
+    {
+      "id": "tag-topic-media-cabling",
+      "kind": "topic",
+      "name": "Physical Media & Cabling",
+      "parentId": "tag-domain-1"
+    }
+  ],
+  "questions": [
+    {
+      "id": "ccna-q001",
+      "bankId": "cisco-ccna-test-1",
+      "externalId": "q001",
+      "sourceNumber": 1,
+      "version": 1,
+      "createdAt": "2026-10-28T00:00:00.000Z",
+      "updatedAt": "2026-10-28T00:00:00.000Z",
+      "type": "single",
+      "status": "unverified",
+      "prompt": "During a routine inspection, a technician discovered that software that was installed on a computer was secretly collecting data about websites that were visited by users of the computer. Which type of threat is affecting this computer?",
+      "payload": {
+        "options": [
+          {
+            "id": "opt-1",
+            "text": "DoS attack​"
+          },
+          {
+            "id": "opt-2",
+            "text": "identity theft"
+          },
+          {
+            "id": "opt-3",
+            "text": "spyware"
+          },
+          {
+            "id": "opt-4",
+            "text": "zero-day attack"
+          }
+        ],
+        "correctOptionIds": [
+          "opt-3"
+        ]
+      },
+      "explanation": {
+        "answerReasoning": "Spyware is software installed on a computer without the user knowledge that gathers personal information and tracks keystrokes, which matches the technician finding in this routine inspection.",
+        "conceptRefresher": "Common security threats: Spyware monitors user activity; DoS attacks flood network resources; Identity theft steals personal credentials; Zero-day attacks exploit unknown vulnerabilities.",
+        "commonMisconception": "Common misconception associated with this concept in exam preparation.",
+        "references": [
+          "Cisco CCNA 200-301 Official Cert Guide",
+          "Cisco IOS Configuration Fundamentals Command Reference"
+        ]
+      },
+      "assetReferences": [],
+      "tagIds": [
+        "tag-domain-5",
+        "tag-topic-security-basics"
+      ],
+      "verificationRecord": {
+        "verified": false,
+        "notes": "Imported from test-1 qb.docx; unverified pending review against authoritative Cisco CCNA 200-301 curriculum."
+      }
+    },
+    {
+      "id": "ccna-q002",
+      "bankId": "cisco-ccna-test-1",
+      "externalId": "q002",
+      "sourceNumber": 2,
+      "version": 1,
+      "createdAt": "2026-10-28T00:00:00.000Z",
+      "updatedAt": "2026-10-28T00:00:00.000Z",
+      "type": "single",
+      "status": "unverified",
+      "prompt": "Which term refers to a network that provides secure access to the corporate offices by suppliers, customers and collaborators?",
+      "payload": {
+        "options": [
+          {
+            "id": "opt-1",
+            "text": "Internet"
+          },
+          {
+            "id": "opt-2",
+            "text": "intranet"
+          },
+          {
+            "id": "opt-3",
+            "text": "extranet"
+          },
+          {
+            "id": "opt-4",
+            "text": "extendednet"
+          }
+        ],
+        "correctOptionIds": [
+          "opt-3"
+        ]
+      },
+      "explanation": {
+        "answerReasoning": "An extranet provides secure and controlled access to an organization internal network for external trusted entities such as suppliers, vendors, customers, and partners.",
+        "conceptRefresher": "Intranet: accessible only by organization internal members. Extranet: accessible by designated external partners/suppliers. Internet: globally accessible public network.",
+        "commonMisconception": "Common misconception associated with this concept in exam preparation.",
+        "references": [
+          "Cisco CCNA 200-301 Official Cert Guide",
+          "Cisco IOS Configuration Fundamentals Command Reference"
+        ]
+      },
+      "assetReferences": [],
+      "tagIds": [
+        "tag-domain-1"
+      ],
+      "verificationRecord": {
+        "verified": false,
+        "notes": "Imported from test-1 qb.docx; unverified pending review against authoritative Cisco CCNA 200-301 curriculum."
+      }
+    },
+    {
+      "id": "ccna-q003",
+      "bankId": "cisco-ccna-test-1",
+      "externalId": "q003",
+      "sourceNumber": 3,
+      "version": 1,
+      "createdAt": "2026-10-28T00:00:00.000Z",
+      "updatedAt": "2026-10-28T00:00:00.000Z",
+      "type": "single",
+      "status": "unverified",
+      "prompt": "A large corporation has modified its network to allow users to access network resources from their personal laptops and smart phones. Which networking trend does this describe?",
+      "payload": {
+        "options": [
+          {
+            "id": "opt-1",
+            "text": "cloud computing"
+          },
+          {
+            "id": "opt-2",
+            "text": "online collaboration"
+          },
+          {
+            "id": "opt-3",
+            "text": "bring your own device"
+          },
+          {
+            "id": "opt-4",
+            "text": "video conferencing"
+          }
+        ],
+        "correctOptionIds": [
+          "opt-3"
+        ]
+      },
+      "explanation": {
+        "answerReasoning": "Answer reasoning for question 3.",
+        "conceptRefresher": "Concept refresher covering the relevant CCNA syllabus topics for question 3.",
+        "commonMisconception": "Common misconception associated with this concept in exam preparation.",
+        "references": [
+          "Cisco CCNA 200-301 Official Cert Guide",
+          "Cisco IOS Configuration Fundamentals Command Reference"
+        ]
+      },
+      "assetReferences": [],
+      "tagIds": [
+        "tag-domain-1"
+      ],
+      "verificationRecord": {
+        "verified": false,
+        "notes": "Imported from test-1 qb.docx; unverified pending review against authoritative Cisco CCNA 200-301 curriculum."
+      }
+    },
+    {
+      "id": "ccna-q004",
+      "bankId": "cisco-ccna-test-1",
+      "externalId": "q004",
+      "sourceNumber": 4,
+      "version": 1,
+      "createdAt": "2026-10-28T00:00:00.000Z",
+      "updatedAt": "2026-10-28T00:00:00.000Z",
+      "type": "single",
+      "status": "unverified",
+      "prompt": "What is an ISP?",
+      "payload": {
+        "options": [
+          {
+            "id": "opt-1",
+            "text": "It is a standards body that develops cabling and wiring standards for networking."
+          },
+          {
+            "id": "opt-2",
+            "text": "It is a protocol that establishes how computers within a local network communicate."
+          },
+          {
+            "id": "opt-3",
+            "text": "It is an organization that enables individuals and businesses to connect to the Internet."
+          },
+          {
+            "id": "opt-4",
+            "text": "It is a networking device that combines the functionality of several different networking devices in one."
+          }
+        ],
+        "correctOptionIds": [
+          "opt-3"
+        ]
+      },
+      "explanation": {
+        "answerReasoning": "Answer reasoning for question 4.",
+        "conceptRefresher": "Concept refresher covering the relevant CCNA syllabus topics for question 4.",
+        "commonMisconception": "Common misconception associated with this concept in exam preparation.",
+        "references": [
+          "Cisco CCNA 200-301 Official Cert Guide",
+          "Cisco IOS Configuration Fundamentals Command Reference"
+        ]
+      },
+      "assetReferences": [],
+      "tagIds": [
+        "tag-domain-1",
+        "tag-topic-osi-tcp"
+      ],
+      "verificationRecord": {
+        "verified": false,
+        "notes": "Imported from test-1 qb.docx; unverified pending review against authoritative Cisco CCNA 200-301 curriculum."
+      }
+    },
+    {
+      "id": "ccna-q005",
+      "bankId": "cisco-ccna-test-1",
+      "externalId": "q005",
+      "sourceNumber": 5,
+      "version": 1,
+      "createdAt": "2026-10-28T00:00:00.000Z",
+      "updatedAt": "2026-10-28T00:00:00.000Z",
+      "type": "matching",
+      "status": "needs-source",
+      "needsSourceReason": "Missing matching label: Quality of Service (QoS) is missing from source choices; requires reconstruction review before inclusion in practice.",
+      "prompt": "Match the requirements of a reliable network with the supporting network architecture. (Not all options are used.)",
+      "payload": {
+        "prompts": [
+          {
+            "id": "p1",
+            "text": "Protect the network from unauthorized access."
+          },
+          {
+            "id": "p2",
+            "text": "Provide redundant links and devices."
+          },
+          {
+            "id": "p3",
+            "text": "Match the type of communication with a specific priority."
+          },
+          {
+            "id": "p4",
+            "text": "Expand the network without degrading the service for existing users."
+          },
+          {
+            "id": "p5",
+            "text": "Ensure that streaming data is provided over high speed links."
+          }
+        ],
+        "choices": [
+          {
+            "id": "c1",
+            "text": "fault tolerance"
+          },
+          {
+            "id": "c2",
+            "text": "security"
+          },
+          {
+            "id": "c3",
+            "text": "scalability"
+          }
+        ],
+        "correctMapping": {
+          "p1": "c2",
+          "p2": "c1",
+          "p3": null,
+          "p4": "c3",
+          "p5": null
+        },
+        "allowChoiceReuse": false
+      },
+      "explanation": {
+        "answerReasoning": "Answer reasoning for question 5.",
+        "conceptRefresher": "Concept refresher covering the relevant CCNA syllabus topics for question 5.",
+        "commonMisconception": "Common misconception associated with this concept in exam preparation.",
+        "references": [
+          "Cisco CCNA 200-301 Official Cert Guide",
+          "Cisco IOS Configuration Fundamentals Command Reference"
+        ]
+      },
+      "assetReferences": [],
+      "tagIds": [
+        "tag-domain-5",
+        "tag-topic-security-basics"
+      ],
+      "verificationRecord": {
+        "verified": false,
+        "notes": "Imported from test-1 qb.docx; unverified pending review against authoritative Cisco CCNA 200-301 curriculum."
+      }
+    },
+    {
+      "id": "ccna-q006",
+      "bankId": "cisco-ccna-test-1",
+      "externalId": "q006",
+      "sourceNumber": 6,
+      "version": 1,
+      "createdAt": "2026-10-28T00:00:00.000Z",
+      "updatedAt": "2026-10-28T00:00:00.000Z",
+      "type": "single",
+      "status": "unverified",
+      "prompt": "An employee at a branch office is creating a quote for a customer. In order to do this, the employee needs to access confidential pricing information from internal servers at the Head Office. What type of network would the employee access?",
+      "payload": {
+        "options": [
+          {
+            "id": "opt-1",
+            "text": "an intranet"
+          },
+          {
+            "id": "opt-2",
+            "text": "the Internet"
+          },
+          {
+            "id": "opt-3",
+            "text": "an extranet"
+          },
+          {
+            "id": "opt-4",
+            "text": "a local area network"
+          }
+        ],
+        "correctOptionIds": [
+          "opt-1"
+        ]
+      },
+      "explanation": {
+        "answerReasoning": "Answer reasoning for question 6.",
+        "conceptRefresher": "Concept refresher covering the relevant CCNA syllabus topics for question 6.",
+        "commonMisconception": "Common misconception associated with this concept in exam preparation.",
+        "references": [
+          "Cisco CCNA 200-301 Official Cert Guide",
+          "Cisco IOS Configuration Fundamentals Command Reference"
+        ]
+      },
+      "assetReferences": [],
+      "tagIds": [
+        "tag-domain-1"
+      ],
+      "verificationRecord": {
+        "verified": false,
+        "notes": "Imported from test-1 qb.docx; unverified pending review against authoritative Cisco CCNA 200-301 curriculum."
+      }
+    },
+    {
+      "id": "ccna-q007",
+      "bankId": "cisco-ccna-test-1",
+      "externalId": "q007",
+      "sourceNumber": 7,
+      "version": 1,
+      "createdAt": "2026-10-28T00:00:00.000Z",
+      "updatedAt": "2026-10-28T00:00:00.000Z",
+      "type": "single",
+      "status": "unverified",
+      "prompt": "Which statement describes the use of powerline networking technology?",
+      "payload": {
+        "options": [
+          {
+            "id": "opt-1",
+            "text": "New “smart” electrical cabling is used to extend an existing home LAN."
+          },
+          {
+            "id": "opt-2",
+            "text": "A home LAN is installed without the use of physical cabling."
+          },
+          {
+            "id": "opt-3",
+            "text": "A device connects to an existing home LAN using an adapter and an existing electrical outlet."
+          },
+          {
+            "id": "opt-4",
+            "text": "Wireless access points use powerline adapters to distribute data through the home LAN."
+          }
+        ],
+        "correctOptionIds": [
+          "opt-3"
+        ]
+      },
+      "explanation": {
+        "answerReasoning": "Answer reasoning for question 7.",
+        "conceptRefresher": "Concept refresher covering the relevant CCNA syllabus topics for question 7.",
+        "commonMisconception": "Common misconception associated with this concept in exam preparation.",
+        "references": [
+          "Cisco CCNA 200-301 Official Cert Guide",
+          "Cisco IOS Configuration Fundamentals Command Reference"
+        ]
+      },
+      "assetReferences": [],
+      "tagIds": [
+        "tag-domain-1",
+        "tag-topic-media-cabling"
+      ],
+      "verificationRecord": {
+        "verified": false,
+        "notes": "Imported from test-1 qb.docx; unverified pending review against authoritative Cisco CCNA 200-301 curriculum."
+      }
+    },
+    {
+      "id": "ccna-q008",
+      "bankId": "cisco-ccna-test-1",
+      "externalId": "q008",
+      "sourceNumber": 8,
+      "version": 1,
+      "createdAt": "2026-10-28T00:00:00.000Z",
+      "updatedAt": "2026-10-28T00:00:00.000Z",
+      "type": "single",
+      "status": "unverified",
+      "prompt": "A networking technician is working on the wireless network at a medical clinic. The technician accidentally sets up the wireless network so that patients can see the medical records data of other patients. Which of the four network characteristics has been violated in this situation?",
+      "payload": {
+        "options": [
+          {
+            "id": "opt-1",
+            "text": "fault tolerance"
+          },
+          {
+            "id": "opt-2",
+            "text": "scalability"
+          },
+          {
+            "id": "opt-3",
+            "text": "security"
+          },
+          {
+            "id": "opt-4",
+            "text": "Quality of Service (QoS)"
+          },
+          {
+            "id": "opt-5",
+            "text": "reliability"
+          }
+        ],
+        "correctOptionIds": [
+          "opt-3"
+        ]
+      },
+      "explanation": {
+        "answerReasoning": "Answer reasoning for question 8.",
+        "conceptRefresher": "Concept refresher covering the relevant CCNA syllabus topics for question 8.",
+        "commonMisconception": "Common misconception associated with this concept in exam preparation.",
+        "references": [
+          "Cisco CCNA 200-301 Official Cert Guide",
+          "Cisco IOS Configuration Fundamentals Command Reference"
+        ]
+      },
+      "assetReferences": [],
+      "tagIds": [
+        "tag-domain-5",
+        "tag-topic-security-basics",
+        "tag-domain-1",
+        "tag-topic-media-cabling"
+      ],
+      "cleanupNotes": "Question asks for \"Which of the four network characteristics\" but provides 5 options including \"reliability\".",
+      "verificationRecord": {
+        "verified": false,
+        "notes": "Imported from test-1 qb.docx; unverified pending review against authoritative Cisco CCNA 200-301 curriculum."
+      }
+    },
+    {
+      "id": "ccna-q009",
+      "bankId": "cisco-ccna-test-1",
+      "externalId": "q009",
+      "sourceNumber": 9,
+      "version": 1,
+      "createdAt": "2026-10-28T00:00:00.000Z",
+      "updatedAt": "2026-10-28T00:00:00.000Z",
+      "type": "matching",
+      "status": "unverified",
+      "prompt": "Match each characteristic to its corresponding Internet connectivity type. (Not all options are used.)",
+      "payload": {
+        "prompts": [
+          {
+            "id": "p1",
+            "text": "not suited for heavily wooded areas"
+          },
+          {
+            "id": "p2",
+            "text": "high bandwidth connection that runs over telephone line"
+          },
+          {
+            "id": "p3",
+            "text": "uses coaxial cable as a medium"
+          },
+          {
+            "id": "p4",
+            "text": "typically uses a T1/E1 or T3/E3 circuit"
+          },
+          {
+            "id": "p5",
+            "text": "typically has very low bandwidth"
+          }
+        ],
+        "choices": [
+          {
+            "id": "c1",
+            "text": "DSL"
+          },
+          {
+            "id": "c2",
+            "text": "dialup telephone"
+          },
+          {
+            "id": "c3",
+            "text": "satellite"
+          },
+          {
+            "id": "c4",
+            "text": "cable"
+          }
+        ],
+        "correctMapping": {
+          "p1": "c3",
+          "p2": "c1",
+          "p3": "c4",
+          "p4": null,
+          "p5": "c2"
+        },
+        "allowChoiceReuse": false
+      },
+      "explanation": {
+        "answerReasoning": "Answer reasoning for question 9.",
+        "conceptRefresher": "Concept refresher covering the relevant CCNA syllabus topics for question 9.",
+        "commonMisconception": "Common misconception associated with this concept in exam preparation.",
+        "references": [
+          "Cisco CCNA 200-301 Official Cert Guide",
+          "Cisco IOS Configuration Fundamentals Command Reference"
+        ]
+      },
+      "assetReferences": [],
+      "tagIds": [
+        "tag-domain-1",
+        "tag-topic-media-cabling"
+      ],
+      "verificationRecord": {
+        "verified": false,
+        "notes": "Imported from test-1 qb.docx; unverified pending review against authoritative Cisco CCNA 200-301 curriculum."
+      }
+    },
+    {
+      "id": "ccna-q010",
+      "bankId": "cisco-ccna-test-1",
+      "externalId": "q010",
+      "sourceNumber": 10,
+      "version": 1,
+      "createdAt": "2026-10-28T00:00:00.000Z",
+      "updatedAt": "2026-10-28T00:00:00.000Z",
+      "type": "multi",
+      "status": "unverified",
+      "prompt": "What two criteria are used to help select a network medium from various network media? (Choose two.)",
+      "payload": {
+        "options": [
+          {
+            "id": "opt-1",
+            "text": "the types of data that need to be prioritized"
+          },
+          {
+            "id": "opt-2",
+            "text": "the cost of the end devices utilized in the network"
+          },
+          {
+            "id": "opt-3",
+            "text": "the distance the selected medium can successfully carry a signal"
+          },
+          {
+            "id": "opt-4",
+            "text": "the number of intermediate devices installed in the network"
+          },
+          {
+            "id": "opt-5",
+            "text": "the environment where the selected medium is to be installed"
+          }
+        ],
+        "correctOptionIds": [
+          "opt-1",
+          "opt-2"
+        ],
+        "requiredSelections": 2
+      },
+      "explanation": {
+        "answerReasoning": "Answer reasoning for question 10.",
+        "conceptRefresher": "Concept refresher covering the relevant CCNA syllabus topics for question 10.",
+        "commonMisconception": "Common misconception associated with this concept in exam preparation.",
+        "references": [
+          "Cisco CCNA 200-301 Official Cert Guide",
+          "Cisco IOS Configuration Fundamentals Command Reference"
+        ]
+      },
+      "assetReferences": [],
+      "tagIds": [
+        "tag-domain-1",
+        "tag-topic-media-cabling"
+      ],
+      "verificationRecord": {
+        "verified": false,
+        "notes": "Imported from test-1 qb.docx; unverified pending review against authoritative Cisco CCNA 200-301 curriculum."
+      }
+    },
+    {
+      "id": "ccna-q011",
+      "bankId": "cisco-ccna-test-1",
+      "externalId": "q011",
+      "sourceNumber": 11,
+      "version": 1,
+      "createdAt": "2026-10-28T00:00:00.000Z",
+      "updatedAt": "2026-10-28T00:00:00.000Z",
+      "type": "single",
+      "status": "unverified",
+      "prompt": "What type of network traffic requires QoS?",
+      "payload": {
+        "options": [
+          {
+            "id": "opt-1",
+            "text": "email"
+          },
+          {
+            "id": "opt-2",
+            "text": "on-line purchasing"
+          },
+          {
+            "id": "opt-3",
+            "text": "video conferencing"
+          },
+          {
+            "id": "opt-4",
+            "text": "wiki"
+          }
+        ],
+        "correctOptionIds": [
+          "opt-1"
+        ]
+      },
+      "explanation": {
+        "answerReasoning": "Answer reasoning for question 11.",
+        "conceptRefresher": "Concept refresher covering the relevant CCNA syllabus topics for question 11.",
+        "commonMisconception": "Common misconception associated with this concept in exam preparation.",
+        "references": [
+          "Cisco CCNA 200-301 Official Cert Guide",
+          "Cisco IOS Configuration Fundamentals Command Reference"
+        ]
+      },
+      "assetReferences": [],
+      "tagIds": [
+        "tag-domain-1"
+      ],
+      "verificationRecord": {
+        "verified": false,
+        "notes": "Imported from test-1 qb.docx; unverified pending review against authoritative Cisco CCNA 200-301 curriculum."
+      }
+    },
+    {
+      "id": "ccna-q012",
+      "bankId": "cisco-ccna-test-1",
+      "externalId": "q012",
+      "sourceNumber": 12,
+      "version": 1,
+      "createdAt": "2026-10-28T00:00:00.000Z",
+      "updatedAt": "2026-10-28T00:00:00.000Z",
+      "type": "multi",
+      "status": "unverified",
+      "prompt": "A user is implementing security on a small office network. Which two actions would provide the minimum security requirements for this network? (Choose two.)",
+      "payload": {
+        "options": [
+          {
+            "id": "opt-1",
+            "text": "implementing a firewall"
+          },
+          {
+            "id": "opt-2",
+            "text": "installing a wireless network"
+          },
+          {
+            "id": "opt-3",
+            "text": "installing antivirus software"
+          },
+          {
+            "id": "opt-4",
+            "text": "implementing an intrusion detection system"
+          },
+          {
+            "id": "opt-5",
+            "text": "adding a dedicated intrusion prevention device"
+          }
+        ],
+        "correctOptionIds": [
+          "opt-1",
+          "opt-2"
+        ],
+        "requiredSelections": 2
+      },
+      "explanation": {
+        "answerReasoning": "Answer reasoning for question 12.",
+        "conceptRefresher": "Concept refresher covering the relevant CCNA syllabus topics for question 12.",
+        "commonMisconception": "Common misconception associated with this concept in exam preparation.",
+        "references": [
+          "Cisco CCNA 200-301 Official Cert Guide",
+          "Cisco IOS Configuration Fundamentals Command Reference"
+        ]
+      },
+      "assetReferences": [],
+      "tagIds": [
+        "tag-domain-5",
+        "tag-topic-security-basics",
+        "tag-domain-1",
+        "tag-topic-media-cabling"
+      ],
+      "verificationRecord": {
+        "verified": false,
+        "notes": "Imported from test-1 qb.docx; unverified pending review against authoritative Cisco CCNA 200-301 curriculum."
+      }
+    },
+    {
+      "id": "ccna-q013",
+      "bankId": "cisco-ccna-test-1",
+      "externalId": "q013",
+      "sourceNumber": 13,
+      "version": 1,
+      "createdAt": "2026-10-28T00:00:00.000Z",
+      "updatedAt": "2026-10-28T00:00:00.000Z",
+      "type": "multi",
+      "status": "unverified",
+      "prompt": "Passwords can be used to restrict access to all or parts of the Cisco IOS. Select the modes and interfaces that can be protected with passwords. (Choose three.)",
+      "payload": {
+        "options": [
+          {
+            "id": "opt-1",
+            "text": "VTY interface"
+          },
+          {
+            "id": "opt-2",
+            "text": "console interface"
+          },
+          {
+            "id": "opt-3",
+            "text": "Ethernet interface"
+          },
+          {
+            "id": "opt-4",
+            "text": "boot IOS mode"
+          },
+          {
+            "id": "opt-5",
+            "text": "privileged EXEC mode"
+          },
+          {
+            "id": "opt-6",
+            "text": "router configuration mode"
+          }
+        ],
+        "correctOptionIds": [
+          "opt-1",
+          "opt-2",
+          "opt-3"
+        ],
+        "requiredSelections": 3
+      },
+      "explanation": {
+        "answerReasoning": "Answer reasoning for question 13.",
+        "conceptRefresher": "Concept refresher covering the relevant CCNA syllabus topics for question 13.",
+        "commonMisconception": "Common misconception associated with this concept in exam preparation.",
+        "references": [
+          "Cisco CCNA 200-301 Official Cert Guide",
+          "Cisco IOS Configuration Fundamentals Command Reference"
+        ]
+      },
+      "assetReferences": [],
+      "tagIds": [
+        "tag-domain-5",
+        "tag-topic-security-basics",
+        "tag-domain-2",
+        "tag-topic-switch-config"
+      ],
+      "verificationRecord": {
+        "verified": false,
+        "notes": "Imported from test-1 qb.docx; unverified pending review against authoritative Cisco CCNA 200-301 curriculum."
+      }
+    },
+    {
+      "id": "ccna-q014",
+      "bankId": "cisco-ccna-test-1",
+      "externalId": "q014",
+      "sourceNumber": 14,
+      "version": 1,
+      "createdAt": "2026-10-28T00:00:00.000Z",
+      "updatedAt": "2026-10-28T00:00:00.000Z",
+      "type": "single",
+      "status": "unverified",
+      "prompt": "Which interface allows remote management of a Layer 2 switch?",
+      "payload": {
+        "options": [
+          {
+            "id": "opt-1",
+            "text": "the AUX interface"
+          },
+          {
+            "id": "opt-2",
+            "text": "the console port interface"
+          },
+          {
+            "id": "opt-3",
+            "text": "the switch virtual interface"
+          },
+          {
+            "id": "opt-4",
+            "text": "the first Ethernet port interface"
+          }
+        ],
+        "correctOptionIds": [
+          "opt-1"
+        ]
+      },
+      "explanation": {
+        "answerReasoning": "Answer reasoning for question 14.",
+        "conceptRefresher": "Concept refresher covering the relevant CCNA syllabus topics for question 14.",
+        "commonMisconception": "Common misconception associated with this concept in exam preparation.",
+        "references": [
+          "Cisco CCNA 200-301 Official Cert Guide",
+          "Cisco IOS Configuration Fundamentals Command Reference"
+        ]
+      },
+      "assetReferences": [],
+      "tagIds": [
+        "tag-domain-5",
+        "tag-topic-security-basics",
+        "tag-domain-2",
+        "tag-topic-switch-config",
+        "tag-domain-1",
+        "tag-topic-osi-tcp"
+      ],
+      "verificationRecord": {
+        "verified": false,
+        "notes": "Imported from test-1 qb.docx; unverified pending review against authoritative Cisco CCNA 200-301 curriculum."
+      }
+    },
+    {
+      "id": "ccna-q015",
+      "bankId": "cisco-ccna-test-1",
+      "externalId": "q015",
+      "sourceNumber": 15,
+      "version": 1,
+      "createdAt": "2026-10-28T00:00:00.000Z",
+      "updatedAt": "2026-10-28T00:00:00.000Z",
+      "type": "single",
+      "status": "unverified",
+      "prompt": "What function does pressing the Tab key have when entering a command in IOS?",
+      "payload": {
+        "options": [
+          {
+            "id": "opt-1",
+            "text": "It aborts the current command and returns to configuration mode."
+          },
+          {
+            "id": "opt-2",
+            "text": "It exits configuration mode and returns to user EXEC mode."
+          },
+          {
+            "id": "opt-3",
+            "text": "It moves the cursor to the beginning of the next line."
+          },
+          {
+            "id": "opt-4",
+            "text": "It completes the remainder of a partially typed word in a command."
+          }
+        ],
+        "correctOptionIds": [
+          "opt-1"
+        ]
+      },
+      "explanation": {
+        "answerReasoning": "Answer reasoning for question 15.",
+        "conceptRefresher": "Concept refresher covering the relevant CCNA syllabus topics for question 15.",
+        "commonMisconception": "Common misconception associated with this concept in exam preparation.",
+        "references": [
+          "Cisco CCNA 200-301 Official Cert Guide",
+          "Cisco IOS Configuration Fundamentals Command Reference"
+        ]
+      },
+      "assetReferences": [],
+      "tagIds": [
+        "tag-domain-2",
+        "tag-topic-switch-config"
+      ],
+      "verificationRecord": {
+        "verified": false,
+        "notes": "Imported from test-1 qb.docx; unverified pending review against authoritative Cisco CCNA 200-301 curriculum."
+      }
+    },
+    {
+      "id": "ccna-q016",
+      "bankId": "cisco-ccna-test-1",
+      "externalId": "q016",
+      "sourceNumber": 16,
+      "version": 1,
+      "createdAt": "2026-10-28T00:00:00.000Z",
+      "updatedAt": "2026-10-28T00:00:00.000Z",
+      "type": "single",
+      "status": "unverified",
+      "prompt": "While trying to solve a network issue, a technician made multiple changes to the current router configuration file. The changes did not solve the problem and were not saved. What action can the technician take to discard the changes and work with the file in NVRAM?",
+      "payload": {
+        "options": [
+          {
+            "id": "opt-1",
+            "text": "Issue the reload command without saving the running configuration."
+          },
+          {
+            "id": "opt-2",
+            "text": "Delete the vlan.dat file and reboot the device."
+          },
+          {
+            "id": "opt-3",
+            "text": "Close and reopen the terminal emulation software."
+          },
+          {
+            "id": "opt-4",
+            "text": "Issue the copy startup-config running-config command."
+          }
+        ],
+        "correctOptionIds": [
+          "opt-1"
+        ]
+      },
+      "explanation": {
+        "answerReasoning": "Answer reasoning for question 16.",
+        "conceptRefresher": "Concept refresher covering the relevant CCNA syllabus topics for question 16.",
+        "commonMisconception": "Common misconception associated with this concept in exam preparation.",
+        "references": [
+          "Cisco CCNA 200-301 Official Cert Guide",
+          "Cisco IOS Configuration Fundamentals Command Reference"
+        ]
+      },
+      "assetReferences": [],
+      "tagIds": [
+        "tag-domain-2",
+        "tag-topic-switch-config"
+      ],
+      "verificationRecord": {
+        "verified": false,
+        "notes": "Imported from test-1 qb.docx; unverified pending review against authoritative Cisco CCNA 200-301 curriculum."
+      }
+    },
+    {
+      "id": "ccna-q017",
+      "bankId": "cisco-ccna-test-1",
+      "externalId": "q017",
+      "sourceNumber": 17,
+      "version": 1,
+      "createdAt": "2026-10-28T00:00:00.000Z",
+      "updatedAt": "2026-10-28T00:00:00.000Z",
+      "type": "single",
+      "status": "unverified",
+      "prompt": "An administrator uses the Ctrl-Shift-6 key combination on a switch after issuing the ping command. What is the purpose of using these keystrokes?",
+      "payload": {
+        "options": [
+          {
+            "id": "opt-1",
+            "text": "to restart the ping process"
+          },
+          {
+            "id": "opt-2",
+            "text": "to interrupt the ping process"
+          },
+          {
+            "id": "opt-3",
+            "text": "to exit to a different configuration mode"
+          },
+          {
+            "id": "opt-4",
+            "text": "to allow the user to complete the command"
+          }
+        ],
+        "correctOptionIds": [
+          "opt-1"
+        ]
+      },
+      "explanation": {
+        "answerReasoning": "Answer reasoning for question 17.",
+        "conceptRefresher": "Concept refresher covering the relevant CCNA syllabus topics for question 17.",
+        "commonMisconception": "Common misconception associated with this concept in exam preparation.",
+        "references": [
+          "Cisco CCNA 200-301 Official Cert Guide",
+          "Cisco IOS Configuration Fundamentals Command Reference"
+        ]
+      },
+      "assetReferences": [],
+      "tagIds": [
+        "tag-domain-2",
+        "tag-topic-switch-config"
+      ],
+      "verificationRecord": {
+        "verified": false,
+        "notes": "Imported from test-1 qb.docx; unverified pending review against authoritative Cisco CCNA 200-301 curriculum."
+      }
+    },
+    {
+      "id": "ccna-q018",
+      "bankId": "cisco-ccna-test-1",
+      "externalId": "q018",
+      "sourceNumber": 18,
+      "version": 1,
+      "createdAt": "2026-10-28T00:00:00.000Z",
+      "updatedAt": "2026-10-28T00:00:00.000Z",
+      "type": "single",
+      "status": "unverified",
+      "prompt": "Refer to the exhibit. A network administrator is configuring access control to switch SW1. If the administrator uses a console connection to connect to the switch, which password is needed to access user EXEC mode?",
+      "payload": {
+        "options": [
+          {
+            "id": "opt-1",
+            "text": "letmein"
+          },
+          {
+            "id": "opt-2",
+            "text": "secretin"
+          },
+          {
+            "id": "opt-3",
+            "text": "lineconin"
+          },
+          {
+            "id": "opt-4",
+            "text": "linevtyin"
+          }
+        ],
+        "correctOptionIds": [
+          "opt-3"
+        ]
+      },
+      "explanation": {
+        "answerReasoning": "Under \"line console 0\", the command \"password lineconin\" followed by \"login\" configures the console port password required when connecting via the console cable.",
+        "conceptRefresher": "\"enable secret\" protects privileged EXEC mode (# prompt), whereas \"line console 0\" password protects the initial user EXEC mode (> prompt) over a physical console connection.",
+        "commonMisconception": "Common misconception associated with this concept in exam preparation.",
+        "references": [
+          "Cisco CCNA 200-301 Official Cert Guide",
+          "Cisco IOS Configuration Fundamentals Command Reference"
+        ]
+      },
+      "assetReferences": [
+        {
+          "id": "exhibit-q018",
+          "type": "image",
+          "url": "/exhibits/image1.jpeg",
+          "caption": "Exhibit: Switch SW1 Access Control Configuration",
+          "altText": "Cisco IOS configuration lines for enable secret, enable password, and line console 0"
+        }
+      ],
+      "tagIds": [
+        "tag-domain-5",
+        "tag-topic-security-basics",
+        "tag-domain-2",
+        "tag-topic-switch-config"
+      ],
+      "verificationRecord": {
+        "verified": false,
+        "notes": "Imported from test-1 qb.docx; unverified pending review against authoritative Cisco CCNA 200-301 curriculum."
+      }
+    },
+    {
+      "id": "ccna-q019",
+      "bankId": "cisco-ccna-test-1",
+      "externalId": "q019",
+      "sourceNumber": 19,
+      "version": 1,
+      "createdAt": "2026-10-28T00:00:00.000Z",
+      "updatedAt": "2026-10-28T00:00:00.000Z",
+      "type": "single",
+      "status": "unverified",
+      "prompt": "A technician enters the following commands on a Cisco switch. What is the technician configuring?",
+      "structuredBlocks": [
+        {
+          "type": "code",
+          "content": "SwitchA(config)# interface vlan 1\nSwitchA(config-if)# ip address 192.168.1.1 255.255.255.0\nSwitchA(config-if)# no shutdown"
+        }
+      ],
+      "payload": {
+        "options": [
+          {
+            "id": "opt-1",
+            "text": "Telnet access"
+          },
+          {
+            "id": "opt-2",
+            "text": "SVI"
+          },
+          {
+            "id": "opt-3",
+            "text": "password encryption"
+          },
+          {
+            "id": "opt-4",
+            "text": "physical switchport access"
+          }
+        ],
+        "correctOptionIds": [
+          "opt-2"
+        ]
+      },
+      "explanation": {
+        "answerReasoning": "Configuring an IP address and enabling interface vlan 1 configures a Switch Virtual Interface (SVI) used for remote IP management of a Layer 2 switch.",
+        "conceptRefresher": "A Layer 2 switch does not route packets between physical ports by default, but requires an SVI (commonly VLAN 1) to be reachable via SSH, Telnet, or web management.",
+        "commonMisconception": "Common misconception associated with this concept in exam preparation.",
+        "references": [
+          "Cisco CCNA 200-301 Official Cert Guide",
+          "Cisco IOS Configuration Fundamentals Command Reference"
+        ]
+      },
+      "assetReferences": [],
+      "tagIds": [
+        "tag-domain-5",
+        "tag-topic-security-basics",
+        "tag-domain-2",
+        "tag-topic-switch-config",
+        "tag-domain-1",
+        "tag-topic-osi-tcp",
+        "tag-topic-ipv4-addressing"
+      ],
+      "verificationRecord": {
+        "verified": false,
+        "notes": "Imported from test-1 qb.docx; unverified pending review against authoritative Cisco CCNA 200-301 curriculum."
+      }
+    },
+    {
+      "id": "ccna-q020",
+      "bankId": "cisco-ccna-test-1",
+      "externalId": "q020",
+      "sourceNumber": 20,
+      "version": 1,
+      "createdAt": "2026-10-28T00:00:00.000Z",
+      "updatedAt": "2026-10-28T00:00:00.000Z",
+      "type": "single",
+      "status": "unverified",
+      "prompt": "Which command or key combination allows a user to return to the previous level in the command hierarchy?",
+      "payload": {
+        "options": [
+          {
+            "id": "opt-1",
+            "text": "end"
+          },
+          {
+            "id": "opt-2",
+            "text": "exit"
+          },
+          {
+            "id": "opt-3",
+            "text": "Ctrl-Z"
+          },
+          {
+            "id": "opt-4",
+            "text": "Ctrl-C"
+          }
+        ],
+        "correctOptionIds": [
+          "opt-1"
+        ]
+      },
+      "explanation": {
+        "answerReasoning": "Answer reasoning for question 20.",
+        "conceptRefresher": "Concept refresher covering the relevant CCNA syllabus topics for question 20.",
+        "commonMisconception": "Common misconception associated with this concept in exam preparation.",
+        "references": [
+          "Cisco CCNA 200-301 Official Cert Guide",
+          "Cisco IOS Configuration Fundamentals Command Reference"
+        ]
+      },
+      "assetReferences": [],
+      "tagIds": [
+        "tag-domain-1"
+      ],
+      "verificationRecord": {
+        "verified": false,
+        "notes": "Imported from test-1 qb.docx; unverified pending review against authoritative Cisco CCNA 200-301 curriculum."
+      }
+    },
+    {
+      "id": "ccna-q021",
+      "bankId": "cisco-ccna-test-1",
+      "externalId": "q021",
+      "sourceNumber": 21,
+      "version": 1,
+      "createdAt": "2026-10-28T00:00:00.000Z",
+      "updatedAt": "2026-10-28T00:00:00.000Z",
+      "type": "multi",
+      "status": "unverified",
+      "prompt": "What are two characteristics of RAM on a Cisco device? (Choose two.)",
+      "payload": {
+        "options": [
+          {
+            "id": "opt-1",
+            "text": "RAM provides nonvolatile storage."
+          },
+          {
+            "id": "opt-2",
+            "text": "The configuration that is actively running on the device is stored in RAM."
+          },
+          {
+            "id": "opt-3",
+            "text": "The contents of RAM are lost during a power cycle."
+          },
+          {
+            "id": "opt-4",
+            "text": "RAM is a component in Cisco switches but not in Cisco routers."
+          },
+          {
+            "id": "opt-5",
+            "text": "RAM is able to store multiple versions of IOS and configuration files."
+          }
+        ],
+        "correctOptionIds": [
+          "opt-1",
+          "opt-2"
+        ],
+        "requiredSelections": 2
+      },
+      "explanation": {
+        "answerReasoning": "Answer reasoning for question 21.",
+        "conceptRefresher": "Concept refresher covering the relevant CCNA syllabus topics for question 21.",
+        "commonMisconception": "Common misconception associated with this concept in exam preparation.",
+        "references": [
+          "Cisco CCNA 200-301 Official Cert Guide",
+          "Cisco IOS Configuration Fundamentals Command Reference"
+        ]
+      },
+      "assetReferences": [],
+      "tagIds": [
+        "tag-domain-2",
+        "tag-topic-switch-config"
+      ],
+      "verificationRecord": {
+        "verified": false,
+        "notes": "Imported from test-1 qb.docx; unverified pending review against authoritative Cisco CCNA 200-301 curriculum."
+      }
+    },
+    {
+      "id": "ccna-q022",
+      "bankId": "cisco-ccna-test-1",
+      "externalId": "q022",
+      "sourceNumber": 22,
+      "version": 1,
+      "createdAt": "2026-10-28T00:00:00.000Z",
+      "updatedAt": "2026-10-28T00:00:00.000Z",
+      "type": "multi",
+      "status": "unverified",
+      "prompt": "Which two host names follow the guidelines for naming conventions on Cisco IOS devices? (Choose two.)",
+      "payload": {
+        "options": [
+          {
+            "id": "opt-1",
+            "text": "Branch2!"
+          },
+          {
+            "id": "opt-2",
+            "text": "RM-3-Switch-2A4"
+          },
+          {
+            "id": "opt-3",
+            "text": "Floor(15)"
+          },
+          {
+            "id": "opt-4",
+            "text": "HO Floor 17"
+          },
+          {
+            "id": "opt-5",
+            "text": "SwBranch799"
+          }
+        ],
+        "correctOptionIds": [
+          "opt-1",
+          "opt-2"
+        ],
+        "requiredSelections": 2
+      },
+      "explanation": {
+        "answerReasoning": "Answer reasoning for question 22.",
+        "conceptRefresher": "Concept refresher covering the relevant CCNA syllabus topics for question 22.",
+        "commonMisconception": "Common misconception associated with this concept in exam preparation.",
+        "references": [
+          "Cisco CCNA 200-301 Official Cert Guide",
+          "Cisco IOS Configuration Fundamentals Command Reference"
+        ]
+      },
+      "assetReferences": [],
+      "tagIds": [
+        "tag-domain-2",
+        "tag-topic-switch-config"
+      ],
+      "verificationRecord": {
+        "verified": false,
+        "notes": "Imported from test-1 qb.docx; unverified pending review against authoritative Cisco CCNA 200-301 curriculum."
+      }
+    },
+    {
+      "id": "ccna-q023",
+      "bankId": "cisco-ccna-test-1",
+      "externalId": "q023",
+      "sourceNumber": 23,
+      "version": 1,
+      "createdAt": "2026-10-28T00:00:00.000Z",
+      "updatedAt": "2026-10-28T00:00:00.000Z",
+      "type": "single",
+      "status": "unverified",
+      "prompt": "How is SSH different from Telnet?",
+      "payload": {
+        "options": [
+          {
+            "id": "opt-1",
+            "text": "SSH makes connections over the network, whereas Telnet is for out-of-band access."
+          },
+          {
+            "id": "opt-2",
+            "text": "SSH provides security to remote sessions by encrypting messages and using user authentication. Telnet is considered insecure and sends messages in plaintext."
+          },
+          {
+            "id": "opt-3",
+            "text": "SSH requires the use of the PuTTY terminal emulation program. Tera Term must be used to connect to devices through the use of Telnet."
+          },
+          {
+            "id": "opt-4",
+            "text": "SSH must be configured over an active network connection, whereas Telnet is used to connect to a device from a console connection."
+          }
+        ],
+        "correctOptionIds": [
+          "opt-1"
+        ]
+      },
+      "explanation": {
+        "answerReasoning": "Answer reasoning for question 23.",
+        "conceptRefresher": "Concept refresher covering the relevant CCNA syllabus topics for question 23.",
+        "commonMisconception": "Common misconception associated with this concept in exam preparation.",
+        "references": [
+          "Cisco CCNA 200-301 Official Cert Guide",
+          "Cisco IOS Configuration Fundamentals Command Reference"
+        ]
+      },
+      "assetReferences": [],
+      "tagIds": [
+        "tag-domain-5",
+        "tag-topic-security-basics",
+        "tag-domain-1",
+        "tag-topic-osi-tcp"
+      ],
+      "verificationRecord": {
+        "verified": false,
+        "notes": "Imported from test-1 qb.docx; unverified pending review against authoritative Cisco CCNA 200-301 curriculum."
+      }
+    },
+    {
+      "id": "ccna-q024",
+      "bankId": "cisco-ccna-test-1",
+      "externalId": "q024",
+      "sourceNumber": 24,
+      "version": 1,
+      "createdAt": "2026-10-28T00:00:00.000Z",
+      "updatedAt": "2026-10-28T00:00:00.000Z",
+      "type": "ordering",
+      "status": "unverified",
+      "prompt": "An administrator is configuring a switch console port with a password. In what order will the administrator travel through the IOS modes of operation in order to reach the mode in which the configuration commands will be entered? (Not all options are used.)",
+      "payload": {
+        "items": [
+          {
+            "id": "item-1",
+            "text": "user EXEC mode"
+          },
+          {
+            "id": "item-2",
+            "text": "privileged EXEC mode"
+          },
+          {
+            "id": "item-3",
+            "text": "global configuration mode"
+          },
+          {
+            "id": "item-4",
+            "text": "line configuration mode"
+          }
+        ],
+        "correctOrderIds": [
+          "item-1",
+          "item-2",
+          "item-3",
+          "item-4"
+        ]
+      },
+      "explanation": {
+        "answerReasoning": "Answer reasoning for question 24.",
+        "conceptRefresher": "Concept refresher covering the relevant CCNA syllabus topics for question 24.",
+        "commonMisconception": "Common misconception associated with this concept in exam preparation.",
+        "references": [
+          "Cisco CCNA 200-301 Official Cert Guide",
+          "Cisco IOS Configuration Fundamentals Command Reference"
+        ]
+      },
+      "assetReferences": [
+        {
+          "id": "exhibit-q024",
+          "type": "image",
+          "url": "/exhibits/image2.jpeg",
+          "caption": "Exhibit: IOS Mode Transitions for Console Configuration",
+          "altText": "Modes diagram showing transition from user EXEC to line configuration"
+        }
+      ],
+      "tagIds": [
+        "tag-domain-5",
+        "tag-topic-security-basics",
+        "tag-domain-2",
+        "tag-topic-switch-config"
+      ],
+      "verificationRecord": {
+        "verified": false,
+        "notes": "Imported from test-1 qb.docx; unverified pending review against authoritative Cisco CCNA 200-301 curriculum."
+      }
+    },
+    {
+      "id": "ccna-q025",
+      "bankId": "cisco-ccna-test-1",
+      "externalId": "q025",
+      "sourceNumber": 25,
+      "version": 1,
+      "createdAt": "2026-10-28T00:00:00.000Z",
+      "updatedAt": "2026-10-28T00:00:00.000Z",
+      "type": "multi",
+      "status": "unverified",
+      "prompt": "What are three characteristics of an SVI? (Choose three.)",
+      "payload": {
+        "options": [
+          {
+            "id": "opt-1",
+            "text": "It is designed as a security protocol to protect switch ports."
+          },
+          {
+            "id": "opt-2",
+            "text": "It is not associated with any physical interface on a switch."
+          },
+          {
+            "id": "opt-3",
+            "text": "It is a special interface that allows connectivity by different types of media."
+          },
+          {
+            "id": "opt-4",
+            "text": "It is required to allow connectivity by any device at any location."
+          },
+          {
+            "id": "opt-5",
+            "text": "It provides a means to remotely manage a switch."
+          },
+          {
+            "id": "opt-6",
+            "text": "It is associated with VLAN1 by default."
+          }
+        ],
+        "correctOptionIds": [
+          "opt-1",
+          "opt-2",
+          "opt-3"
+        ],
+        "requiredSelections": 3
+      },
+      "explanation": {
+        "answerReasoning": "Answer reasoning for question 25.",
+        "conceptRefresher": "Concept refresher covering the relevant CCNA syllabus topics for question 25.",
+        "commonMisconception": "Common misconception associated with this concept in exam preparation.",
+        "references": [
+          "Cisco CCNA 200-301 Official Cert Guide",
+          "Cisco IOS Configuration Fundamentals Command Reference"
+        ]
+      },
+      "assetReferences": [],
+      "tagIds": [
+        "tag-domain-5",
+        "tag-topic-security-basics",
+        "tag-domain-2",
+        "tag-topic-switch-config",
+        "tag-domain-1",
+        "tag-topic-osi-tcp",
+        "tag-topic-media-cabling"
+      ],
+      "verificationRecord": {
+        "verified": false,
+        "notes": "Imported from test-1 qb.docx; unverified pending review against authoritative Cisco CCNA 200-301 curriculum."
+      }
+    },
+    {
+      "id": "ccna-q026",
+      "bankId": "cisco-ccna-test-1",
+      "externalId": "q026",
+      "sourceNumber": 26,
+      "version": 1,
+      "createdAt": "2026-10-28T00:00:00.000Z",
+      "updatedAt": "2026-10-28T00:00:00.000Z",
+      "type": "single",
+      "status": "unverified",
+      "prompt": "What command is used to verify the condition of the switch interfaces, including the status of the interfaces and a configured IP address?",
+      "payload": {
+        "options": [
+          {
+            "id": "opt-1",
+            "text": "ipconfig"
+          },
+          {
+            "id": "opt-2",
+            "text": "ping"
+          },
+          {
+            "id": "opt-3",
+            "text": "traceroute"
+          },
+          {
+            "id": "opt-4",
+            "text": "show ip interface brief"
+          }
+        ],
+        "correctOptionIds": [
+          "opt-1"
+        ]
+      },
+      "explanation": {
+        "answerReasoning": "Answer reasoning for question 26.",
+        "conceptRefresher": "Concept refresher covering the relevant CCNA syllabus topics for question 26.",
+        "commonMisconception": "Common misconception associated with this concept in exam preparation.",
+        "references": [
+          "Cisco CCNA 200-301 Official Cert Guide",
+          "Cisco IOS Configuration Fundamentals Command Reference"
+        ]
+      },
+      "assetReferences": [],
+      "tagIds": [
+        "tag-domain-2",
+        "tag-topic-switch-config",
+        "tag-domain-1",
+        "tag-topic-ipv4-addressing"
+      ],
+      "verificationRecord": {
+        "verified": false,
+        "notes": "Imported from test-1 qb.docx; unverified pending review against authoritative Cisco CCNA 200-301 curriculum."
+      }
+    },
+    {
+      "id": "ccna-q027",
+      "bankId": "cisco-ccna-test-1",
+      "externalId": "q027",
+      "sourceNumber": 27,
+      "version": 1,
+      "createdAt": "2026-10-28T00:00:00.000Z",
+      "updatedAt": "2026-10-28T00:00:00.000Z",
+      "type": "matching",
+      "status": "unverified",
+      "prompt": "Match the description with the associated IOS mode. (Not all options are used.)",
+      "payload": {
+        "prompts": [
+          {
+            "id": "p1",
+            "text": "changes made affect the operation of the device as a whole"
+          },
+          {
+            "id": "p2",
+            "text": "accessed by entering the enable command"
+          },
+          {
+            "id": "p3",
+            "text": "identified by a prompt ending with the # character"
+          },
+          {
+            "id": "p4",
+            "text": "limited number of basic monitoring commands"
+          },
+          {
+            "id": "p5",
+            "text": "accessed by entering the configure terminal command"
+          },
+          {
+            "id": "p6",
+            "text": "the first entrance into the CLI of an IOS device"
+          },
+          {
+            "id": "p7",
+            "text": "used to enable the password for vty lines"
+          }
+        ],
+        "choices": [
+          {
+            "id": "c1",
+            "text": "user EXEC mode"
+          },
+          {
+            "id": "c2",
+            "text": "privileged EXEC mode"
+          },
+          {
+            "id": "c3",
+            "text": "global configuration mode"
+          }
+        ],
+        "correctMapping": {
+          "p1": "c3",
+          "p2": "c2",
+          "p3": "c2",
+          "p4": "c1",
+          "p5": "c3",
+          "p6": "c1",
+          "p7": null
+        },
+        "allowChoiceReuse": true
+      },
+      "explanation": {
+        "answerReasoning": "Answer reasoning for question 27.",
+        "conceptRefresher": "Concept refresher covering the relevant CCNA syllabus topics for question 27.",
+        "commonMisconception": "Common misconception associated with this concept in exam preparation.",
+        "references": [
+          "Cisco CCNA 200-301 Official Cert Guide",
+          "Cisco IOS Configuration Fundamentals Command Reference"
+        ]
+      },
+      "assetReferences": [
+        {
+          "id": "exhibit-q027",
+          "type": "image",
+          "url": "/exhibits/image3.jpeg",
+          "caption": "Exhibit: IOS Modes Matching Table",
+          "altText": "Matching matrix between CLI modes and their descriptions"
+        }
+      ],
+      "tagIds": [
+        "tag-domain-2",
+        "tag-topic-switch-config"
+      ],
+      "cleanupNotes": "Question body contained \"...\" in source docx; options and mappings restored from exhibit image3.jpeg.",
+      "verificationRecord": {
+        "verified": false,
+        "notes": "Imported from test-1 qb.docx; unverified pending review against authoritative Cisco CCNA 200-301 curriculum."
+      }
+    },
+    {
+      "id": "ccna-q028",
+      "bankId": "cisco-ccna-test-1",
+      "externalId": "q028",
+      "sourceNumber": 28,
+      "version": 1,
+      "createdAt": "2026-10-28T00:00:00.000Z",
+      "updatedAt": "2026-10-28T00:00:00.000Z",
+      "type": "matching",
+      "status": "unverified",
+      "prompt": "Match the definitions to their respective CLI hot keys and shortcuts. (Not all options are used.)",
+      "payload": {
+        "prompts": [
+          {
+            "id": "p1",
+            "text": "displays the next screen"
+          },
+          {
+            "id": "p2",
+            "text": "scrolls backwards through previously entered commands"
+          },
+          {
+            "id": "p3",
+            "text": "provides context-sensitive help"
+          },
+          {
+            "id": "p4",
+            "text": "completes abbreviated commands and parameters"
+          },
+          {
+            "id": "p5",
+            "text": "aborts commands such as trace and ping"
+          }
+        ],
+        "choices": [
+          {
+            "id": "c1",
+            "text": "Ctrl-Shift-6"
+          },
+          {
+            "id": "c2",
+            "text": "Up Arrow"
+          },
+          {
+            "id": "c3",
+            "text": "?"
+          },
+          {
+            "id": "c4",
+            "text": "space bar"
+          },
+          {
+            "id": "c5",
+            "text": "Ctrl-C"
+          },
+          {
+            "id": "c6",
+            "text": "Tab"
+          }
+        ],
+        "correctMapping": {
+          "p1": "c4",
+          "p2": "c2",
+          "p3": "c3",
+          "p4": "c6",
+          "p5": "c1"
+        },
+        "allowChoiceReuse": false
+      },
+      "explanation": {
+        "answerReasoning": "Answer reasoning for question 28.",
+        "conceptRefresher": "Concept refresher covering the relevant CCNA syllabus topics for question 28.",
+        "commonMisconception": "Common misconception associated with this concept in exam preparation.",
+        "references": [
+          "Cisco CCNA 200-301 Official Cert Guide",
+          "Cisco IOS Configuration Fundamentals Command Reference"
+        ]
+      },
+      "assetReferences": [],
+      "tagIds": [
+        "tag-domain-1"
+      ],
+      "verificationRecord": {
+        "verified": false,
+        "notes": "Imported from test-1 qb.docx; unverified pending review against authoritative Cisco CCNA 200-301 curriculum."
+      }
+    },
+    {
+      "id": "ccna-q029",
+      "bankId": "cisco-ccna-test-1",
+      "externalId": "q029",
+      "sourceNumber": 29,
+      "version": 1,
+      "createdAt": "2026-10-28T00:00:00.000Z",
+      "updatedAt": "2026-10-28T00:00:00.000Z",
+      "type": "single",
+      "status": "unverified",
+      "prompt": "In the show running-config command, which part of the syntax is represented by running-config?",
+      "payload": {
+        "options": [
+          {
+            "id": "opt-1",
+            "text": "the command"
+          },
+          {
+            "id": "opt-2",
+            "text": "a keyword"
+          },
+          {
+            "id": "opt-3",
+            "text": "a variable"
+          },
+          {
+            "id": "opt-4",
+            "text": "a prompt"
+          }
+        ],
+        "correctOptionIds": [
+          "opt-1"
+        ]
+      },
+      "explanation": {
+        "answerReasoning": "Answer reasoning for question 29.",
+        "conceptRefresher": "Concept refresher covering the relevant CCNA syllabus topics for question 29.",
+        "commonMisconception": "Common misconception associated with this concept in exam preparation.",
+        "references": [
+          "Cisco CCNA 200-301 Official Cert Guide",
+          "Cisco IOS Configuration Fundamentals Command Reference"
+        ]
+      },
+      "assetReferences": [],
+      "tagIds": [
+        "tag-domain-1"
+      ],
+      "verificationRecord": {
+        "verified": false,
+        "notes": "Imported from test-1 qb.docx; unverified pending review against authoritative Cisco CCNA 200-301 curriculum."
+      }
+    },
+    {
+      "id": "ccna-q030",
+      "bankId": "cisco-ccna-test-1",
+      "externalId": "q030",
+      "sourceNumber": 30,
+      "version": 1,
+      "createdAt": "2026-10-28T00:00:00.000Z",
+      "updatedAt": "2026-10-28T00:00:00.000Z",
+      "type": "single",
+      "status": "unverified",
+      "prompt": "After making configuration changes on a Cisco switch, a network administrator issues a copy running-config startup-config command. What is the result of issuing this command?",
+      "payload": {
+        "options": [
+          {
+            "id": "opt-1",
+            "text": "The new configuration will be stored in flash memory."
+          },
+          {
+            "id": "opt-2",
+            "text": "The new configuration will be loaded if the switch is restarted."
+          },
+          {
+            "id": "opt-3",
+            "text": "The current IOS file will be replaced with the newly configured file."
+          },
+          {
+            "id": "opt-4",
+            "text": "The configuration changes will be removed and the original configuration will be restored."
+          }
+        ],
+        "correctOptionIds": [
+          "opt-1"
+        ]
+      },
+      "explanation": {
+        "answerReasoning": "Answer reasoning for question 30.",
+        "conceptRefresher": "Concept refresher covering the relevant CCNA syllabus topics for question 30.",
+        "commonMisconception": "Common misconception associated with this concept in exam preparation.",
+        "references": [
+          "Cisco CCNA 200-301 Official Cert Guide",
+          "Cisco IOS Configuration Fundamentals Command Reference"
+        ]
+      },
+      "assetReferences": [],
+      "tagIds": [
+        "tag-domain-2",
+        "tag-topic-switch-config"
+      ],
+      "verificationRecord": {
+        "verified": false,
+        "notes": "Imported from test-1 qb.docx; unverified pending review against authoritative Cisco CCNA 200-301 curriculum."
+      }
+    },
+    {
+      "id": "ccna-q031",
+      "bankId": "cisco-ccna-test-1",
+      "externalId": "q031",
+      "sourceNumber": 31,
+      "version": 1,
+      "createdAt": "2026-10-28T00:00:00.000Z",
+      "updatedAt": "2026-10-28T00:00:00.000Z",
+      "type": "single",
+      "status": "unverified",
+      "prompt": "What command will prevent all unencrypted passwords from displaying in plain text in a configuration file?",
+      "payload": {
+        "options": [
+          {
+            "id": "opt-1",
+            "text": "(config)# enable password secret"
+          },
+          {
+            "id": "opt-2",
+            "text": "(config)# enable secret Secret_Password"
+          },
+          {
+            "id": "opt-3",
+            "text": "(config-line)# password secret"
+          },
+          {
+            "id": "opt-4",
+            "text": "(config)# service password-encryption"
+          },
+          {
+            "id": "opt-5",
+            "text": "(config)# enable secret Encrypted_Password"
+          }
+        ],
+        "correctOptionIds": [
+          "opt-1"
+        ]
+      },
+      "explanation": {
+        "answerReasoning": "Answer reasoning for question 31.",
+        "conceptRefresher": "Concept refresher covering the relevant CCNA syllabus topics for question 31.",
+        "commonMisconception": "Common misconception associated with this concept in exam preparation.",
+        "references": [
+          "Cisco CCNA 200-301 Official Cert Guide",
+          "Cisco IOS Configuration Fundamentals Command Reference"
+        ]
+      },
+      "assetReferences": [],
+      "tagIds": [
+        "tag-domain-5",
+        "tag-topic-security-basics"
+      ],
+      "verificationRecord": {
+        "verified": false,
+        "notes": "Imported from test-1 qb.docx; unverified pending review against authoritative Cisco CCNA 200-301 curriculum."
+      }
+    },
+    {
+      "id": "ccna-q032",
+      "bankId": "cisco-ccna-test-1",
+      "externalId": "q032",
+      "sourceNumber": 32,
+      "version": 1,
+      "createdAt": "2026-10-28T00:00:00.000Z",
+      "updatedAt": "2026-10-28T00:00:00.000Z",
+      "type": "single",
+      "status": "unverified",
+      "prompt": "A network administrator enters the service password-encryption command into the configuration mode of a router. What does this command accomplish?",
+      "payload": {
+        "options": [
+          {
+            "id": "opt-1",
+            "text": "This command encrypts passwords as they are transmitted across serial WAN links."
+          },
+          {
+            "id": "opt-2",
+            "text": "This command prevents someone from viewing the running configuration passwords."
+          },
+          {
+            "id": "opt-3",
+            "text": "This command enables a strong encryption algorithm for the enable secret password command."
+          },
+          {
+            "id": "opt-4",
+            "text": "This command automatically encrypts passwords in configuration files that are currently stored in NVRAM."
+          },
+          {
+            "id": "opt-5",
+            "text": "This command provides an exclusive encrypted password for external service personnel who are required to do router maintenance."
+          }
+        ],
+        "correctOptionIds": [
+          "opt-1"
+        ]
+      },
+      "explanation": {
+        "answerReasoning": "Answer reasoning for question 32.",
+        "conceptRefresher": "Concept refresher covering the relevant CCNA syllabus topics for question 32.",
+        "commonMisconception": "Common misconception associated with this concept in exam preparation.",
+        "references": [
+          "Cisco CCNA 200-301 Official Cert Guide",
+          "Cisco IOS Configuration Fundamentals Command Reference"
+        ]
+      },
+      "assetReferences": [],
+      "tagIds": [
+        "tag-domain-5",
+        "tag-topic-security-basics"
+      ],
+      "verificationRecord": {
+        "verified": false,
+        "notes": "Imported from test-1 qb.docx; unverified pending review against authoritative Cisco CCNA 200-301 curriculum."
+      }
+    },
+    {
+      "id": "ccna-q033",
+      "bankId": "cisco-ccna-test-1",
+      "externalId": "q033",
+      "sourceNumber": 33,
+      "version": 1,
+      "createdAt": "2026-10-28T00:00:00.000Z",
+      "updatedAt": "2026-10-28T00:00:00.000Z",
+      "type": "single",
+      "status": "unverified",
+      "prompt": "What method can be used by two computers to ensure that packets are not dropped because too much data is being sent too quickly?",
+      "payload": {
+        "options": [
+          {
+            "id": "opt-1",
+            "text": "encapsulation"
+          },
+          {
+            "id": "opt-2",
+            "text": "flow control"
+          },
+          {
+            "id": "opt-3",
+            "text": "access method"
+          },
+          {
+            "id": "opt-4",
+            "text": "response timeout"
+          }
+        ],
+        "correctOptionIds": [
+          "opt-1"
+        ]
+      },
+      "explanation": {
+        "answerReasoning": "Answer reasoning for question 33.",
+        "conceptRefresher": "Concept refresher covering the relevant CCNA syllabus topics for question 33.",
+        "commonMisconception": "Common misconception associated with this concept in exam preparation.",
+        "references": [
+          "Cisco CCNA 200-301 Official Cert Guide",
+          "Cisco IOS Configuration Fundamentals Command Reference"
+        ]
+      },
+      "assetReferences": [],
+      "tagIds": [
+        "tag-domain-1",
+        "tag-topic-osi-tcp"
+      ],
+      "verificationRecord": {
+        "verified": false,
+        "notes": "Imported from test-1 qb.docx; unverified pending review against authoritative Cisco CCNA 200-301 curriculum."
+      }
+    },
+    {
+      "id": "ccna-q034",
+      "bankId": "cisco-ccna-test-1",
+      "externalId": "q034",
+      "sourceNumber": 34,
+      "version": 1,
+      "createdAt": "2026-10-28T00:00:00.000Z",
+      "updatedAt": "2026-10-28T00:00:00.000Z",
+      "type": "single",
+      "status": "unverified",
+      "prompt": "Which statement accurately describes a TCP/IP encapsulation process when a PC is sending data to the network?",
+      "payload": {
+        "options": [
+          {
+            "id": "opt-1",
+            "text": "Data is sent from the internet layer to the network access layer."
+          },
+          {
+            "id": "opt-2",
+            "text": "Packets are sent from the network access layer to the transport layer."
+          },
+          {
+            "id": "opt-3",
+            "text": "Segments are sent from the transport layer to the internet layer."
+          },
+          {
+            "id": "opt-4",
+            "text": "Frames are sent from the network access layer to the internet layer."
+          }
+        ],
+        "correctOptionIds": [
+          "opt-1"
+        ]
+      },
+      "explanation": {
+        "answerReasoning": "Answer reasoning for question 34.",
+        "conceptRefresher": "Concept refresher covering the relevant CCNA syllabus topics for question 34.",
+        "commonMisconception": "Common misconception associated with this concept in exam preparation.",
+        "references": [
+          "Cisco CCNA 200-301 Official Cert Guide",
+          "Cisco IOS Configuration Fundamentals Command Reference"
+        ]
+      },
+      "assetReferences": [],
+      "tagIds": [
+        "tag-domain-1",
+        "tag-topic-osi-tcp"
+      ],
+      "verificationRecord": {
+        "verified": false,
+        "notes": "Imported from test-1 qb.docx; unverified pending review against authoritative Cisco CCNA 200-301 curriculum."
+      }
+    },
+    {
+      "id": "ccna-q035",
+      "bankId": "cisco-ccna-test-1",
+      "externalId": "q035",
+      "sourceNumber": 35,
+      "version": 1,
+      "createdAt": "2026-10-28T00:00:00.000Z",
+      "updatedAt": "2026-10-28T00:00:00.000Z",
+      "type": "multi",
+      "status": "unverified",
+      "prompt": "What three application layer protocols are part of the TCP/IP protocol suite? (Choose three.)",
+      "payload": {
+        "options": [
+          {
+            "id": "opt-1",
+            "text": "ARP"
+          },
+          {
+            "id": "opt-2",
+            "text": "DHCP"
+          },
+          {
+            "id": "opt-3",
+            "text": "DNS"
+          },
+          {
+            "id": "opt-4",
+            "text": "FTP"
+          },
+          {
+            "id": "opt-5",
+            "text": "NAT"
+          },
+          {
+            "id": "opt-6",
+            "text": "PPP"
+          }
+        ],
+        "correctOptionIds": [
+          "opt-1",
+          "opt-2",
+          "opt-3"
+        ],
+        "requiredSelections": 3
+      },
+      "explanation": {
+        "answerReasoning": "Answer reasoning for question 35.",
+        "conceptRefresher": "Concept refresher covering the relevant CCNA syllabus topics for question 35.",
+        "commonMisconception": "Common misconception associated with this concept in exam preparation.",
+        "references": [
+          "Cisco CCNA 200-301 Official Cert Guide",
+          "Cisco IOS Configuration Fundamentals Command Reference"
+        ]
+      },
+      "assetReferences": [],
+      "tagIds": [
+        "tag-domain-1",
+        "tag-topic-osi-tcp"
+      ],
+      "verificationRecord": {
+        "verified": false,
+        "notes": "Imported from test-1 qb.docx; unverified pending review against authoritative Cisco CCNA 200-301 curriculum."
+      }
+    },
+    {
+      "id": "ccna-q036",
+      "bankId": "cisco-ccna-test-1",
+      "externalId": "q036",
+      "sourceNumber": 36,
+      "version": 1,
+      "createdAt": "2026-10-28T00:00:00.000Z",
+      "updatedAt": "2026-10-28T00:00:00.000Z",
+      "type": "matching",
+      "status": "unverified",
+      "prompt": "Match the description to the organization. (Not all options are used.)",
+      "payload": {
+        "prompts": [
+          {
+            "id": "p1",
+            "text": "This organization is responsible for overseeing and managing IP address allocation, domain name management, and protocol identifiers."
+          },
+          {
+            "id": "p2",
+            "text": "This organization is the largest developer of international standards in the world for a wide variety of products and services. It is known for its Open Systems Interconnection (OSI) reference model."
+          },
+          {
+            "id": "p3",
+            "text": "This organization promotes the open development, evolution, and use of the Internet throughout the world."
+          }
+        ],
+        "choices": [
+          {
+            "id": "c1",
+            "text": "ISOC"
+          },
+          {
+            "id": "c2",
+            "text": "EIA"
+          },
+          {
+            "id": "c3",
+            "text": "ISO"
+          },
+          {
+            "id": "c4",
+            "text": "IANA"
+          }
+        ],
+        "correctMapping": {
+          "p1": "c4",
+          "p2": "c3",
+          "p3": "c1"
+        },
+        "allowChoiceReuse": false
+      },
+      "explanation": {
+        "answerReasoning": "Answer reasoning for question 36.",
+        "conceptRefresher": "Concept refresher covering the relevant CCNA syllabus topics for question 36.",
+        "commonMisconception": "Common misconception associated with this concept in exam preparation.",
+        "references": [
+          "Cisco CCNA 200-301 Official Cert Guide",
+          "Cisco IOS Configuration Fundamentals Command Reference"
+        ]
+      },
+      "assetReferences": [],
+      "tagIds": [
+        "tag-domain-1",
+        "tag-topic-osi-tcp",
+        "tag-topic-ipv4-addressing"
+      ],
+      "verificationRecord": {
+        "verified": false,
+        "notes": "Imported from test-1 qb.docx; unverified pending review against authoritative Cisco CCNA 200-301 curriculum."
+      }
+    },
+    {
+      "id": "ccna-q037",
+      "bankId": "cisco-ccna-test-1",
+      "externalId": "q037",
+      "sourceNumber": 37,
+      "version": 1,
+      "createdAt": "2026-10-28T00:00:00.000Z",
+      "updatedAt": "2026-10-28T00:00:00.000Z",
+      "type": "single",
+      "status": "unverified",
+      "prompt": "Which name is assigned to the transport layer PDU?",
+      "payload": {
+        "options": [
+          {
+            "id": "opt-1",
+            "text": "bits"
+          },
+          {
+            "id": "opt-2",
+            "text": "data"
+          },
+          {
+            "id": "opt-3",
+            "text": "frame"
+          },
+          {
+            "id": "opt-4",
+            "text": "packet"
+          },
+          {
+            "id": "opt-5",
+            "text": "segment"
+          }
+        ],
+        "correctOptionIds": [
+          "opt-1"
+        ]
+      },
+      "explanation": {
+        "answerReasoning": "Answer reasoning for question 37.",
+        "conceptRefresher": "Concept refresher covering the relevant CCNA syllabus topics for question 37.",
+        "commonMisconception": "Common misconception associated with this concept in exam preparation.",
+        "references": [
+          "Cisco CCNA 200-301 Official Cert Guide",
+          "Cisco IOS Configuration Fundamentals Command Reference"
+        ]
+      },
+      "assetReferences": [],
+      "tagIds": [
+        "tag-domain-1",
+        "tag-topic-osi-tcp"
+      ],
+      "verificationRecord": {
+        "verified": false,
+        "notes": "Imported from test-1 qb.docx; unverified pending review against authoritative Cisco CCNA 200-301 curriculum."
+      }
+    },
+    {
+      "id": "ccna-q038",
+      "bankId": "cisco-ccna-test-1",
+      "externalId": "q038",
+      "sourceNumber": 38,
+      "version": 1,
+      "createdAt": "2026-10-28T00:00:00.000Z",
+      "updatedAt": "2026-10-28T00:00:00.000Z",
+      "type": "single",
+      "status": "unverified",
+      "prompt": "When IPv4 addressing is manually configured on a web server, which property of the IPv4 configuration identifies the network and host portion for an IPv4 address?",
+      "payload": {
+        "options": [
+          {
+            "id": "opt-1",
+            "text": "DNS server address"
+          },
+          {
+            "id": "opt-2",
+            "text": "subnet mask"
+          },
+          {
+            "id": "opt-3",
+            "text": "default gateway"
+          },
+          {
+            "id": "opt-4",
+            "text": "DHCP server address"
+          }
+        ],
+        "correctOptionIds": [
+          "opt-1"
+        ]
+      },
+      "explanation": {
+        "answerReasoning": "Answer reasoning for question 38.",
+        "conceptRefresher": "Concept refresher covering the relevant CCNA syllabus topics for question 38.",
+        "commonMisconception": "Common misconception associated with this concept in exam preparation.",
+        "references": [
+          "Cisco CCNA 200-301 Official Cert Guide",
+          "Cisco IOS Configuration Fundamentals Command Reference"
+        ]
+      },
+      "assetReferences": [],
+      "tagIds": [
+        "tag-domain-1",
+        "tag-topic-ipv4-addressing"
+      ],
+      "verificationRecord": {
+        "verified": false,
+        "notes": "Imported from test-1 qb.docx; unverified pending review against authoritative Cisco CCNA 200-301 curriculum."
+      }
+    },
+    {
+      "id": "ccna-q039",
+      "bankId": "cisco-ccna-test-1",
+      "externalId": "q039",
+      "sourceNumber": 39,
+      "version": 1,
+      "createdAt": "2026-10-28T00:00:00.000Z",
+      "updatedAt": "2026-10-28T00:00:00.000Z",
+      "type": "single",
+      "status": "unverified",
+      "prompt": "What process involves placing one PDU inside of another PDU?",
+      "payload": {
+        "options": [
+          {
+            "id": "opt-1",
+            "text": "encapsulation"
+          },
+          {
+            "id": "opt-2",
+            "text": "encoding"
+          },
+          {
+            "id": "opt-3",
+            "text": "segmentation"
+          },
+          {
+            "id": "opt-4",
+            "text": "flow control"
+          }
+        ],
+        "correctOptionIds": [
+          "opt-1"
+        ]
+      },
+      "explanation": {
+        "answerReasoning": "Answer reasoning for question 39.",
+        "conceptRefresher": "Concept refresher covering the relevant CCNA syllabus topics for question 39.",
+        "commonMisconception": "Common misconception associated with this concept in exam preparation.",
+        "references": [
+          "Cisco CCNA 200-301 Official Cert Guide",
+          "Cisco IOS Configuration Fundamentals Command Reference"
+        ]
+      },
+      "assetReferences": [],
+      "tagIds": [
+        "tag-domain-1",
+        "tag-topic-osi-tcp"
+      ],
+      "verificationRecord": {
+        "verified": false,
+        "notes": "Imported from test-1 qb.docx; unverified pending review against authoritative Cisco CCNA 200-301 curriculum."
+      }
+    },
+    {
+      "id": "ccna-q040",
+      "bankId": "cisco-ccna-test-1",
+      "externalId": "q040",
+      "sourceNumber": 40,
+      "version": 1,
+      "createdAt": "2026-10-28T00:00:00.000Z",
+      "updatedAt": "2026-10-28T00:00:00.000Z",
+      "type": "single",
+      "status": "unverified",
+      "prompt": "What layer is responsible for routing messages through an internetwork in the TCP/IP model?",
+      "payload": {
+        "options": [
+          {
+            "id": "opt-1",
+            "text": "internet"
+          },
+          {
+            "id": "opt-2",
+            "text": "transport"
+          },
+          {
+            "id": "opt-3",
+            "text": "network access"
+          },
+          {
+            "id": "opt-4",
+            "text": "session"
+          }
+        ],
+        "correctOptionIds": [
+          "opt-1"
+        ]
+      },
+      "explanation": {
+        "answerReasoning": "Answer reasoning for question 40.",
+        "conceptRefresher": "Concept refresher covering the relevant CCNA syllabus topics for question 40.",
+        "commonMisconception": "Common misconception associated with this concept in exam preparation.",
+        "references": [
+          "Cisco CCNA 200-301 Official Cert Guide",
+          "Cisco IOS Configuration Fundamentals Command Reference"
+        ]
+      },
+      "assetReferences": [],
+      "tagIds": [
+        "tag-domain-1",
+        "tag-topic-osi-tcp"
+      ],
+      "verificationRecord": {
+        "verified": false,
+        "notes": "Imported from test-1 qb.docx; unverified pending review against authoritative Cisco CCNA 200-301 curriculum."
+      }
+    },
+    {
+      "id": "ccna-q041",
+      "bankId": "cisco-ccna-test-1",
+      "externalId": "q041",
+      "sourceNumber": 41,
+      "version": 1,
+      "createdAt": "2026-10-28T00:00:00.000Z",
+      "updatedAt": "2026-10-28T00:00:00.000Z",
+      "type": "matching",
+      "status": "unverified",
+      "prompt": "For the TCP/IP protocol suite, what is the correct order of events when a Telnet message is being prepared to be sent over the network?",
+      "payload": {
+        "prompts": [
+          {
+            "id": "p1",
+            "text": "Prompt item 1"
+          },
+          {
+            "id": "p2",
+            "text": "Prompt item 2"
+          }
+        ],
+        "choices": [
+          {
+            "id": "c1",
+            "text": "Choice A"
+          },
+          {
+            "id": "c2",
+            "text": "Choice B"
+          }
+        ],
+        "correctMapping": {
+          "p1": "c1",
+          "p2": "c2"
+        },
+        "allowChoiceReuse": false
+      },
+      "explanation": {
+        "answerReasoning": "Answer reasoning for question 41.",
+        "conceptRefresher": "Concept refresher covering the relevant CCNA syllabus topics for question 41.",
+        "commonMisconception": "Common misconception associated with this concept in exam preparation.",
+        "references": [
+          "Cisco CCNA 200-301 Official Cert Guide",
+          "Cisco IOS Configuration Fundamentals Command Reference"
+        ]
+      },
+      "assetReferences": [],
+      "tagIds": [
+        "tag-domain-1",
+        "tag-topic-osi-tcp"
+      ],
+      "verificationRecord": {
+        "verified": false,
+        "notes": "Imported from test-1 qb.docx; unverified pending review against authoritative Cisco CCNA 200-301 curriculum."
+      }
+    },
+    {
+      "id": "ccna-q042",
+      "bankId": "cisco-ccna-test-1",
+      "externalId": "q042",
+      "sourceNumber": 42,
+      "version": 1,
+      "createdAt": "2026-10-28T00:00:00.000Z",
+      "updatedAt": "2026-10-28T00:00:00.000Z",
+      "type": "single",
+      "status": "unverified",
+      "prompt": "Which PDU format is used when bits are received from the network medium by the NIC of a host?",
+      "payload": {
+        "options": [
+          {
+            "id": "opt-1",
+            "text": "file"
+          },
+          {
+            "id": "opt-2",
+            "text": "frame"
+          },
+          {
+            "id": "opt-3",
+            "text": "packet"
+          },
+          {
+            "id": "opt-4",
+            "text": "segment"
+          }
+        ],
+        "correctOptionIds": [
+          "opt-1"
+        ]
+      },
+      "explanation": {
+        "answerReasoning": "Answer reasoning for question 42.",
+        "conceptRefresher": "Concept refresher covering the relevant CCNA syllabus topics for question 42.",
+        "commonMisconception": "Common misconception associated with this concept in exam preparation.",
+        "references": [
+          "Cisco CCNA 200-301 Official Cert Guide",
+          "Cisco IOS Configuration Fundamentals Command Reference"
+        ]
+      },
+      "assetReferences": [],
+      "tagIds": [
+        "tag-domain-1",
+        "tag-topic-osi-tcp"
+      ],
+      "verificationRecord": {
+        "verified": false,
+        "notes": "Imported from test-1 qb.docx; unverified pending review against authoritative Cisco CCNA 200-301 curriculum."
+      }
+    },
+    {
+      "id": "ccna-q043",
+      "bankId": "cisco-ccna-test-1",
+      "externalId": "q043",
+      "sourceNumber": 43,
+      "version": 1,
+      "createdAt": "2026-10-28T00:00:00.000Z",
+      "updatedAt": "2026-10-28T00:00:00.000Z",
+      "type": "multi",
+      "status": "unverified",
+      "prompt": "Refer to the exhibit. ServerB is attempting to contact HostA. Which two statements correctly identify the addressing that ServerB will generate in the process? (Choose two.)",
+      "payload": {
+        "options": [
+          {
+            "id": "opt-1",
+            "text": "ServerB will generate a packet with the destination IP address of RouterB."
+          },
+          {
+            "id": "opt-2",
+            "text": "ServerB will generate a frame with the destination MAC address of SwitchB."
+          },
+          {
+            "id": "opt-3",
+            "text": "ServerB will generate a packet with the destination IP address of RouterA."
+          },
+          {
+            "id": "opt-4",
+            "text": "ServerB will generate a frame with the destination MAC address of RouterB."
+          },
+          {
+            "id": "opt-5",
+            "text": "ServerB will generate a packet with the destination IP address of HostA."
+          },
+          {
+            "id": "opt-6",
+            "text": "ServerB will generate a frame with the destination MAC address of RouterA."
+          }
+        ],
+        "correctOptionIds": [
+          "opt-5",
+          "opt-4"
+        ],
+        "requiredSelections": 2
+      },
+      "explanation": {
+        "answerReasoning": "Answer reasoning for question 43.",
+        "conceptRefresher": "Concept refresher covering the relevant CCNA syllabus topics for question 43.",
+        "commonMisconception": "Common misconception associated with this concept in exam preparation.",
+        "references": [
+          "Cisco CCNA 200-301 Official Cert Guide",
+          "Cisco IOS Configuration Fundamentals Command Reference"
+        ]
+      },
+      "assetReferences": [
+        {
+          "id": "exhibit-q043",
+          "type": "image",
+          "url": "/exhibits/image4.png",
+          "caption": "Exhibit: Network Topology for ServerB contacting HostA",
+          "altText": "Topology diagram with HostA, SwitchA, RouterA, RouterB, SwitchB, and ServerB"
+        }
+      ],
+      "tagIds": [
+        "tag-domain-2",
+        "tag-topic-switch-config",
+        "tag-domain-1",
+        "tag-topic-osi-tcp",
+        "tag-topic-ipv4-addressing"
+      ],
+      "verificationRecord": {
+        "verified": false,
+        "notes": "Imported from test-1 qb.docx; unverified pending review against authoritative Cisco CCNA 200-301 curriculum."
+      }
+    },
+    {
+      "id": "ccna-q044",
+      "bankId": "cisco-ccna-test-1",
+      "externalId": "q044",
+      "sourceNumber": 44,
+      "version": 1,
+      "createdAt": "2026-10-28T00:00:00.000Z",
+      "updatedAt": "2026-10-28T00:00:00.000Z",
+      "type": "single",
+      "status": "unverified",
+      "prompt": "Which method allows a computer to react accordingly when it requests data from a server and the server takes too long to respond?",
+      "payload": {
+        "options": [
+          {
+            "id": "opt-1",
+            "text": "encapsulation"
+          },
+          {
+            "id": "opt-2",
+            "text": "flow control"
+          },
+          {
+            "id": "opt-3",
+            "text": "access method"
+          },
+          {
+            "id": "opt-4",
+            "text": "response timeout"
+          }
+        ],
+        "correctOptionIds": [
+          "opt-1"
+        ]
+      },
+      "explanation": {
+        "answerReasoning": "Answer reasoning for question 44.",
+        "conceptRefresher": "Concept refresher covering the relevant CCNA syllabus topics for question 44.",
+        "commonMisconception": "Common misconception associated with this concept in exam preparation.",
+        "references": [
+          "Cisco CCNA 200-301 Official Cert Guide",
+          "Cisco IOS Configuration Fundamentals Command Reference"
+        ]
+      },
+      "assetReferences": [],
+      "tagIds": [
+        "tag-domain-1"
+      ],
+      "verificationRecord": {
+        "verified": false,
+        "notes": "Imported from test-1 qb.docx; unverified pending review against authoritative Cisco CCNA 200-301 curriculum."
+      }
+    },
+    {
+      "id": "ccna-q045",
+      "bankId": "cisco-ccna-test-1",
+      "externalId": "q045",
+      "sourceNumber": 45,
+      "version": 1,
+      "createdAt": "2026-10-28T00:00:00.000Z",
+      "updatedAt": "2026-10-28T00:00:00.000Z",
+      "type": "ordering",
+      "status": "unverified",
+      "prompt": "A web client is receiving a response for a web page from a web server. From the perspective of the client, what is the correct order of the protocol stack that is used to decode the received transmission?",
+      "payload": {
+        "items": [
+          {
+            "id": "item-1",
+            "text": "First step"
+          },
+          {
+            "id": "item-2",
+            "text": "Second step"
+          }
+        ],
+        "correctOrderIds": [
+          "item-1",
+          "item-2"
+        ]
+      },
+      "explanation": {
+        "answerReasoning": "Answer reasoning for question 45.",
+        "conceptRefresher": "Concept refresher covering the relevant CCNA syllabus topics for question 45.",
+        "commonMisconception": "Common misconception associated with this concept in exam preparation.",
+        "references": [
+          "Cisco CCNA 200-301 Official Cert Guide",
+          "Cisco IOS Configuration Fundamentals Command Reference"
+        ]
+      },
+      "assetReferences": [],
+      "tagIds": [
+        "tag-domain-1",
+        "tag-topic-osi-tcp"
+      ],
+      "verificationRecord": {
+        "verified": false,
+        "notes": "Imported from test-1 qb.docx; unverified pending review against authoritative Cisco CCNA 200-301 curriculum."
+      }
+    },
+    {
+      "id": "ccna-q046",
+      "bankId": "cisco-ccna-test-1",
+      "externalId": "q046",
+      "sourceNumber": 46,
+      "version": 1,
+      "createdAt": "2026-10-28T00:00:00.000Z",
+      "updatedAt": "2026-10-28T00:00:00.000Z",
+      "type": "multi",
+      "status": "unverified",
+      "prompt": "Which two OSI model layers have the same functionality as a single layer of the TCP/IP model? (Choose two.)",
+      "payload": {
+        "options": [
+          {
+            "id": "opt-1",
+            "text": "data link"
+          },
+          {
+            "id": "opt-2",
+            "text": "network"
+          },
+          {
+            "id": "opt-3",
+            "text": "physical"
+          },
+          {
+            "id": "opt-4",
+            "text": "session"
+          },
+          {
+            "id": "opt-5",
+            "text": "transport"
+          }
+        ],
+        "correctOptionIds": [
+          "opt-1",
+          "opt-2"
+        ],
+        "requiredSelections": 2
+      },
+      "explanation": {
+        "answerReasoning": "Answer reasoning for question 46.",
+        "conceptRefresher": "Concept refresher covering the relevant CCNA syllabus topics for question 46.",
+        "commonMisconception": "Common misconception associated with this concept in exam preparation.",
+        "references": [
+          "Cisco CCNA 200-301 Official Cert Guide",
+          "Cisco IOS Configuration Fundamentals Command Reference"
+        ]
+      },
+      "assetReferences": [],
+      "tagIds": [
+        "tag-domain-1",
+        "tag-topic-osi-tcp"
+      ],
+      "verificationRecord": {
+        "verified": false,
+        "notes": "Imported from test-1 qb.docx; unverified pending review against authoritative Cisco CCNA 200-301 curriculum."
+      }
+    },
+    {
+      "id": "ccna-q047",
+      "bankId": "cisco-ccna-test-1",
+      "externalId": "q047",
+      "sourceNumber": 47,
+      "version": 1,
+      "createdAt": "2026-10-28T00:00:00.000Z",
+      "updatedAt": "2026-10-28T00:00:00.000Z",
+      "type": "single",
+      "status": "unverified",
+      "prompt": "At which layer of the OSI model would a logical address be added during encapsulation?",
+      "payload": {
+        "options": [
+          {
+            "id": "opt-1",
+            "text": "physical layer"
+          },
+          {
+            "id": "opt-2",
+            "text": "data link layer"
+          },
+          {
+            "id": "opt-3",
+            "text": "network layer"
+          },
+          {
+            "id": "opt-4",
+            "text": "transport layer"
+          }
+        ],
+        "correctOptionIds": [
+          "opt-1"
+        ]
+      },
+      "explanation": {
+        "answerReasoning": "Answer reasoning for question 47.",
+        "conceptRefresher": "Concept refresher covering the relevant CCNA syllabus topics for question 47.",
+        "commonMisconception": "Common misconception associated with this concept in exam preparation.",
+        "references": [
+          "Cisco CCNA 200-301 Official Cert Guide",
+          "Cisco IOS Configuration Fundamentals Command Reference"
+        ]
+      },
+      "assetReferences": [],
+      "tagIds": [
+        "tag-domain-1",
+        "tag-topic-osi-tcp"
+      ],
+      "verificationRecord": {
+        "verified": false,
+        "notes": "Imported from test-1 qb.docx; unverified pending review against authoritative Cisco CCNA 200-301 curriculum."
+      }
+    },
+    {
+      "id": "ccna-q048",
+      "bankId": "cisco-ccna-test-1",
+      "externalId": "q048",
+      "sourceNumber": 48,
+      "version": 1,
+      "createdAt": "2026-10-28T00:00:00.000Z",
+      "updatedAt": "2026-10-28T00:00:00.000Z",
+      "type": "single",
+      "status": "unverified",
+      "prompt": "What is a characteristic of multicast messages?",
+      "payload": {
+        "options": [
+          {
+            "id": "opt-1",
+            "text": "They are sent to a select group of hosts."
+          },
+          {
+            "id": "opt-2",
+            "text": "They are sent to all hosts on a network."
+          },
+          {
+            "id": "opt-3",
+            "text": "They must be acknowledged."
+          },
+          {
+            "id": "opt-4",
+            "text": "They are sent to a single destination."
+          }
+        ],
+        "correctOptionIds": [
+          "opt-1"
+        ]
+      },
+      "explanation": {
+        "answerReasoning": "Answer reasoning for question 48.",
+        "conceptRefresher": "Concept refresher covering the relevant CCNA syllabus topics for question 48.",
+        "commonMisconception": "Common misconception associated with this concept in exam preparation.",
+        "references": [
+          "Cisco CCNA 200-301 Official Cert Guide",
+          "Cisco IOS Configuration Fundamentals Command Reference"
+        ]
+      },
+      "assetReferences": [],
+      "tagIds": [
+        "tag-domain-1"
+      ],
+      "verificationRecord": {
+        "verified": false,
+        "notes": "Imported from test-1 qb.docx; unverified pending review against authoritative Cisco CCNA 200-301 curriculum."
+      }
+    },
+    {
+      "id": "ccna-q049",
+      "bankId": "cisco-ccna-test-1",
+      "externalId": "q049",
+      "sourceNumber": 49,
+      "version": 1,
+      "createdAt": "2026-10-28T00:00:00.000Z",
+      "updatedAt": "2026-10-28T00:00:00.000Z",
+      "type": "single",
+      "status": "unverified",
+      "prompt": "Which statement is correct about network protocols?",
+      "payload": {
+        "options": [
+          {
+            "id": "opt-1",
+            "text": "Network protocols define the type of hardware that is used and how it is mounted in racks."
+          },
+          {
+            "id": "opt-2",
+            "text": "They define how messages are exchanged between the source and the destination."
+          },
+          {
+            "id": "opt-3",
+            "text": "They all function in the network access layer of TCP/IP."
+          },
+          {
+            "id": "opt-4",
+            "text": "They are only required for exchange of messages between devices on remote networks."
+          }
+        ],
+        "correctOptionIds": [
+          "opt-1"
+        ]
+      },
+      "explanation": {
+        "answerReasoning": "Answer reasoning for question 49.",
+        "conceptRefresher": "Concept refresher covering the relevant CCNA syllabus topics for question 49.",
+        "commonMisconception": "Common misconception associated with this concept in exam preparation.",
+        "references": [
+          "Cisco CCNA 200-301 Official Cert Guide",
+          "Cisco IOS Configuration Fundamentals Command Reference"
+        ]
+      },
+      "assetReferences": [],
+      "tagIds": [
+        "tag-domain-1",
+        "tag-topic-osi-tcp"
+      ],
+      "verificationRecord": {
+        "verified": false,
+        "notes": "Imported from test-1 qb.docx; unverified pending review against authoritative Cisco CCNA 200-301 curriculum."
+      }
+    },
+    {
+      "id": "ccna-q050",
+      "bankId": "cisco-ccna-test-1",
+      "externalId": "q050",
+      "sourceNumber": 50,
+      "version": 1,
+      "createdAt": "2026-10-28T00:00:00.000Z",
+      "updatedAt": "2026-10-28T00:00:00.000Z",
+      "type": "single",
+      "status": "unverified",
+      "prompt": "What is an advantage of network devices using open standard protocols?",
+      "payload": {
+        "options": [
+          {
+            "id": "opt-1",
+            "text": "Network communications is confined to data transfers between devices from the same vendor."
+          },
+          {
+            "id": "opt-2",
+            "text": "A client host and a server running different operating systems can successfully exchange data."
+          },
+          {
+            "id": "opt-3",
+            "text": "Internet access can be controlled by a single ISP in each market."
+          },
+          {
+            "id": "opt-4",
+            "text": "Competition and innovation are limited to specific types of products."
+          }
+        ],
+        "correctOptionIds": [
+          "opt-1"
+        ]
+      },
+      "explanation": {
+        "answerReasoning": "Answer reasoning for question 50.",
+        "conceptRefresher": "Concept refresher covering the relevant CCNA syllabus topics for question 50.",
+        "commonMisconception": "Common misconception associated with this concept in exam preparation.",
+        "references": [
+          "Cisco CCNA 200-301 Official Cert Guide",
+          "Cisco IOS Configuration Fundamentals Command Reference"
+        ]
+      },
+      "assetReferences": [],
+      "tagIds": [
+        "tag-domain-1",
+        "tag-topic-osi-tcp"
+      ],
+      "verificationRecord": {
+        "verified": false,
+        "notes": "Imported from test-1 qb.docx; unverified pending review against authoritative Cisco CCNA 200-301 curriculum."
+      }
+    },
+    {
+      "id": "ccna-q051",
+      "bankId": "cisco-ccna-test-1",
+      "externalId": "q051",
+      "sourceNumber": 51,
+      "version": 1,
+      "createdAt": "2026-10-28T00:00:00.000Z",
+      "updatedAt": "2026-10-28T00:00:00.000Z",
+      "type": "single",
+      "status": "unverified",
+      "prompt": "Which device performs the function of determining the path that messages should take through internetworks?",
+      "payload": {
+        "options": [
+          {
+            "id": "opt-1",
+            "text": "a router"
+          },
+          {
+            "id": "opt-2",
+            "text": "a firewall"
+          },
+          {
+            "id": "opt-3",
+            "text": "a web server"
+          },
+          {
+            "id": "opt-4",
+            "text": "a DSL modem"
+          }
+        ],
+        "correctOptionIds": [
+          "opt-1"
+        ]
+      },
+      "explanation": {
+        "answerReasoning": "Answer reasoning for question 51.",
+        "conceptRefresher": "Concept refresher covering the relevant CCNA syllabus topics for question 51.",
+        "commonMisconception": "Common misconception associated with this concept in exam preparation.",
+        "references": [
+          "Cisco CCNA 200-301 Official Cert Guide",
+          "Cisco IOS Configuration Fundamentals Command Reference"
+        ]
+      },
+      "assetReferences": [],
+      "tagIds": [
+        "tag-domain-1"
+      ],
+      "verificationRecord": {
+        "verified": false,
+        "notes": "Imported from test-1 qb.docx; unverified pending review against authoritative Cisco CCNA 200-301 curriculum."
+      }
+    },
+    {
+      "id": "ccna-q052",
+      "bankId": "cisco-ccna-test-1",
+      "externalId": "q052",
+      "sourceNumber": 52,
+      "version": 1,
+      "createdAt": "2026-10-28T00:00:00.000Z",
+      "updatedAt": "2026-10-28T00:00:00.000Z",
+      "type": "single",
+      "status": "needs-source",
+      "needsSourceReason": "References an absent Packet Tracer activity file (.pkt); excluded from practice until the activity is supplied or an independently reviewed replacement is authored.",
+      "prompt": "Open the PT Activity. Perform the tasks in the activity instructions and then answer the question. What is the IP address of the switch virtual interface (SVI) on Switch0?",
+      "payload": {
+        "options": [
+          {
+            "id": "opt-1",
+            "text": "192.168.5.10"
+          },
+          {
+            "id": "opt-2",
+            "text": "192.168.10.5"
+          },
+          {
+            "id": "opt-3",
+            "text": "192.168.10.1"
+          },
+          {
+            "id": "opt-4",
+            "text": "192.168.5.0"
+          }
+        ],
+        "correctOptionIds": [
+          "opt-1"
+        ]
+      },
+      "explanation": {
+        "answerReasoning": "Answer reasoning for question 52.",
+        "conceptRefresher": "Concept refresher covering the relevant CCNA syllabus topics for question 52.",
+        "commonMisconception": "Common misconception associated with this concept in exam preparation.",
+        "references": [
+          "Cisco CCNA 200-301 Official Cert Guide",
+          "Cisco IOS Configuration Fundamentals Command Reference"
+        ]
+      },
+      "assetReferences": [
+        {
+          "id": "exhibit-q052",
+          "type": "image",
+          "url": "/exhibits/image5.jpeg",
+          "caption": "Exhibit: Packet Tracer topology placeholder",
+          "altText": "PC0 connected to Switch0 via console and ethernet"
+        }
+      ],
+      "tagIds": [
+        "tag-domain-2",
+        "tag-topic-switch-config",
+        "tag-domain-1",
+        "tag-topic-ipv4-addressing"
+      ],
+      "verificationRecord": {
+        "verified": false,
+        "notes": "Imported from test-1 qb.docx; unverified pending review against authoritative Cisco CCNA 200-301 curriculum."
+      }
+    },
+    {
+      "id": "ccna-q053",
+      "bankId": "cisco-ccna-test-1",
+      "externalId": "q053",
+      "sourceNumber": 53,
+      "version": 1,
+      "createdAt": "2026-10-28T00:00:00.000Z",
+      "updatedAt": "2026-10-28T00:00:00.000Z",
+      "type": "single",
+      "status": "unverified",
+      "prompt": "Why would a Layer 2 switch need an IP address?",
+      "payload": {
+        "options": [
+          {
+            "id": "opt-1",
+            "text": "to enable the switch to send broadcast frames to attached PCs"
+          },
+          {
+            "id": "opt-2",
+            "text": "to enable the switch to function as a default gateway"
+          },
+          {
+            "id": "opt-3",
+            "text": "to enable the switch to be managed remotely"
+          },
+          {
+            "id": "opt-4",
+            "text": "to enable the switch to receive frames from attached PCs"
+          }
+        ],
+        "correctOptionIds": [
+          "opt-1"
+        ]
+      },
+      "explanation": {
+        "answerReasoning": "Answer reasoning for question 53.",
+        "conceptRefresher": "Concept refresher covering the relevant CCNA syllabus topics for question 53.",
+        "commonMisconception": "Common misconception associated with this concept in exam preparation.",
+        "references": [
+          "Cisco CCNA 200-301 Official Cert Guide",
+          "Cisco IOS Configuration Fundamentals Command Reference"
+        ]
+      },
+      "assetReferences": [],
+      "tagIds": [
+        "tag-domain-2",
+        "tag-topic-switch-config",
+        "tag-domain-1",
+        "tag-topic-osi-tcp",
+        "tag-topic-ipv4-addressing"
+      ],
+      "verificationRecord": {
+        "verified": false,
+        "notes": "Imported from test-1 qb.docx; unverified pending review against authoritative Cisco CCNA 200-301 curriculum."
+      }
+    },
+    {
+      "id": "ccna-q054",
+      "bankId": "cisco-ccna-test-1",
+      "externalId": "q054",
+      "sourceNumber": 54,
+      "version": 1,
+      "createdAt": "2026-10-28T00:00:00.000Z",
+      "updatedAt": "2026-10-28T00:00:00.000Z",
+      "type": "single",
+      "status": "unverified",
+      "prompt": "Refer to the exhibit. An administrator is trying to configure the switch but receives the error message that is displayed in the exhibit. What is the problem?",
+      "payload": {
+        "options": [
+          {
+            "id": "opt-1",
+            "text": "The entire command, configure terminal, must be used."
+          },
+          {
+            "id": "opt-2",
+            "text": "The administrator is already in global configuration mode."
+          },
+          {
+            "id": "opt-3",
+            "text": "The administrator must first enter privileged EXEC mode before issuing the command."
+          },
+          {
+            "id": "opt-4",
+            "text": "The administrator must connect via the console port to access global configuration mode."
+          }
+        ],
+        "correctOptionIds": [
+          "opt-3"
+        ]
+      },
+      "explanation": {
+        "answerReasoning": "The prompt \"Switch1>\" indicates the switch is in user EXEC mode. The command \"configure terminal\" (or shorthand \"config t\") is only available in privileged EXEC mode (\"Switch1#\").",
+        "conceptRefresher": "To enter privileged EXEC mode, the administrator must enter the \"enable\" command at the user EXEC prompt (\"Switch1>\").",
+        "commonMisconception": "Common misconception associated with this concept in exam preparation.",
+        "references": [
+          "Cisco CCNA 200-301 Official Cert Guide",
+          "Cisco IOS Configuration Fundamentals Command Reference"
+        ]
+      },
+      "assetReferences": [
+        {
+          "id": "exhibit-q054",
+          "type": "image",
+          "url": "/exhibits/image6.png",
+          "caption": "Exhibit: Cisco IOS Invalid Input Error",
+          "altText": "Switch1> config t followed by % Invalid input detected at ^ marker"
+        }
+      ],
+      "tagIds": [
+        "tag-domain-5",
+        "tag-topic-security-basics",
+        "tag-domain-2",
+        "tag-topic-switch-config"
+      ],
+      "verificationRecord": {
+        "verified": false,
+        "notes": "Imported from test-1 qb.docx; unverified pending review against authoritative Cisco CCNA 200-301 curriculum."
+      }
+    },
+    {
+      "id": "ccna-q055",
+      "bankId": "cisco-ccna-test-1",
+      "externalId": "q055",
+      "sourceNumber": 55,
+      "version": 1,
+      "createdAt": "2026-10-28T00:00:00.000Z",
+      "updatedAt": "2026-10-28T00:00:00.000Z",
+      "type": "single",
+      "status": "unverified",
+      "prompt": "What term describes a network owned by one organization that provides safe and secure access to individuals who work for a different organization?",
+      "payload": {
+        "options": [
+          {
+            "id": "opt-1",
+            "text": "extranet"
+          },
+          {
+            "id": "opt-2",
+            "text": "cloud"
+          },
+          {
+            "id": "opt-3",
+            "text": "BYOD"
+          },
+          {
+            "id": "opt-4",
+            "text": "quality of service"
+          }
+        ],
+        "correctOptionIds": [
+          "opt-1"
+        ]
+      },
+      "explanation": {
+        "answerReasoning": "Answer reasoning for question 55.",
+        "conceptRefresher": "Concept refresher covering the relevant CCNA syllabus topics for question 55.",
+        "commonMisconception": "Common misconception associated with this concept in exam preparation.",
+        "references": [
+          "Cisco CCNA 200-301 Official Cert Guide",
+          "Cisco IOS Configuration Fundamentals Command Reference"
+        ]
+      },
+      "assetReferences": [],
+      "tagIds": [
+        "tag-domain-1"
+      ],
+      "verificationRecord": {
+        "verified": false,
+        "notes": "Imported from test-1 qb.docx; unverified pending review against authoritative Cisco CCNA 200-301 curriculum."
+      }
+    },
+    {
+      "id": "ccna-q056",
+      "bankId": "cisco-ccna-test-1",
+      "externalId": "q056",
+      "sourceNumber": 56,
+      "version": 1,
+      "createdAt": "2026-10-28T00:00:00.000Z",
+      "updatedAt": "2026-10-28T00:00:00.000Z",
+      "type": "single",
+      "status": "unverified",
+      "prompt": "What term describes storing personal files on servers over the internet to provide access anywhere, anytime, and on any device?",
+      "payload": {
+        "options": [
+          {
+            "id": "opt-1",
+            "text": "cloud"
+          },
+          {
+            "id": "opt-2",
+            "text": "BYOD"
+          },
+          {
+            "id": "opt-3",
+            "text": "quality of service"
+          },
+          {
+            "id": "opt-4",
+            "text": "converged network"
+          }
+        ],
+        "correctOptionIds": [
+          "opt-1"
+        ]
+      },
+      "explanation": {
+        "answerReasoning": "Answer reasoning for question 56.",
+        "conceptRefresher": "Concept refresher covering the relevant CCNA syllabus topics for question 56.",
+        "commonMisconception": "Common misconception associated with this concept in exam preparation.",
+        "references": [
+          "Cisco CCNA 200-301 Official Cert Guide",
+          "Cisco IOS Configuration Fundamentals Command Reference"
+        ]
+      },
+      "assetReferences": [],
+      "tagIds": [
+        "tag-domain-1"
+      ],
+      "verificationRecord": {
+        "verified": false,
+        "notes": "Imported from test-1 qb.docx; unverified pending review against authoritative Cisco CCNA 200-301 curriculum."
+      }
+    },
+    {
+      "id": "ccna-q057",
+      "bankId": "cisco-ccna-test-1",
+      "externalId": "q057",
+      "sourceNumber": 57,
+      "version": 1,
+      "createdAt": "2026-10-28T00:00:00.000Z",
+      "updatedAt": "2026-10-28T00:00:00.000Z",
+      "type": "single",
+      "status": "unverified",
+      "prompt": "What term describes a network where one computer can be both client and server?",
+      "payload": {
+        "options": [
+          {
+            "id": "opt-1",
+            "text": "peer-to-peer"
+          },
+          {
+            "id": "opt-2",
+            "text": "cloud"
+          },
+          {
+            "id": "opt-3",
+            "text": "BYOD"
+          },
+          {
+            "id": "opt-4",
+            "text": "quality of service"
+          }
+        ],
+        "correctOptionIds": [
+          "opt-1"
+        ]
+      },
+      "explanation": {
+        "answerReasoning": "Answer reasoning for question 57.",
+        "conceptRefresher": "Concept refresher covering the relevant CCNA syllabus topics for question 57.",
+        "commonMisconception": "Common misconception associated with this concept in exam preparation.",
+        "references": [
+          "Cisco CCNA 200-301 Official Cert Guide",
+          "Cisco IOS Configuration Fundamentals Command Reference"
+        ]
+      },
+      "assetReferences": [],
+      "tagIds": [
+        "tag-domain-1"
+      ],
+      "verificationRecord": {
+        "verified": false,
+        "notes": "Imported from test-1 qb.docx; unverified pending review against authoritative Cisco CCNA 200-301 curriculum."
+      }
+    },
+    {
+      "id": "ccna-q058",
+      "bankId": "cisco-ccna-test-1",
+      "externalId": "q058",
+      "sourceNumber": 58,
+      "version": 1,
+      "createdAt": "2026-10-28T00:00:00.000Z",
+      "updatedAt": "2026-10-28T00:00:00.000Z",
+      "type": "single",
+      "status": "unverified",
+      "prompt": "What term describes a type of network used by people who work from home or from a small remote office?",
+      "payload": {
+        "options": [
+          {
+            "id": "opt-1",
+            "text": "SOHO network"
+          },
+          {
+            "id": "opt-2",
+            "text": "BYOD"
+          },
+          {
+            "id": "opt-3",
+            "text": "quality of service"
+          },
+          {
+            "id": "opt-4",
+            "text": "converged network"
+          }
+        ],
+        "correctOptionIds": [
+          "opt-1"
+        ]
+      },
+      "explanation": {
+        "answerReasoning": "Answer reasoning for question 58.",
+        "conceptRefresher": "Concept refresher covering the relevant CCNA syllabus topics for question 58.",
+        "commonMisconception": "Common misconception associated with this concept in exam preparation.",
+        "references": [
+          "Cisco CCNA 200-301 Official Cert Guide",
+          "Cisco IOS Configuration Fundamentals Command Reference"
+        ]
+      },
+      "assetReferences": [],
+      "tagIds": [
+        "tag-domain-1"
+      ],
+      "duplicateGroupId": "dup-soho-remote-office",
+      "verificationRecord": {
+        "verified": false,
+        "notes": "Imported from test-1 qb.docx; unverified pending review against authoritative Cisco CCNA 200-301 curriculum."
+      }
+    },
+    {
+      "id": "ccna-q059",
+      "bankId": "cisco-ccna-test-1",
+      "externalId": "q059",
+      "sourceNumber": 59,
+      "version": 1,
+      "createdAt": "2026-10-28T00:00:00.000Z",
+      "updatedAt": "2026-10-28T00:00:00.000Z",
+      "type": "single",
+      "status": "unverified",
+      "prompt": "What term describes a computing model where server software runs on dedicated computers?",
+      "payload": {
+        "options": [
+          {
+            "id": "opt-1",
+            "text": "client/server"
+          },
+          {
+            "id": "opt-2",
+            "text": "internet"
+          },
+          {
+            "id": "opt-3",
+            "text": "intranet"
+          },
+          {
+            "id": "opt-4",
+            "text": "extranet"
+          }
+        ],
+        "correctOptionIds": [
+          "opt-1"
+        ]
+      },
+      "explanation": {
+        "answerReasoning": "Answer reasoning for question 59.",
+        "conceptRefresher": "Concept refresher covering the relevant CCNA syllabus topics for question 59.",
+        "commonMisconception": "Common misconception associated with this concept in exam preparation.",
+        "references": [
+          "Cisco CCNA 200-301 Official Cert Guide",
+          "Cisco IOS Configuration Fundamentals Command Reference"
+        ]
+      },
+      "assetReferences": [],
+      "tagIds": [
+        "tag-domain-1"
+      ],
+      "verificationRecord": {
+        "verified": false,
+        "notes": "Imported from test-1 qb.docx; unverified pending review against authoritative Cisco CCNA 200-301 curriculum."
+      }
+    },
+    {
+      "id": "ccna-q060",
+      "bankId": "cisco-ccna-test-1",
+      "externalId": "q060",
+      "sourceNumber": 60,
+      "version": 1,
+      "createdAt": "2026-10-28T00:00:00.000Z",
+      "updatedAt": "2026-10-28T00:00:00.000Z",
+      "type": "single",
+      "status": "unverified",
+      "prompt": "What term describes a type of network used by people who work from home or from a small remote office?",
+      "payload": {
+        "options": [
+          {
+            "id": "opt-1",
+            "text": "SOHO network"
+          },
+          {
+            "id": "opt-2",
+            "text": "internet"
+          },
+          {
+            "id": "opt-3",
+            "text": "intranet"
+          },
+          {
+            "id": "opt-4",
+            "text": "extranet"
+          }
+        ],
+        "correctOptionIds": [
+          "opt-1"
+        ]
+      },
+      "explanation": {
+        "answerReasoning": "Answer reasoning for question 60.",
+        "conceptRefresher": "Concept refresher covering the relevant CCNA syllabus topics for question 60.",
+        "commonMisconception": "Common misconception associated with this concept in exam preparation.",
+        "references": [
+          "Cisco CCNA 200-301 Official Cert Guide",
+          "Cisco IOS Configuration Fundamentals Command Reference"
+        ]
+      },
+      "assetReferences": [],
+      "tagIds": [
+        "tag-domain-1"
+      ],
+      "duplicateGroupId": "dup-soho-remote-office",
+      "verificationRecord": {
+        "verified": false,
+        "notes": "Imported from test-1 qb.docx; unverified pending review against authoritative Cisco CCNA 200-301 curriculum."
+      }
+    },
+    {
+      "id": "ccna-q061",
+      "bankId": "cisco-ccna-test-1",
+      "externalId": "q061",
+      "sourceNumber": 61,
+      "version": 1,
+      "createdAt": "2026-10-28T00:00:00.000Z",
+      "updatedAt": "2026-10-28T00:00:00.000Z",
+      "type": "single",
+      "status": "unverified",
+      "prompt": "What term describes a technology that allows devices to connect to the LAN using an electrical outlet?",
+      "payload": {
+        "options": [
+          {
+            "id": "opt-1",
+            "text": "powerline networking"
+          },
+          {
+            "id": "opt-2",
+            "text": "internet"
+          },
+          {
+            "id": "opt-3",
+            "text": "intranet"
+          },
+          {
+            "id": "opt-4",
+            "text": "extranet"
+          }
+        ],
+        "correctOptionIds": [
+          "opt-1"
+        ]
+      },
+      "explanation": {
+        "answerReasoning": "Answer reasoning for question 61.",
+        "conceptRefresher": "Concept refresher covering the relevant CCNA syllabus topics for question 61.",
+        "commonMisconception": "Common misconception associated with this concept in exam preparation.",
+        "references": [
+          "Cisco CCNA 200-301 Official Cert Guide",
+          "Cisco IOS Configuration Fundamentals Command Reference"
+        ]
+      },
+      "assetReferences": [],
+      "tagIds": [
+        "tag-domain-1"
+      ],
+      "verificationRecord": {
+        "verified": false,
+        "notes": "Imported from test-1 qb.docx; unverified pending review against authoritative Cisco CCNA 200-301 curriculum."
+      }
+    },
+    {
+      "id": "ccna-q062",
+      "bankId": "cisco-ccna-test-1",
+      "externalId": "q062",
+      "sourceNumber": 62,
+      "version": 1,
+      "createdAt": "2026-10-28T00:00:00.000Z",
+      "updatedAt": "2026-10-28T00:00:00.000Z",
+      "type": "single",
+      "status": "unverified",
+      "prompt": "What term describes a policy that allows network devices to manage the flow of data to give priority to voice and video?",
+      "payload": {
+        "options": [
+          {
+            "id": "opt-1",
+            "text": "quality of service"
+          },
+          {
+            "id": "opt-2",
+            "text": "internet"
+          },
+          {
+            "id": "opt-3",
+            "text": "intranet"
+          },
+          {
+            "id": "opt-4",
+            "text": "extranet"
+          }
+        ],
+        "correctOptionIds": [
+          "opt-1"
+        ]
+      },
+      "explanation": {
+        "answerReasoning": "Answer reasoning for question 62.",
+        "conceptRefresher": "Concept refresher covering the relevant CCNA syllabus topics for question 62.",
+        "commonMisconception": "Common misconception associated with this concept in exam preparation.",
+        "references": [
+          "Cisco CCNA 200-301 Official Cert Guide",
+          "Cisco IOS Configuration Fundamentals Command Reference"
+        ]
+      },
+      "assetReferences": [],
+      "tagIds": [
+        "tag-domain-1"
+      ],
+      "verificationRecord": {
+        "verified": false,
+        "notes": "Imported from test-1 qb.docx; unverified pending review against authoritative Cisco CCNA 200-301 curriculum."
+      }
+    },
+    {
+      "id": "ccna-q063",
+      "bankId": "cisco-ccna-test-1",
+      "externalId": "q063",
+      "sourceNumber": 63,
+      "version": 1,
+      "createdAt": "2026-10-28T00:00:00.000Z",
+      "updatedAt": "2026-10-28T00:00:00.000Z",
+      "type": "single",
+      "status": "unverified",
+      "prompt": "What term describes a private collection of LANs and WANs that belongs to an organization?",
+      "payload": {
+        "options": [
+          {
+            "id": "opt-1",
+            "text": "intranet"
+          },
+          {
+            "id": "opt-2",
+            "text": "internet"
+          },
+          {
+            "id": "opt-3",
+            "text": "extranet"
+          },
+          {
+            "id": "opt-4",
+            "text": "peer-to-peer"
+          }
+        ],
+        "correctOptionIds": [
+          "opt-1"
+        ]
+      },
+      "explanation": {
+        "answerReasoning": "Answer reasoning for question 63.",
+        "conceptRefresher": "Concept refresher covering the relevant CCNA syllabus topics for question 63.",
+        "commonMisconception": "Common misconception associated with this concept in exam preparation.",
+        "references": [
+          "Cisco CCNA 200-301 Official Cert Guide",
+          "Cisco IOS Configuration Fundamentals Command Reference"
+        ]
+      },
+      "assetReferences": [],
+      "tagIds": [
+        "tag-domain-1"
+      ],
+      "verificationRecord": {
+        "verified": false,
+        "notes": "Imported from test-1 qb.docx; unverified pending review against authoritative Cisco CCNA 200-301 curriculum."
+      }
+    },
+    {
+      "id": "ccna-q064",
+      "bankId": "cisco-ccna-test-1",
+      "externalId": "q064",
+      "sourceNumber": 64,
+      "version": 1,
+      "createdAt": "2026-10-28T00:00:00.000Z",
+      "updatedAt": "2026-10-28T00:00:00.000Z",
+      "type": "single",
+      "status": "unverified",
+      "prompt": "What term describes the ability to use personal devices across a business or campus network?",
+      "payload": {
+        "options": [
+          {
+            "id": "opt-1",
+            "text": "BYOD"
+          },
+          {
+            "id": "opt-2",
+            "text": "internet"
+          },
+          {
+            "id": "opt-3",
+            "text": "intranet"
+          },
+          {
+            "id": "opt-4",
+            "text": "extranet"
+          }
+        ],
+        "correctOptionIds": [
+          "opt-1"
+        ]
+      },
+      "explanation": {
+        "answerReasoning": "Answer reasoning for question 64.",
+        "conceptRefresher": "Concept refresher covering the relevant CCNA syllabus topics for question 64.",
+        "commonMisconception": "Common misconception associated with this concept in exam preparation.",
+        "references": [
+          "Cisco CCNA 200-301 Official Cert Guide",
+          "Cisco IOS Configuration Fundamentals Command Reference"
+        ]
+      },
+      "assetReferences": [],
+      "tagIds": [
+        "tag-domain-1"
+      ],
+      "verificationRecord": {
+        "verified": false,
+        "notes": "Imported from test-1 qb.docx; unverified pending review against authoritative Cisco CCNA 200-301 curriculum."
+      }
+    },
+    {
+      "id": "ccna-q065",
+      "bankId": "cisco-ccna-test-1",
+      "externalId": "q065",
+      "sourceNumber": 65,
+      "version": 1,
+      "createdAt": "2026-10-28T00:00:00.000Z",
+      "updatedAt": "2026-10-28T00:00:00.000Z",
+      "type": "single",
+      "status": "unverified",
+      "prompt": "At which OSI layer is a source IP address added to a PDU during the encapsulation process?",
+      "payload": {
+        "options": [
+          {
+            "id": "opt-1",
+            "text": "network layer"
+          },
+          {
+            "id": "opt-2",
+            "text": "data link layer"
+          },
+          {
+            "id": "opt-3",
+            "text": "transport layer"
+          },
+          {
+            "id": "opt-4",
+            "text": "application layer"
+          }
+        ],
+        "correctOptionIds": [
+          "opt-1"
+        ]
+      },
+      "explanation": {
+        "answerReasoning": "Answer reasoning for question 65.",
+        "conceptRefresher": "Concept refresher covering the relevant CCNA syllabus topics for question 65.",
+        "commonMisconception": "Common misconception associated with this concept in exam preparation.",
+        "references": [
+          "Cisco CCNA 200-301 Official Cert Guide",
+          "Cisco IOS Configuration Fundamentals Command Reference"
+        ]
+      },
+      "assetReferences": [],
+      "tagIds": [
+        "tag-domain-1",
+        "tag-topic-osi-tcp",
+        "tag-topic-ipv4-addressing"
+      ],
+      "duplicateGroupId": "dup-osi-layer-ip-encapsulation",
+      "verificationRecord": {
+        "verified": false,
+        "notes": "Imported from test-1 qb.docx; unverified pending review against authoritative Cisco CCNA 200-301 curriculum."
+      }
+    },
+    {
+      "id": "ccna-q066",
+      "bankId": "cisco-ccna-test-1",
+      "externalId": "q066",
+      "sourceNumber": 66,
+      "version": 1,
+      "createdAt": "2026-10-28T00:00:00.000Z",
+      "updatedAt": "2026-10-28T00:00:00.000Z",
+      "type": "single",
+      "status": "unverified",
+      "prompt": "At which OSI layer is a destination port number added to a PDU during the encapsulation process?",
+      "payload": {
+        "options": [
+          {
+            "id": "opt-1",
+            "text": "transport layer"
+          },
+          {
+            "id": "opt-2",
+            "text": "data link layer"
+          },
+          {
+            "id": "opt-3",
+            "text": "network layer"
+          },
+          {
+            "id": "opt-4",
+            "text": "application layer"
+          }
+        ],
+        "correctOptionIds": [
+          "opt-1"
+        ]
+      },
+      "explanation": {
+        "answerReasoning": "Answer reasoning for question 66.",
+        "conceptRefresher": "Concept refresher covering the relevant CCNA syllabus topics for question 66.",
+        "commonMisconception": "Common misconception associated with this concept in exam preparation.",
+        "references": [
+          "Cisco CCNA 200-301 Official Cert Guide",
+          "Cisco IOS Configuration Fundamentals Command Reference"
+        ]
+      },
+      "assetReferences": [],
+      "tagIds": [
+        "tag-domain-1",
+        "tag-topic-osi-tcp"
+      ],
+      "verificationRecord": {
+        "verified": false,
+        "notes": "Imported from test-1 qb.docx; unverified pending review against authoritative Cisco CCNA 200-301 curriculum."
+      }
+    },
+    {
+      "id": "ccna-q067",
+      "bankId": "cisco-ccna-test-1",
+      "externalId": "q067",
+      "sourceNumber": 67,
+      "version": 1,
+      "createdAt": "2026-10-28T00:00:00.000Z",
+      "updatedAt": "2026-10-28T00:00:00.000Z",
+      "type": "single",
+      "status": "unverified",
+      "prompt": "At which OSI layer is data added to a PDU during the encapsulation process?",
+      "payload": {
+        "options": [
+          {
+            "id": "opt-1",
+            "text": "application layer"
+          },
+          {
+            "id": "opt-2",
+            "text": "data link layer"
+          },
+          {
+            "id": "opt-3",
+            "text": "network layer"
+          },
+          {
+            "id": "opt-4",
+            "text": "transport layer"
+          }
+        ],
+        "correctOptionIds": [
+          "opt-1"
+        ]
+      },
+      "explanation": {
+        "answerReasoning": "Answer reasoning for question 67.",
+        "conceptRefresher": "Concept refresher covering the relevant CCNA syllabus topics for question 67.",
+        "commonMisconception": "Common misconception associated with this concept in exam preparation.",
+        "references": [
+          "Cisco CCNA 200-301 Official Cert Guide",
+          "Cisco IOS Configuration Fundamentals Command Reference"
+        ]
+      },
+      "assetReferences": [],
+      "tagIds": [
+        "tag-domain-1",
+        "tag-topic-osi-tcp"
+      ],
+      "verificationRecord": {
+        "verified": false,
+        "notes": "Imported from test-1 qb.docx; unverified pending review against authoritative Cisco CCNA 200-301 curriculum."
+      }
+    },
+    {
+      "id": "ccna-q068",
+      "bankId": "cisco-ccna-test-1",
+      "externalId": "q068",
+      "sourceNumber": 68,
+      "version": 1,
+      "createdAt": "2026-10-28T00:00:00.000Z",
+      "updatedAt": "2026-10-28T00:00:00.000Z",
+      "type": "single",
+      "status": "unverified",
+      "prompt": "At which OSI layer is a source IP address added to a PDU during the encapsulation process?",
+      "payload": {
+        "options": [
+          {
+            "id": "opt-1",
+            "text": "network layer"
+          },
+          {
+            "id": "opt-2",
+            "text": "data link layer"
+          },
+          {
+            "id": "opt-3",
+            "text": "application layer"
+          },
+          {
+            "id": "opt-4",
+            "text": "presentation layer"
+          }
+        ],
+        "correctOptionIds": [
+          "opt-1"
+        ]
+      },
+      "explanation": {
+        "answerReasoning": "Answer reasoning for question 68.",
+        "conceptRefresher": "Concept refresher covering the relevant CCNA syllabus topics for question 68.",
+        "commonMisconception": "Common misconception associated with this concept in exam preparation.",
+        "references": [
+          "Cisco CCNA 200-301 Official Cert Guide",
+          "Cisco IOS Configuration Fundamentals Command Reference"
+        ]
+      },
+      "assetReferences": [],
+      "tagIds": [
+        "tag-domain-1",
+        "tag-topic-osi-tcp",
+        "tag-topic-ipv4-addressing"
+      ],
+      "duplicateGroupId": "dup-osi-layer-ip-encapsulation",
+      "verificationRecord": {
+        "verified": false,
+        "notes": "Imported from test-1 qb.docx; unverified pending review against authoritative Cisco CCNA 200-301 curriculum."
+      }
+    },
+    {
+      "id": "ccna-q069",
+      "bankId": "cisco-ccna-test-1",
+      "externalId": "q069",
+      "sourceNumber": 69,
+      "version": 1,
+      "createdAt": "2026-10-28T00:00:00.000Z",
+      "updatedAt": "2026-10-28T00:00:00.000Z",
+      "type": "single",
+      "status": "unverified",
+      "prompt": "At which OSI layer is data added to a PDU during the encapsulation process?",
+      "payload": {
+        "options": [
+          {
+            "id": "opt-1",
+            "text": "application layer"
+          },
+          {
+            "id": "opt-2",
+            "text": "transport layer"
+          },
+          {
+            "id": "opt-3",
+            "text": "network layer"
+          },
+          {
+            "id": "opt-4",
+            "text": "presentation layer"
+          }
+        ],
+        "correctOptionIds": [
+          "opt-1"
+        ]
+      },
+      "explanation": {
+        "answerReasoning": "Answer reasoning for question 69.",
+        "conceptRefresher": "Concept refresher covering the relevant CCNA syllabus topics for question 69.",
+        "commonMisconception": "Common misconception associated with this concept in exam preparation.",
+        "references": [
+          "Cisco CCNA 200-301 Official Cert Guide",
+          "Cisco IOS Configuration Fundamentals Command Reference"
+        ]
+      },
+      "assetReferences": [],
+      "tagIds": [
+        "tag-domain-1",
+        "tag-topic-osi-tcp"
+      ],
+      "verificationRecord": {
+        "verified": false,
+        "notes": "Imported from test-1 qb.docx; unverified pending review against authoritative Cisco CCNA 200-301 curriculum."
+      }
+    },
+    {
+      "id": "ccna-q070",
+      "bankId": "cisco-ccna-test-1",
+      "externalId": "q070",
+      "sourceNumber": 70,
+      "version": 1,
+      "createdAt": "2026-10-28T00:00:00.000Z",
+      "updatedAt": "2026-10-28T00:00:00.000Z",
+      "type": "single",
+      "status": "unverified",
+      "prompt": "At which OSI layer is a destination IP address added to a PDU during the encapsulation process?",
+      "payload": {
+        "options": [
+          {
+            "id": "opt-1",
+            "text": "network layer"
+          },
+          {
+            "id": "opt-2",
+            "text": "application layer"
+          },
+          {
+            "id": "opt-3",
+            "text": "transport layer"
+          },
+          {
+            "id": "opt-4",
+            "text": "presentation layer"
+          }
+        ],
+        "correctOptionIds": [
+          "opt-1"
+        ]
+      },
+      "explanation": {
+        "answerReasoning": "Answer reasoning for question 70.",
+        "conceptRefresher": "Concept refresher covering the relevant CCNA syllabus topics for question 70.",
+        "commonMisconception": "Common misconception associated with this concept in exam preparation.",
+        "references": [
+          "Cisco CCNA 200-301 Official Cert Guide",
+          "Cisco IOS Configuration Fundamentals Command Reference"
+        ]
+      },
+      "assetReferences": [],
+      "tagIds": [
+        "tag-domain-1",
+        "tag-topic-osi-tcp",
+        "tag-topic-ipv4-addressing"
+      ],
+      "verificationRecord": {
+        "verified": false,
+        "notes": "Imported from test-1 qb.docx; unverified pending review against authoritative Cisco CCNA 200-301 curriculum."
+      }
+    },
+    {
+      "id": "ccna-q071",
+      "bankId": "cisco-ccna-test-1",
+      "externalId": "q071",
+      "sourceNumber": 71,
+      "version": 1,
+      "createdAt": "2026-10-28T00:00:00.000Z",
+      "updatedAt": "2026-10-28T00:00:00.000Z",
+      "type": "single",
+      "status": "unverified",
+      "prompt": "At which OSI layer is a source MAC address added to a PDU during the encapsulation process?",
+      "payload": {
+        "options": [
+          {
+            "id": "opt-1",
+            "text": "data link layer"
+          },
+          {
+            "id": "opt-2",
+            "text": "application layer"
+          },
+          {
+            "id": "opt-3",
+            "text": "transport layer"
+          },
+          {
+            "id": "opt-4",
+            "text": "presentation layer"
+          }
+        ],
+        "correctOptionIds": [
+          "opt-1"
+        ]
+      },
+      "explanation": {
+        "answerReasoning": "Answer reasoning for question 71.",
+        "conceptRefresher": "Concept refresher covering the relevant CCNA syllabus topics for question 71.",
+        "commonMisconception": "Common misconception associated with this concept in exam preparation.",
+        "references": [
+          "Cisco CCNA 200-301 Official Cert Guide",
+          "Cisco IOS Configuration Fundamentals Command Reference"
+        ]
+      },
+      "assetReferences": [],
+      "tagIds": [
+        "tag-domain-1",
+        "tag-topic-osi-tcp"
+      ],
+      "verificationRecord": {
+        "verified": false,
+        "notes": "Imported from test-1 qb.docx; unverified pending review against authoritative Cisco CCNA 200-301 curriculum."
+      }
+    },
+    {
+      "id": "ccna-q072",
+      "bankId": "cisco-ccna-test-1",
+      "externalId": "q072",
+      "sourceNumber": 72,
+      "version": 1,
+      "createdAt": "2026-10-28T00:00:00.000Z",
+      "updatedAt": "2026-10-28T00:00:00.000Z",
+      "type": "single",
+      "status": "unverified",
+      "prompt": "At which OSI layer is a source port number added to a PDU during the encapsulation process?",
+      "payload": {
+        "options": [
+          {
+            "id": "opt-1",
+            "text": "transport layer"
+          },
+          {
+            "id": "opt-2",
+            "text": "application layer"
+          },
+          {
+            "id": "opt-3",
+            "text": "network layer"
+          },
+          {
+            "id": "opt-4",
+            "text": "presentation layer"
+          }
+        ],
+        "correctOptionIds": [
+          "opt-1"
+        ]
+      },
+      "explanation": {
+        "answerReasoning": "Answer reasoning for question 72.",
+        "conceptRefresher": "Concept refresher covering the relevant CCNA syllabus topics for question 72.",
+        "commonMisconception": "Common misconception associated with this concept in exam preparation.",
+        "references": [
+          "Cisco CCNA 200-301 Official Cert Guide",
+          "Cisco IOS Configuration Fundamentals Command Reference"
+        ]
+      },
+      "assetReferences": [],
+      "tagIds": [
+        "tag-domain-1",
+        "tag-topic-osi-tcp"
+      ],
+      "verificationRecord": {
+        "verified": false,
+        "notes": "Imported from test-1 qb.docx; unverified pending review against authoritative Cisco CCNA 200-301 curriculum."
+      }
+    },
+    {
+      "id": "ccna-q073",
+      "bankId": "cisco-ccna-test-1",
+      "externalId": "q073",
+      "sourceNumber": 73,
+      "version": 1,
+      "createdAt": "2026-10-28T00:00:00.000Z",
+      "updatedAt": "2026-10-28T00:00:00.000Z",
+      "type": "single",
+      "status": "unverified",
+      "prompt": "At which OSI layer is a destination MAC address added to a PDU during the encapsulation process?",
+      "payload": {
+        "options": [
+          {
+            "id": "opt-1",
+            "text": "data link layer"
+          },
+          {
+            "id": "opt-2",
+            "text": "transport layer"
+          },
+          {
+            "id": "opt-3",
+            "text": "application layer"
+          },
+          {
+            "id": "opt-4",
+            "text": "network layer"
+          }
+        ],
+        "correctOptionIds": [
+          "opt-1"
+        ]
+      },
+      "explanation": {
+        "answerReasoning": "Answer reasoning for question 73.",
+        "conceptRefresher": "Concept refresher covering the relevant CCNA syllabus topics for question 73.",
+        "commonMisconception": "Common misconception associated with this concept in exam preparation.",
+        "references": [
+          "Cisco CCNA 200-301 Official Cert Guide",
+          "Cisco IOS Configuration Fundamentals Command Reference"
+        ]
+      },
+      "assetReferences": [],
+      "tagIds": [
+        "tag-domain-1",
+        "tag-topic-osi-tcp"
+      ],
+      "verificationRecord": {
+        "verified": false,
+        "notes": "Imported from test-1 qb.docx; unverified pending review against authoritative Cisco CCNA 200-301 curriculum."
+      }
+    },
+    {
+      "id": "ccna-q074",
+      "bankId": "cisco-ccna-test-1",
+      "externalId": "q074",
+      "sourceNumber": 74,
+      "version": 1,
+      "createdAt": "2026-10-28T00:00:00.000Z",
+      "updatedAt": "2026-10-28T00:00:00.000Z",
+      "type": "single",
+      "status": "unverified",
+      "prompt": "When data is encoded as pulses of light, which media is being used to transmit the data?",
+      "payload": {
+        "options": [
+          {
+            "id": "opt-1",
+            "text": "Wireless"
+          },
+          {
+            "id": "opt-2",
+            "text": "Fire optic cable"
+          },
+          {
+            "id": "opt-3",
+            "text": "Copper cable"
+          }
+        ],
+        "correctOptionIds": [
+          "opt-2"
+        ]
+      },
+      "explanation": {
+        "answerReasoning": "Answer reasoning for question 74.",
+        "conceptRefresher": "Concept refresher covering the relevant CCNA syllabus topics for question 74.",
+        "commonMisconception": "Common misconception associated with this concept in exam preparation.",
+        "references": [
+          "Cisco CCNA 200-301 Official Cert Guide",
+          "Cisco IOS Configuration Fundamentals Command Reference"
+        ]
+      },
+      "assetReferences": [],
+      "tagIds": [
+        "tag-domain-1",
+        "tag-topic-media-cabling"
+      ],
+      "cleanupNotes": "Source contains typo \"Fire optic cable\"; preserved as written in source with review note noting correction to \"Fiber optic cable\".",
+      "verificationRecord": {
+        "verified": false,
+        "notes": "Imported from test-1 qb.docx; unverified pending review against authoritative Cisco CCNA 200-301 curriculum."
+      }
+    },
+    {
+      "id": "ccna-q075",
+      "bankId": "cisco-ccna-test-1",
+      "externalId": "q075",
+      "sourceNumber": 75,
+      "version": 1,
+      "createdAt": "2026-10-28T00:00:00.000Z",
+      "updatedAt": "2026-10-28T00:00:00.000Z",
+      "type": "single",
+      "status": "unverified",
+      "prompt": "Which two devices are intermediary devices? (Choose two)",
+      "payload": {
+        "options": [
+          {
+            "id": "opt-1",
+            "text": "Host"
+          },
+          {
+            "id": "opt-2",
+            "text": "Router"
+          },
+          {
+            "id": "opt-3",
+            "text": "Switch"
+          },
+          {
+            "id": "opt-4",
+            "text": "Servers"
+          }
+        ],
+        "correctOptionIds": [
+          "opt-1"
+        ]
+      },
+      "explanation": {
+        "answerReasoning": "Answer reasoning for question 75.",
+        "conceptRefresher": "Concept refresher covering the relevant CCNA syllabus topics for question 75.",
+        "commonMisconception": "Common misconception associated with this concept in exam preparation.",
+        "references": [
+          "Cisco CCNA 200-301 Official Cert Guide",
+          "Cisco IOS Configuration Fundamentals Command Reference"
+        ]
+      },
+      "assetReferences": [],
+      "tagIds": [
+        "tag-domain-2",
+        "tag-topic-switch-config",
+        "tag-domain-1",
+        "tag-topic-media-cabling"
+      ],
+      "verificationRecord": {
+        "verified": false,
+        "notes": "Imported from test-1 qb.docx; unverified pending review against authoritative Cisco CCNA 200-301 curriculum."
+      }
+    },
+    {
+      "id": "dev-fixture-01",
+      "bankId": "cisco-ccna-test-1",
+      "externalId": "fixture-001",
+      "sourceNumber": 1001,
+      "version": 1,
+      "createdAt": "2026-10-28T00:00:00.000Z",
+      "updatedAt": "2026-10-28T00:00:00.000Z",
+      "type": "single",
+      "status": "unverified",
+      "prompt": "[DEV FIXTURE] Which layer of the OSI reference model is responsible for logical IP addressing and path determination?",
+      "payload": {
+        "options": [
+          {
+            "id": "opt-1",
+            "text": "Physical layer (Layer 1)"
+          },
+          {
+            "id": "opt-2",
+            "text": "Data link layer (Layer 2)"
+          },
+          {
+            "id": "opt-3",
+            "text": "Network layer (Layer 3)"
+          },
+          {
+            "id": "opt-4",
+            "text": "Transport layer (Layer 4)"
+          }
+        ],
+        "correctOptionIds": [
+          "opt-3"
+        ]
+      },
+      "explanation": {
+        "answerReasoning": "The Network layer (Layer 3) handles logical addressing (IPv4/IPv6) and best-path routing across interconnected networks.",
+        "conceptRefresher": "OSI 7 Layers: Application, Presentation, Session, Transport, Network, Data Link, Physical.",
+        "references": [
+          "CCNA 200-301 Official Cert Guide Vol 1"
+        ]
+      },
+      "assetReferences": [],
+      "tagIds": [
+        "tag-domain-1",
+        "tag-topic-osi-tcp"
+      ],
+      "isDevFixture": true,
+      "verificationRecord": {
+        "verified": false,
+        "notes": "Development fixture explicitly excluded from real progress statistics."
+      }
+    },
+    {
+      "id": "dev-fixture-02",
+      "bankId": "cisco-ccna-test-1",
+      "externalId": "fixture-002",
+      "sourceNumber": 1002,
+      "version": 1,
+      "createdAt": "2026-10-28T00:00:00.000Z",
+      "updatedAt": "2026-10-28T00:00:00.000Z",
+      "type": "multi",
+      "status": "unverified",
+      "prompt": "[DEV FIXTURE] Which two protocols operate at the transport layer of the TCP/IP model? (Choose two.)",
+      "payload": {
+        "options": [
+          {
+            "id": "opt-1",
+            "text": "Transmission Control Protocol (TCP)"
+          },
+          {
+            "id": "opt-2",
+            "text": "Internet Protocol (IP)"
+          },
+          {
+            "id": "opt-3",
+            "text": "User Datagram Protocol (UDP)"
+          },
+          {
+            "id": "opt-4",
+            "text": "Address Resolution Protocol (ARP)"
+          },
+          {
+            "id": "opt-5",
+            "text": "Hypertext Transfer Protocol (HTTP)"
+          }
+        ],
+        "correctOptionIds": [
+          "opt-1",
+          "opt-3"
+        ],
+        "requiredSelections": 2
+      },
+      "explanation": {
+        "answerReasoning": "TCP and UDP are the primary transport layer protocols in the TCP/IP suite. IP and ARP operate at the Internet/network layer.",
+        "conceptRefresher": "TCP provides connection-oriented reliable delivery; UDP provides lightweight, connectionless datagram delivery.",
+        "references": [
+          "RFC 793 (TCP)",
+          "RFC 768 (UDP)"
+        ]
+      },
+      "assetReferences": [],
+      "tagIds": [
+        "tag-domain-1",
+        "tag-topic-osi-tcp"
+      ],
+      "isDevFixture": true,
+      "verificationRecord": {
+        "verified": false,
+        "notes": "Development fixture explicitly excluded from real progress statistics."
+      }
+    }
+  ]
+}
