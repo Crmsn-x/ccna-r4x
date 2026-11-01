@@ -1,68 +1,123 @@
 @import "tailwindcss";
 
+@custom-variant dark (&:where([data-theme="dark"], [data-theme="dark"] *));
+
 :root {
-  /* Default Light Theme */
-  --bg-page: #F7F8FA;
+  /* Reference Specification - Light Theme */
+  --bg-page: #FFFFFF;
   --bg-panel: #FFFFFF;
-  --bg-sidebar: #14243B;
-  --text-primary: #172033;
-  --text-secondary: #526174;
-  --text-sidebar: #F1F5F9;
-  --text-sidebar-muted: #94A3B8;
-  --border: #D9E1EB;
-  --border-sidebar: #1E293B;
+  --bg-sidebar: #F1F7FC; /* exact reference #F1F7FC */
+  --border-sidebar: #E4ECF4; /* exact reference 1px solid #E4ECF4 */
+  
+  --wordmark-color: #0B1223;
+  --sidebar-nav-text: #11182A;
+  --sidebar-icon-color: #354158;
+  --sidebar-active-bg: #DFEAFF; /* exact reference #DFEAFF */
+  --sidebar-active-text: #087BFF; /* exact reference #087BFF */
+  --sidebar-hover-bg: #E8F0FA; /* exact reference #E8F0FA */
+  --sidebar-pressed-bg: #D4E3FA; /* exact reference #D4E3FA */
+  --sidebar-divider: #D8E2EE; /* exact reference #D8E2EE */
+  --soon-badge-bg: #E3EAF3; /* exact reference #E3EAF3 */
+  --soon-badge-text: #526078; /* exact reference #526078 */
+
+  --bg-card: #FFFFFF;
+  --border-card: #E5E9F0;
+  
+  --text-heading: #0C1523; /* near-black navy */
+  --text-primary: #0C1523; /* near-black navy */
+  --text-secondary: #64748B; /* muted slate */
+  
+  --text-sidebar: #11182A;
+  --text-sidebar-muted: #64748B;
+  
+  --border: #E5E9F0;
+  --divider: #E8EDF5;
   --accent: #2563EB;
   --accent-hover: #1D4ED8;
   --accent-fg: #FFFFFF;
 
-  /* Semantic Status Tokens */
-  --success-bg: #ECFDF5;
-  --success-border: #A7F3D0;
-  --success-text: #065F46;
+  /* Session banner - intentionally charcoal in both themes */
+  --session-banner-bg: #1B222E;
+  --session-banner-text: #FFFFFF;
+  --session-banner-muted: #94A3B8;
 
-  --warning-bg: #FFFBEB;
-  --warning-border: #FDE68A;
-  --warning-text: #92400E;
+  /* Study card icons */
+  --icon-tile-bg: #E8F1FD;
+  --icon-tile-text: #2563EB;
 
-  --error-bg: #FEF2F2;
-  --error-border: #FECACA;
-  --error-text: #991B1B;
+  /* Semantic Status Tokens (High WCAG AAA Contrast >= 7:1) */
+  --success-bg: #D1FAE5;
+  --success-border: #059669;
+  --success-text: #064E3B;
 
-  /* Distinct incorrect response tokens (distinct from crimson accent) */
+  --warning-bg: #FEF3C7;
+  --warning-border: #D97706;
+  --warning-text: #78350F;
+
+  --error-bg: #FEE2E2;
+  --error-border: #DC2626;
+  --error-text: #7F1D1D;
+
   --incorrect-bg: #FFF1F2;
-  --incorrect-border: #FDA4AF;
-  --incorrect-text: #9F1239;
+  --incorrect-border: #F43F5E;
+  --incorrect-text: #881337;
   --incorrect-icon: #E11D48;
 
-  --ring-focus: #2563EB;
+  --ring-focus: #087BFF;
 }
 
-[data-theme="dark"] {
-  /* Crimson / Black Dark Theme */
-  --bg-page: #000000;
-  --bg-panel: #0F0F10;
-  --bg-sidebar: #0F0F10;
-  --text-primary: #EDEDED;
-  --text-secondary: #A6A6AE;
-  --text-sidebar: #EDEDED;
-  --text-sidebar-muted: #A6A6AE;
-  --border: #303036;
-  --border-sidebar: #222226;
-  --accent: #DC143C;
-  --accent-hover: #B01030;
+html[data-theme="dark"], :root[data-theme="dark"] {
+  /* Reference Specification - Dark Theme (Charcoal / Crimson / Blue) */
+  --bg-page: #0B0F17;
+  --bg-panel: #111827;
+  --bg-sidebar: #0D121C;
+  --border-sidebar: #1E293B;
+  
+  --wordmark-color: #F8FAFC;
+  --sidebar-nav-text: #E2E8F0;
+  --sidebar-icon-color: #94A3B8;
+  --sidebar-active-bg: #1E2B45;
+  --sidebar-active-text: #DC143C; /* crimson navigation accents */
+  --sidebar-hover-bg: #172033;
+  --sidebar-pressed-bg: #1E2B45;
+  --sidebar-divider: #1E293B;
+  --soon-badge-bg: #1E293B;
+  --soon-badge-text: #94A3B8;
+
+  --bg-card: #131926;
+  --border-card: #1F293D;
+
+  --text-heading: #F8FAFC;
+  --text-primary: #F8FAFC;
+  --text-secondary: #94A3B8;
+  
+  --text-sidebar: #E2E8F0;
+  --text-sidebar-muted: #64748B;
+  
+  --border: #1E293B;
+  --divider: #1E293B;
+  --accent: #3B82F6;
+  --accent-hover: #2563EB;
   --accent-fg: #FFFFFF;
 
-  --success-bg: #06281E;
-  --success-border: #047857;
-  --success-text: #34D399;
+  --session-banner-bg: #131926;
+  --session-banner-text: #FFFFFF;
+  --session-banner-muted: #94A3B8;
 
-  --warning-bg: #2E1A05;
+  --icon-tile-bg: #1E293D;
+  --icon-tile-text: #60A5FA;
+
+  --success-bg: #05261C;
+  --success-border: #047857;
+  --success-text: #A7F3D0;
+
+  --warning-bg: #2B1705;
   --warning-border: #B45309;
-  --warning-text: #FBBF24;
+  --warning-text: #FDE68A;
 
   --error-bg: #280B10;
   --error-border: #991B1B;
-  --error-text: #F87171;
+  --error-text: #FECDD3;
 
   --incorrect-bg: #380D14;
   --incorrect-border: #881337;
@@ -75,7 +130,7 @@
 body {
   background-color: var(--bg-page);
   color: var(--text-primary);
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   min-height: 100vh;
   margin: 0;
   padding: 0;
@@ -90,6 +145,31 @@ code, pre, kbd {
 :focus-visible {
   outline: 2px solid var(--ring-focus);
   outline-offset: 2px;
+}
+
+/* Accessible disabled controls with readable contrast */
+button:disabled, input:disabled, select:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+}
+
+/* High contrast badge utilities */
+.badge-warning {
+  background-color: var(--warning-bg);
+  color: var(--warning-text);
+  border: 1px solid var(--warning-border);
+}
+
+.badge-success {
+  background-color: var(--success-bg);
+  color: var(--success-text);
+  border: 1px solid var(--success-border);
+}
+
+.notice-warning {
+  background-color: var(--warning-bg);
+  color: var(--warning-text);
+  border: 1px solid var(--warning-border);
 }
 
 /* Respect reduced motion */

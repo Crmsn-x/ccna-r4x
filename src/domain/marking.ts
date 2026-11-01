@@ -60,8 +60,9 @@ export function markQuestion(question: Question, answer: ClientAnswer): MarkingR
       const payload = question.payload as MatchingPayload;
       const matchAns = answer as { type: 'matching'; mapping: Record<string, string | null> };
       
+      const mapping = payload.correctMapping || (payload.correctMatches ? Object.fromEntries(payload.correctMatches.map(m => [m.promptId, m.choiceId])) : {});
       let allMatch = true;
-      for (const [promptId, expectedChoiceId] of Object.entries(payload.correctMapping)) {
+      for (const [promptId, expectedChoiceId] of Object.entries(mapping)) {
         const submittedChoiceId = matchAns.mapping[promptId] ?? null;
         if (submittedChoiceId !== expectedChoiceId) {
           allMatch = false;
@@ -70,7 +71,7 @@ export function markQuestion(question: Question, answer: ClientAnswer): MarkingR
       }
       isCorrect = allMatch;
       correctAnswerSummary = {
-        correctMapping: payload.correctMapping,
+        correctMapping: mapping,
       };
       break;
     }
@@ -87,6 +88,7 @@ export function markQuestion(question: Question, answer: ClientAnswer): MarkingR
 
       correctAnswerSummary = {
         correctOrderIds: payload.correctOrderIds,
+        distractorItemIds: payload.distractorItemIds || [],
       };
       break;
     }

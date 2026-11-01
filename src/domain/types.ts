@@ -9,9 +9,9 @@ export type QuestionType = 'single' | 'multi' | 'matching' | 'ordering';
 export type QuestionStatus = 'unverified' | 'verified' | 'needs-source';
 export type ConfidenceLevel = 'confident' | 'unsure' | 'guessed';
 export type SessionMode = 'learn' | 'assess';
-export type ContentTrack = 'verified' | 'draft';
+export type ContentTrack = 'verified' | 'draft' | 'fixture';
 export type SessionStatus = 'active' | 'completed' | 'abandoned';
-export type TagKind = 'domain' | 'topic' | 'subtopic' | 'module' | 'lesson';
+export type TagKind = 'course' | 'domain' | 'topic' | 'subtopic' | 'module' | 'lesson';
 
 export interface Tag {
   id: string;
@@ -20,6 +20,7 @@ export interface Tag {
   parentId?: string | null;
   courseId?: string | null;
   blueprintVersion?: string; // e.g. "CCNA 200-301 v1.1"
+  mappingStatus?: string;
 }
 
 export interface OptionItem {
@@ -30,6 +31,7 @@ export interface OptionItem {
 export interface SingleChoicePayload {
   options: OptionItem[];
   correctOptionIds: string[]; // single element for valid single-choice
+  requiredSelections?: number;
 }
 
 export interface MultiChoicePayload {
@@ -53,7 +55,9 @@ export interface MatchingPayload {
   choices: MatchingChoice[]; // includes possible distractors
   // Map of promptId -> choiceId (or null if "No match" is explicitly authored)
   correctMapping: Record<string, string | null>;
+  correctMatches?: { promptId: string; choiceId: string | null }[];
   allowChoiceReuse: boolean;
+  allowNoMatch?: boolean;
 }
 
 export interface OrderingItem {
@@ -64,6 +68,7 @@ export interface OrderingItem {
 export interface OrderingPayload {
   items: OrderingItem[];
   correctOrderIds: string[]; // ordered sequence of item ids
+  distractorItemIds?: string[];
 }
 
 export type QuestionPayload =
@@ -85,6 +90,17 @@ export interface Explanation {
   commonMisconception?: string;
   references?: string[];
   relatedLabIds?: string[];
+  summary?: { text: string; origin: string; sourceRefs: unknown[] };
+  concept?: { text: string; origin: string; sourceRefs: unknown[] };
+  sourceExplanation?: { text: string; origin: string; sourceRefs: unknown[] } | null;
+  optionRationales?: Array<{ optionId: string; rationale: { text: string; origin: string; sourceRefs: unknown[] } }>;
+  matchingRationales?: Array<{ promptId: string; rationale: { text: string; origin: string; sourceRefs: unknown[] } }>;
+  orderingRationales?: Array<{ itemId: string; rationale: { text: string; origin: string; sourceRefs: unknown[] } }>;
+  commonMistakes?: Array<{ text: string; origin: string; sourceRefs: unknown[] }>;
+  practicalExample?: { intro: { text: string; origin: string; sourceRefs: unknown[] }; code?: string | null; language?: string | null } | null;
+  relatedQuestionIds?: string[];
+  correctAnswerLetter?: string;
+  optionExplanations?: Record<string, string>;
 }
 
 export interface AssetReference {
@@ -101,14 +117,19 @@ export interface VerificationRecord {
   verifiedAt?: string;
   verifiedBy?: string;
   authoritativeSource?: string;
+  consultedSources?: string[];
+  suggestedReferences?: string[];
+  whatWasChecked?: string;
+  referenceLocation?: string;
   notes?: string;
   unresolvedAmbiguity?: string;
+  trialOnly?: boolean;
 }
 
 export interface Question {
   id: string;
   bankId: string;
-  externalId: string; // e.g. "q001", scoped to bankId
+  externalId: string; // e.g. "q001" or "itn-m01-03-test-q001", scoped to bankId
   sourceNumber: number;
   version: number;
   createdAt: string;
@@ -118,9 +139,25 @@ export interface Question {
   needsSourceReason?: string; // required when status is 'needs-source'
   prompt: string;
   structuredBlocks?: {
-    type: 'paragraph' | 'code' | 'callout';
-    content: string;
+    type: 'paragraph' | 'code' | 'callout' | 'text' | 'image';
+    content?: string;
+    text?: string;
+    language?: string;
+    assetId?: string;
   }[];
+  blocks?: Array<{
+    type: string;
+    text?: string;
+    language?: string;
+    assetId?: string;
+  }>;
+  sourceNumbers?: Array<{
+    sourceId: string;
+    number: number;
+    pages: number[];
+  }>;
+  moduleIds?: string[];
+  topicIds?: string[];
   difficulty?: 'entry' | 'intermediate' | 'advanced';
   payload:
     | SingleChoicePayload
@@ -131,9 +168,19 @@ export interface Question {
   assetReferences: AssetReference[];
   tagIds: string[];
   cleanupNotes?: string;
-  duplicateGroupId?: string;
+  duplicateGroupId?: string | null;
   verificationRecord?: VerificationRecord;
   isDevFixture?: boolean; // development fixture excluded from real progress statistics
+  provenance?: unknown;
+  editorialNotes?: Array<{
+    field: string;
+    originalText: string;
+    revisedText: string;
+    reason: string;
+  }>;
+  verificationStatus?: string;
+  trialOnly?: boolean;
+  sourceAnswer?: string;
 }
 
 export interface ImmutableQuestionSnapshot {
@@ -148,8 +195,8 @@ export interface ImmutableQuestionSnapshot {
   payload:
     | { options: OptionItem[] } // sanitized single
     | { options: OptionItem[]; requiredSelections: number } // sanitized multi
-    | { prompts: MatchingPrompt[]; choices: MatchingChoice[]; allowChoiceReuse: boolean } // sanitized matching
-    | { items: OrderingItem[] }; // sanitized ordering
+    | { prompts: MatchingPrompt[]; choices: MatchingChoice[]; allowChoiceReuse: boolean; allowNoMatch?: boolean } // sanitized matching
+    | { items: OrderingItem[]; distractorItemIds?: string[] }; // sanitized ordering
   initialDisplayOrder?: string[]; // for ordering initial shuffle or options presentation
 }
 
@@ -190,10 +237,17 @@ export interface SubmittedResponse {
   submittedAt: string;
 }
 
+export type ScopeType = 'all' | 'domain' | 'topic' | 'module';
+
 export interface ScopeFilterSnapshot {
+  scopeType: ScopeType;
   domainTagIds?: string[];
   topicTagIds?: string[];
+  subtopicTagIds?: string[];
   moduleTagIds?: string[];
+  lessonTagIds?: string[];
+  resolvedTagIds?: string[];
+  scopeSummary?: string;
   selectionCriteria: 'unseen' | 'incorrect' | 'due' | 'all';
   requestedCount: number;
 }

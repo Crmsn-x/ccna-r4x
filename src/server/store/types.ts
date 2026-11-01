@@ -53,6 +53,7 @@ export interface Store {
   createSession(params: CreateSessionParams): Promise<Session>;
   getSession(sessionId: string): Promise<Session | null>;
   listSessions(userId?: string): Promise<Session[]>;
+  finalizeSession(sessionId: string): Promise<Session>;
   
   /** Responses & Marking */
   saveDraftResponse(draft: DraftResponse): Promise<DraftResponse>;

@@ -1,205 +1,355 @@
 import Link from 'next/link';
 import { getStore } from '@/server/store';
+import { OverviewSearch } from '@/components/OverviewSearch';
 
 export const dynamic = 'force-dynamic';
 
 export default async function OverviewPage() {
   const store = getStore();
-  const [questions, sessions, dueReviews] = await Promise.all([
+  const [questions, sessions, dueReviews, reviewStates] = await Promise.all([
     store.getQuestions(),
     store.listSessions(),
     store.getDueReviews(),
+    store.getReviewStates(),
   ]);
 
-  const totalSourceQuestions = questions.length;
-  const verifiedCount = questions.filter(q => q.status === 'verified').length;
-  const unverifiedCount = questions.filter(q => q.status === 'unverified').length;
-  const needsSourceCount = questions.filter(q => q.status === 'needs-source').length;
+  const totalBankQuestions = questions.length; // 75
+  const reviewedCount = reviewStates.length; // Reviewed so far
+  const needsSourceCount = questions.filter(q => q.status === 'needs-source').length; // 2
+
+  // Active session
   const activeSession = sessions.find(s => s.status === 'active');
+  const activeCount = activeSession ? activeSession.questionIds.length : 1;
+  const isDraftPractice = !activeSession || activeSession.contentTrack === 'draft' || activeSession.mode === 'learn';
+  const sessionSubtitle = activeSession
+    ? `${isDraftPractice ? 'Draft practice' : 'Timed assessment'} · ${activeCount} question${activeCount === 1 ? '' : 's'}`
+    : 'Draft practice · 1 question';
+
+  const resumeHref = activeSession ? `/practice/${activeSession.id}` : '/practice';
 
   return (
-    <div className="space-y-8">
-      {/* Page Header */}
-      <div>
-        <h1 className="text-2xl font-bold tracking-tight">Overview</h1>
-        <p className="text-sm text-[var(--text-secondary)] mt-1">
-          CCNA 200-301 Revision & Knowledge Assessment Hub
-        </p>
+    <div className="w-full">
+      {/* 1. Page Header (Overview heading 48px bold + Search box 438x52px) */}
+      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-2">
+        <h1 className="text-[36px] sm:text-[44px] lg:text-[48px] font-bold tracking-tight text-[var(--text-heading)] leading-none">
+          Overview
+        </h1>
+        <OverviewSearch />
       </div>
 
-      {/* Honest Content & Status Banner */}
-      <div className="p-4 rounded-xl border border-amber-500/30 bg-amber-500/10 text-amber-600 dark:text-amber-300">
-        <div className="flex items-start gap-3">
-          <svg className="w-5 h-5 mt-0.5 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+      {/* 2. Session Banner (charcoal #1B222E, min-height ~281px, rounded-[8px]) */}
+      <div className="mt-8 mb-9 bg-[var(--session-banner-bg)] text-[var(--session-banner-text)] rounded-[8px] p-7 sm:p-9 lg:p-11 min-h-[281px] flex flex-col md:flex-row md:items-center justify-between gap-8 shadow-xs relative overflow-hidden">
+        <div className="max-w-2xl z-10">
+          <div className="flex items-center gap-2.5">
+            <span className="w-2.5 h-2.5 rounded-full bg-[#1877F2] inline-block shrink-0" />
+            <span className="text-[12px] sm:text-[13px] font-semibold tracking-wider text-slate-300 uppercase">
+              SESSION IN PROGRESS
+            </span>
+          </div>
+
+          <h2 className="text-[30px] sm:text-[36px] lg:text-[40px] font-bold text-white mt-3.5 mb-2 tracking-tight leading-tight">
+            Pick up where you left off.
+          </h2>
+
+          <p className="text-[18px] sm:text-[20px] text-[var(--session-banner-muted)] mb-8 font-normal">
+            {sessionSubtitle}
+          </p>
+
+          <div className="flex flex-wrap items-center gap-6 sm:gap-8">
+            <Link
+              href={resumeHref}
+              id="resume-session-btn"
+              className="inline-flex items-center gap-2.5 bg-white text-[#0B1223] font-semibold px-7 py-3.5 rounded-[8px] text-[16px] hover:bg-slate-100 transition-colors shadow-xs"
+            >
+              <span>Resume session</span>
+              <svg
+                className="w-4 h-4 stroke-[2.25] text-[#0B1223]"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              >
+                <line x1="5" y1="12" x2="19" y2="12" />
+                <polyline points="12 5 19 12 12 19" />
+              </svg>
+            </Link>
+
+            <Link
+              href="/practice"
+              id="start-new-session-btn"
+              className="text-slate-300 hover:text-white text-[16px] font-medium transition-colors"
+            >
+              Start new session
+            </Link>
+          </div>
+        </div>
+
+        {/* High-Fidelity 3D Perspective Cards Graphic on Right */}
+        <div className="relative w-80 lg:w-[410px] h-52 shrink-0 hidden md:flex items-center justify-center select-none pointer-events-none">
+          <svg
+            viewBox="0 0 440 280"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            className="w-full h-full"
+          >
+            {/* Card 3 (Back) */}
+            <g transform="translate(182, 38) skewY(4.5)">
+              <rect
+                width="176"
+                height="142"
+                rx="12"
+                fill="#161E2B"
+                stroke="rgba(175, 195, 220, 0.28)"
+                strokeWidth="1.5"
+              />
+            </g>
+
+            {/* Card 2 (Middle) */}
+            <g transform="translate(118, 54) skewY(4.5)">
+              <rect
+                width="176"
+                height="142"
+                rx="12"
+                fill="#192230"
+                stroke="rgba(175, 195, 220, 0.48)"
+                strokeWidth="1.5"
+              />
+            </g>
+
+            {/* Card 1 (Front) */}
+            <g transform="translate(54, 70) skewY(4.5)">
+              <rect
+                width="176"
+                height="142"
+                rx="12"
+                fill="#1C2534"
+                stroke="#FFFFFF"
+                strokeWidth="1.75"
+              />
+              {/* Blue rounded badge icon */}
+              <rect
+                x="20"
+                y="20"
+                width="28"
+                height="28"
+                rx="7"
+                fill="#087BFF"
+              />
+              {/* 3 Prompt wireframe lines */}
+              <line
+                x1="20"
+                y1="72"
+                x2="136"
+                y2="72"
+                stroke="rgba(255, 255, 255, 0.9)"
+                strokeWidth="2.2"
+                strokeLinecap="round"
+              />
+              <line
+                x1="20"
+                y1="94"
+                x2="116"
+                y2="94"
+                stroke="rgba(255, 255, 255, 0.9)"
+                strokeWidth="2.2"
+                strokeLinecap="round"
+              />
+              <line
+                x1="20"
+                y1="116"
+                x2="80"
+                y2="116"
+                stroke="rgba(255, 255, 255, 0.9)"
+                strokeWidth="2.2"
+                strokeLinecap="round"
+              />
+            </g>
           </svg>
-          <div className="text-xs space-y-1">
-            <p className="font-semibold text-sm">Phase 0 & 1 Review Checkpoint: Honest Status Tracking</p>
-            <p>
-              All 75 source questions from the supplied question bank have been extracted, classified, and stored in the canonical seed.
-              As required by the build brief, AI-drafted answers start strictly <strong>unverified</strong> (73 questions) and unusable questions with missing materials are classified as <strong>needs-source</strong> (2 questions: Q5 and Q52).
-            </p>
-          </div>
         </div>
       </div>
 
-      {/* Stats Overview Grid */}
-      <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
-        <div className="p-5 rounded-xl border border-[var(--border)] bg-[var(--bg-panel)] shadow-xs">
-          <div className="text-xs font-medium text-[var(--text-secondary)] uppercase tracking-wider">
-            Total Source Bank
+      {/* 3. Statistics Row (Numbers 38-42px bold, labels 16px, vertical separator, right-aligned View progress) */}
+      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 py-2">
+        <div className="flex items-center gap-7 sm:gap-9">
+          <div className="flex items-center gap-3.5">
+            <span className="text-[36px] sm:text-[40px] font-bold text-[var(--text-heading)] leading-none tracking-tight">
+              {totalBankQuestions}
+            </span>
+            <span className="text-[16px] text-[#5C6B82] dark:text-slate-400 font-normal">
+              Questions in your bank
+            </span>
           </div>
-          <div className="text-3xl font-extrabold mt-2 text-[var(--text-primary)]">
-            {totalSourceQuestions}
-          </div>
-          <div className="text-xs text-[var(--text-secondary)] mt-1">
-            All 75 source items accounted for
+
+          <div className="h-9 w-px bg-[#D9E2EC] dark:bg-slate-700 hidden sm:block" />
+
+          <div className="flex items-center gap-3.5">
+            <span className="text-[36px] sm:text-[40px] font-bold text-[var(--text-heading)] leading-none tracking-tight">
+              {reviewedCount}
+            </span>
+            <span className="text-[16px] text-[#5C6B82] dark:text-slate-400 font-normal">
+              Reviewed so far
+            </span>
           </div>
         </div>
 
-        <div className="p-5 rounded-xl border border-[var(--border)] bg-[var(--bg-panel)] shadow-xs">
-          <div className="text-xs font-medium text-[var(--text-secondary)] uppercase tracking-wider">
-            Verified Content
-          </div>
-          <div className="text-3xl font-extrabold mt-2 text-emerald-600 dark:text-emerald-400">
-            {verifiedCount}
-          </div>
-          <div className="text-xs text-[var(--text-secondary)] mt-1">
-            Requires documented authority check
-          </div>
-        </div>
-
-        <div className="p-5 rounded-xl border border-[var(--border)] bg-[var(--bg-panel)] shadow-xs">
-          <div className="text-xs font-medium text-[var(--text-secondary)] uppercase tracking-wider">
-            Draft / Unverified
-          </div>
-          <div className="text-3xl font-extrabold mt-2 text-amber-500">
-            {unverifiedCount}
-          </div>
-          <div className="text-xs text-[var(--text-secondary)] mt-1">
-            Draft Learn practice only
-          </div>
-        </div>
-
-        <div className="p-5 rounded-xl border border-[var(--border)] bg-[var(--bg-panel)] shadow-xs">
-          <div className="text-xs font-medium text-[var(--text-secondary)] uppercase tracking-wider">
-            Needs Source
-          </div>
-          <div className="text-3xl font-extrabold mt-2 text-rose-500">
-            {needsSourceCount}
-          </div>
-          <div className="text-xs text-[var(--text-secondary)] mt-1">
-            Q5 (missing label), Q52 (missing PT)
-          </div>
-        </div>
+        <Link
+          href="/progress"
+          id="overview-view-progress-link"
+          className="text-[#087BFF] hover:underline text-[16px] font-semibold inline-flex items-center gap-2 transition-colors"
+        >
+          <span>View progress</span>
+          <svg
+            className="w-4 h-4 stroke-[2.25]"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          >
+            <line x1="5" y1="12" x2="19" y2="12" />
+            <polyline points="12 5 19 12 12 19" />
+          </svg>
+        </Link>
       </div>
 
-      {/* Main Panels: Active Session, Spaced Repetition Due, and Quick Actions */}
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
-        {/* Left Column: Active Session & Reviews */}
-        <div className="lg:col-span-2 space-y-6">
-          {/* Active Session Card */}
-          <div className="p-6 rounded-xl border border-[var(--border)] bg-[var(--bg-panel)]">
-            <h2 className="text-base font-bold flex items-center justify-between">
-              <span>Active Revision Session</span>
-              {activeSession && (
-                <span className="text-xs font-semibold px-2 py-0.5 rounded bg-emerald-500/20 text-emerald-500">
-                  In Progress
-                </span>
-              )}
-            </h2>
+      {/* Light Horizontal Divider below statistics */}
+      <div className="w-full border-b border-[#E8EEF5] dark:border-slate-800 my-8" />
 
-            {activeSession ? (
-              <div className="mt-4 space-y-3">
-                <p className="text-sm">
-                  You have an unfinished session with {activeSession.questionIds.length} questions.
-                </p>
-                <Link
-                  href={`/practice/${activeSession.id}`}
-                  className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-[var(--accent)] text-white text-sm font-medium hover:bg-[var(--accent-hover)] transition-colors"
+      {/* 4. Study Section (Heading 28px bold, cards ~118px height) */}
+      <div>
+        <h2 className="text-[26px] sm:text-[28px] font-bold text-[var(--text-heading)] tracking-tight mb-5">
+          Your study space
+        </h2>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+          {/* Card 1: Targeted Practice */}
+          <Link
+            href="/practice"
+            id="targeted-practice-card"
+            className="p-6 rounded-[14px] border border-[#E5ECF6] dark:border-slate-800 bg-[var(--bg-card)] hover:border-slate-300 dark:hover:border-slate-700 hover:shadow-xs transition-all flex items-center justify-between min-h-[118px] group"
+          >
+            <div className="flex items-center gap-5">
+              <div className="w-[56px] h-[56px] rounded-[14px] bg-[#EBF3FC] dark:bg-blue-950/40 flex items-center justify-center shrink-0">
+                {/* Clean Crosshairs / Target icon matching reference */}
+                <svg
+                  className="w-7 h-7 text-[#087BFF]"
+                  viewBox="0 0 28 28"
+                  fill="none"
                 >
-                  Resume Session
-                </Link>
+                  <circle cx="14" cy="14" r="8" stroke="currentColor" strokeWidth="1.75" />
+                  <circle cx="14" cy="14" r="3.5" stroke="currentColor" strokeWidth="1.75" />
+                  <circle cx="14" cy="14" r="1" fill="currentColor" />
+                  <line x1="14" y1="2" x2="14" y2="5" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" />
+                  <line x1="14" y1="23" x2="14" y2="26" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" />
+                  <line x1="2" y1="14" x2="5" y2="14" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" />
+                  <line x1="23" y1="14" x2="26" y2="14" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" />
+                </svg>
               </div>
-            ) : (
-              <div className="mt-4 py-6 text-center border border-dashed border-[var(--border)] rounded-lg">
-                <p className="text-sm text-[var(--text-secondary)]">No active study session right now.</p>
-                <div className="mt-3">
-                  <Link
-                    href="/bank"
-                    className="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg border border-[var(--border)] text-xs font-medium hover:border-[var(--accent)] transition-colors"
-                  >
-                    Browse Question Bank
-                  </Link>
-                </div>
-              </div>
-            )}
-          </div>
-
-          {/* Reviews Due (Leitner Spaced Repetition) */}
-          <div className="p-6 rounded-xl border border-[var(--border)] bg-[var(--bg-panel)]">
-            <h2 className="text-base font-bold flex items-center justify-between">
-              <span>Reviews Due (Leitner Boxes 1–5)</span>
-              <span className="text-xs font-mono text-[var(--text-secondary)]">
-                {dueReviews.length} due today
-              </span>
-            </h2>
-
-            {dueReviews.length > 0 ? (
-              <div className="mt-4 space-y-2">
-                <p className="text-sm text-[var(--text-secondary)]">
-                  You have {dueReviews.length} questions due for spaced-repetition review.
-                </p>
-                <Link
-                  href="/review"
-                  className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-[var(--accent)] text-white text-sm font-medium hover:bg-[var(--accent-hover)] transition-colors"
-                >
-                  Start Daily Review
-                </Link>
-              </div>
-            ) : (
-              <div className="mt-4 py-6 text-center border border-dashed border-[var(--border)] rounded-lg">
-                <p className="text-sm text-[var(--text-secondary)]">
-                  No spaced reviews currently due.
-                </p>
-                <p className="text-xs text-[var(--text-secondary)] mt-1">
-                  Completed verified practice attempts automatically schedule reviews across 0, 1, 3, 7, and 21 day intervals.
+              <div>
+                <h3 className="text-[19px] sm:text-[20px] font-bold text-[var(--text-heading)] tracking-[-0.2px]">
+                  Targeted practice
+                </h3>
+                <p className="text-[14px] sm:text-[15px] text-[#64748B] dark:text-slate-400 mt-1 font-normal">
+                  Focus on a topic, one question at a time.
                 </p>
               </div>
-            )}
-          </div>
-        </div>
-
-        {/* Right Column: Fast Shortcuts & Bank Preview */}
-        <div className="space-y-6">
-          <div className="p-6 rounded-xl border border-[var(--border)] bg-[var(--bg-panel)] space-y-4">
-            <h2 className="text-base font-bold">Quick Actions</h2>
-            <div className="space-y-2">
-              <Link
-                href="/bank"
-                className="w-full flex items-center justify-between p-3 rounded-lg border border-[var(--border)] hover:border-[var(--accent)] text-sm font-medium transition-colors"
-              >
-                <span>Question Bank Explorer</span>
-                <span className="text-xs text-[var(--text-secondary)]">75 items &rarr;</span>
-              </Link>
-              <Link
-                href="/labs"
-                className="w-full flex items-center justify-between p-3 rounded-lg border border-[var(--border)] hover:border-[var(--accent)] text-sm font-medium transition-colors"
-              >
-                <span>Practical Labs</span>
-                <span className="text-xs font-semibold px-1.5 py-0.5 rounded bg-amber-500/20 text-amber-500">Phase 5</span>
-              </Link>
             </div>
-          </div>
+            <svg
+              className="w-5 h-5 text-[#0B1223] dark:text-slate-200 shrink-0 group-hover:translate-x-1 transition-transform ml-4"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            >
+              <line x1="5" y1="12" x2="19" y2="12" />
+              <polyline points="12 5 19 12 12 19" />
+            </svg>
+          </Link>
 
-          <div className="p-5 rounded-xl border border-[var(--border)] bg-[var(--bg-panel)] text-xs text-[var(--text-secondary)] space-y-2">
-            <div className="font-semibold text-[var(--text-primary)]">Local PC Constraints</div>
-            <p>• Unauthenticated private PC instance binding to 127.0.0.1.</p>
-            <p>• Zero remote fonts or cloud analytics dependencies.</p>
-            <p>• Server-side atomic JSON persistence with daily automated backups.</p>
-          </div>
+          {/* Card 2: Review Queue */}
+          <Link
+            href="/review"
+            id="review-queue-card"
+            className="p-6 rounded-[14px] border border-[#E5ECF6] dark:border-slate-800 bg-[var(--bg-card)] hover:border-slate-300 dark:hover:border-slate-700 hover:shadow-xs transition-all flex items-center justify-between min-h-[118px] group"
+          >
+            <div className="flex items-center gap-5">
+              <div className="w-[56px] h-[56px] rounded-[14px] bg-[#EBF3FC] dark:bg-blue-950/40 flex items-center justify-center shrink-0">
+                {/* Clean Clock icon matching reference */}
+                <svg
+                  className="w-7 h-7 text-[#087BFF]"
+                  viewBox="0 0 28 28"
+                  fill="none"
+                >
+                  <circle cx="14" cy="14" r="9" stroke="currentColor" strokeWidth="1.75" />
+                  <path
+                    d="M14 9.5V14L17.5 16"
+                    stroke="currentColor"
+                    strokeWidth="1.75"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
+                </svg>
+              </div>
+              <div>
+                <h3 className="text-[19px] sm:text-[20px] font-bold text-[var(--text-heading)] tracking-[-0.2px]">
+                  Review queue
+                </h3>
+                <p className="text-[14px] sm:text-[15px] text-[#64748B] dark:text-slate-400 mt-1 font-normal">
+                  {dueReviews.length > 0
+                    ? `${dueReviews.length} question${dueReviews.length === 1 ? '' : 's'} due for review.`
+                    : "You're all caught up."}
+                </p>
+              </div>
+            </div>
+            <svg
+              className="w-5 h-5 text-[#0B1223] dark:text-slate-200 shrink-0 group-hover:translate-x-1 transition-transform ml-4"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            >
+              <line x1="5" y1="12" x2="19" y2="12" />
+              <polyline points="12 5 19 12 12 19" />
+            </svg>
+          </Link>
         </div>
       </div>
+
+      {/* 5. Bottom Status Divider & Audit Link (only displayed when issues exist) */}
+      {needsSourceCount > 0 && (
+        <div className="w-full border-t border-[#E8EEF5] dark:border-slate-800 pt-7 mt-9 flex items-center justify-between">
+          <div className="flex items-center gap-3">
+            <span className="w-2.5 h-2.5 rounded-full bg-[#EAB308] shrink-0 inline-block" />
+            <span className="text-[15px] text-[#5C6B82] dark:text-slate-400 font-normal">
+              {needsSourceCount} questions need source material
+            </span>
+          </div>
+
+          <Link
+            href="/manage?tab=issues"
+            id="overview-review-content-link"
+            className="text-[#087BFF] hover:underline text-[15px] font-semibold inline-flex items-center gap-1.5 transition-colors"
+          >
+            <span>Review content</span>
+            <svg
+              className="w-4 h-4 stroke-[2.25]"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            >
+              <line x1="5" y1="12" x2="19" y2="12" />
+              <polyline points="12 5 19 12 12 19" />
+            </svg>
+          </Link>
+        </div>
+      )}
     </div>
   );
 }

@@ -6,7 +6,10 @@ declare global {
 }
 
 export function getStore(): Store {
-  if (!globalThis.__ccna_revise_store__) {
+  if (
+    !globalThis.__ccna_revise_store__ ||
+    typeof (globalThis.__ccna_revise_store__ as unknown as Record<string, unknown>).finalizeSession !== 'function'
+  ) {
     globalThis.__ccna_revise_store__ = new JsonStore();
   }
   return globalThis.__ccna_revise_store__;

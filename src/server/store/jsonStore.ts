@@ -10,6 +10,7 @@ import type {
   ReviewState,
   UserDataStore,
   BackupBundle,
+  ScopeFilterSnapshot,
 } from '../../domain/types.ts';
 import { SCHEMA_VERSION } from '../../domain/types.ts';
 import {
@@ -21,6 +22,11 @@ import {
 import { markQuestion } from '../../domain/marking.ts';
 import { calculateNextLeitnerState, initializeReviewState } from '../../domain/scheduling.ts';
 import { sanitizeQuestionForSession } from '../../domain/sanitizer.ts';
+import {
+  filterQuestionsByScope,
+  resolveScopeTagIds,
+  formatScopeSummary,
+} from '../../domain/taxonomy.ts';
 import type {
   Store,
   QuestionFilters,
@@ -43,7 +49,9 @@ export class JsonStore implements Store {
   private backupsDir: string;
 
   private seedCache: SeedStructure | null = null;
+  private seedMtime: number = 0;
   private userDataCache: UserDataStore | null = null;
+  private userDataMtime: number = 0;
   private mutationQueue: Promise<void> = Promise.resolve();
 
   constructor(baseDir: string = process.cwd()) {
@@ -64,7 +72,6 @@ export class JsonStore implements Store {
   }
 
   private loadSeed(): SeedStructure {
-    if (this.seedCache) return this.seedCache;
     this.ensureDirectories();
 
     if (!fs.existsSync(this.seedFilePath)) {
@@ -72,20 +79,26 @@ export class JsonStore implements Store {
     }
 
     try {
+      const stat = fs.statSync(this.seedFilePath);
+      if (this.seedCache && this.seedMtime === stat.mtimeMs) {
+        return this.seedCache;
+      }
+
       const content = fs.readFileSync(this.seedFilePath, 'utf8');
       const parsed = JSON.parse(content) as SeedStructure;
       if (!parsed || !Array.isArray(parsed.questions)) {
         throw new Error('Seed file content is invalid; questions array is missing');
       }
       this.seedCache = parsed;
+      this.seedMtime = stat.mtimeMs;
       return parsed;
     } catch (err) {
+      if (this.seedCache) return this.seedCache;
       throw new Error(`Failed to read seed file: ${(err as Error).message}`);
     }
   }
 
   private loadUserData(): UserDataStore {
-    if (this.userDataCache) return this.userDataCache;
     this.ensureDirectories();
 
     if (!fs.existsSync(this.userDataFilePath)) {
@@ -109,23 +122,44 @@ export class JsonStore implements Store {
     }
 
     try {
-      const content = fs.readFileSync(this.userDataFilePath, 'utf8');
-      const parsed = JSON.parse(content);
-      const val = validateUserDataStore(parsed);
-      if (!val.valid) {
-        throw new Error(
-          `User data file is malformed: ${val.errors.map(e => e.message).join('; ')}. ` +
-          `Recovery copies may be available in ${this.backupsDir}.`
-        );
+      const stat = fs.statSync(this.userDataFilePath);
+      if (this.userDataCache && this.userDataMtime === stat.mtimeMs) {
+        return this.userDataCache;
       }
-      this.userDataCache = parsed as UserDataStore;
-      return this.userDataCache;
-    } catch (err) {
-      throw new Error(
-        `Failed to parse user data store at ${this.userDataFilePath}: ${(err as Error).message}. ` +
-        `Check backups in ${this.backupsDir} to restore previous state.`
-      );
+    } catch {
+      // ignore and proceed to read attempt
     }
+
+    let lastErr: unknown;
+    for (let attempt = 0; attempt < 5; attempt++) {
+      try {
+        const stat = fs.statSync(this.userDataFilePath);
+        const content = fs.readFileSync(this.userDataFilePath, 'utf8');
+        const parsed = JSON.parse(content);
+        const val = validateUserDataStore(parsed);
+        if (!val.valid) {
+          throw new Error(
+            `User data file is malformed: ${val.errors.map(e => e.message).join('; ')}. ` +
+            `Recovery copies may be available in ${this.backupsDir}.`
+          );
+        }
+        this.userDataCache = parsed as UserDataStore;
+        this.userDataMtime = stat.mtimeMs;
+        return this.userDataCache;
+      } catch (err) {
+        lastErr = err;
+        // If file is mid-write by another process, wait briefly and retry
+        const start = Date.now();
+        while (Date.now() - start < 30) {
+          // busy wait 30ms
+        }
+      }
+    }
+
+    throw new Error(
+      `Failed to parse user data store at ${this.userDataFilePath}: ${(lastErr as Error)?.message || String(lastErr)}. ` +
+      `Check backups in ${this.backupsDir} to restore previous state.`
+    );
   }
 
   private getTodayDateString(): string {
@@ -190,6 +224,9 @@ export class JsonStore implements Store {
         fs.copyFileSync(tempFile, this.userDataFilePath);
         try { fs.unlinkSync(tempFile); } catch { /* ignore */ }
       }
+      try {
+        this.userDataMtime = fs.statSync(this.userDataFilePath).mtimeMs;
+      } catch { /* ignore */ }
     } catch (err) {
       if (fs.existsSync(tempFile)) {
         try { fs.unlinkSync(tempFile); } catch { /* ignore */ }
@@ -353,28 +390,39 @@ export class JsonStore implements Store {
   }
 
   async createSession(params: CreateSessionParams): Promise<Session> {
+    const isFixtureTrack = params.contentTrack === 'fixture';
     const allQuestions = await this.getQuestions({
-      includeDevFixtures: false,
+      includeDevFixtures: isFixtureTrack,
     });
+
+    // Rule: Draft content cannot enter normal assessment
+    if (params.mode === 'assess' && params.contentTrack === 'draft') {
+      throw new Error(
+        'Draft content cannot enter a normal assessment. Draft syllabus materials can only be practiced in Learn mode.'
+      );
+    }
 
     // Content track filtering
     let eligible = allQuestions;
     if (params.contentTrack === 'verified') {
-      eligible = eligible.filter(q => q.status === 'verified');
+      eligible = eligible.filter(q => q.status === 'verified' && !q.isDevFixture);
+    } else if (params.contentTrack === 'fixture') {
+      eligible = eligible.filter(q => q.isDevFixture === true);
     } else {
-      // Draft Learn practice allows unverified, but excludes needs-source
-      eligible = eligible.filter(q => q.status !== 'needs-source');
+      // Draft Learn practice allows unverified, but excludes needs-source and dev fixtures
+      eligible = eligible.filter(q => q.status !== 'needs-source' && !q.isDevFixture);
     }
 
-    // Apply tag scope
-    if (params.scopeFilter.domainTagIds?.length) {
-      eligible = eligible.filter(q =>
-        q.tagIds.some(t => params.scopeFilter.domainTagIds!.includes(t))
-      );
-    }
-    if (params.scopeFilter.topicTagIds?.length) {
-      eligible = eligible.filter(q =>
-        q.tagIds.some(t => params.scopeFilter.topicTagIds!.includes(t))
+    // Apply hierarchical scope filtering and deduplication
+    const allTags = await this.getTags();
+    eligible = filterQuestionsByScope(eligible, params.scopeFilter, allTags);
+
+    const scopeSummary = formatScopeSummary(params.scopeFilter, allTags);
+    const resolvedTagIds = resolveScopeTagIds(params.scopeFilter, allTags);
+
+    if (eligible.length === 0) {
+      throw new Error(
+        `No eligible questions found for scope "${scopeSummary}". Try broadening your topic selection or choosing All Available Content.`
       );
     }
 
@@ -404,12 +452,28 @@ export class JsonStore implements Store {
       });
     }
 
+    if (eligible.length === 0) {
+      throw new Error(
+        `No questions match criteria "${params.scopeFilter.selectionCriteria}" within scope "${scopeSummary}".`
+      );
+    }
+
+    // Cap requested count to available eligible count
+    const targetCount = Math.min(params.scopeFilter.requestedCount, eligible.length);
+
+    // Randomize candidate pool using Fisher-Yates shuffle so every session instance samples randomly
+    const pool = [...eligible];
+    for (let i = pool.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [pool[i], pool[j]] = [pool[j], pool[i]];
+    }
+
     // Avoid repeatedly selecting duplicate groups if possible
     const selected: Question[] = [];
     const seenDuplicateGroups = new Set<string>();
 
-    for (const q of eligible) {
-      if (selected.length >= params.scopeFilter.requestedCount) break;
+    for (const q of pool) {
+      if (selected.length >= targetCount) break;
       if (q.duplicateGroupId) {
         if (seenDuplicateGroups.has(q.duplicateGroupId)) continue;
         seenDuplicateGroups.add(q.duplicateGroupId);
@@ -418,13 +482,19 @@ export class JsonStore implements Store {
     }
 
     // If still need questions to reach requested count, allow duplicate groups
-    if (selected.length < params.scopeFilter.requestedCount) {
-      for (const q of eligible) {
-        if (selected.length >= params.scopeFilter.requestedCount) break;
+    if (selected.length < targetCount) {
+      for (const q of pool) {
+        if (selected.length >= targetCount) break;
         if (!selected.some(s => s.id === q.id)) {
           selected.push(q);
         }
       }
+    }
+
+    // Randomize the presentation sequence for this session instance
+    for (let i = selected.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [selected[i], selected[j]] = [selected[j], selected[i]];
     }
 
     const sessionId = `session-${crypto.randomUUID()}`;
@@ -436,12 +506,19 @@ export class JsonStore implements Store {
     // Freeze sanitized snapshots for session questions
     const questionSnapshots = selected.map(q => sanitizeQuestionForSession(q));
 
+    const resolvedScopeFilter: ScopeFilterSnapshot = {
+      ...params.scopeFilter,
+      requestedCount: targetCount,
+      resolvedTagIds,
+      scopeSummary,
+    };
+
     const session: Session = {
       id: sessionId,
       userId: params.userId || 'local',
       mode: params.mode,
       contentTrack: params.contentTrack,
-      scopeFilter: params.scopeFilter,
+      scopeFilter: resolvedScopeFilter,
       status: 'active',
       questionIds: selected.map(q => q.id),
       questionSnapshots,
@@ -466,6 +543,28 @@ export class JsonStore implements Store {
   async listSessions(userId = 'local'): Promise<Session[]> {
     const data = this.loadUserData();
     return data.sessions.filter(s => s.userId === userId);
+  }
+
+  async finalizeSession(sessionId: string): Promise<Session> {
+    return this.runMutation(data => {
+      const session = data.sessions.find(s => s.id === sessionId);
+      if (!session) {
+        throw new Error(`Session ${sessionId} not found`);
+      }
+
+      const submissions = data.submittedResponses.filter(s => s.sessionId === sessionId);
+      const totalScore = submissions.reduce((sum, s) => sum + (s.markingResult?.score || 0), 0);
+      const totalQuestions = session.questionIds.length;
+      const unansweredCount = Math.max(0, totalQuestions - submissions.length);
+
+      session.status = 'completed';
+      session.finishedAt = new Date().toISOString();
+      session.score = totalScore;
+      session.totalQuestions = totalQuestions;
+      session.unansweredCount = unansweredCount;
+
+      return session;
+    });
   }
 
   async saveDraftResponse(draft: DraftResponse): Promise<DraftResponse> {
@@ -541,8 +640,8 @@ export class JsonStore implements Store {
       }
 
       // Review state transition: only eligible verified questions advance Leitner boxes
-      // Unverified questions or draft practice do NOT advance scheduling
-      if (question.status === 'verified') {
+      // Unverified questions, dev fixtures, or draft practice do NOT advance scheduling
+      if (question.status === 'verified' && !question.isDevFixture) {
         let rev = data.reviewStates[question.id];
         if (!rev) {
           rev = initializeReviewState(question.id, data.userId, now);

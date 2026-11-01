@@ -1,0 +1,12 @@
+{
+  "result": "PASS",
+  "questions": 76,
+  "types": {
+    "single": 59,
+    "matching": 5,
+    "multi": 10,
+    "ordering": 2
+  },
+  "rationales": 324,
+  "assets": 3
+}

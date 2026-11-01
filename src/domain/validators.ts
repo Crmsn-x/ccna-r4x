@@ -199,6 +199,12 @@ function validateMatchingPayload(payload: MatchingPayload, errors: ValidationErr
     }
   }
 
+  if (!payload.correctMapping && Array.isArray(payload.correctMatches)) {
+    payload.correctMapping = Object.fromEntries(
+      payload.correctMatches.map(m => [m.promptId, m.choiceId])
+    );
+  }
+
   if (!payload.correctMapping || typeof payload.correctMapping !== 'object') {
     errors.push({ field: 'payload.correctMapping', message: 'correctMapping must be an object' });
     return;
@@ -234,22 +240,31 @@ function validateOrderingPayload(payload: OrderingPayload, errors: ValidationErr
     }
   }
 
-  if (!Array.isArray(payload.correctOrderIds) || payload.correctOrderIds.length !== payload.items.length) {
+  const distractorCount = Array.isArray(payload.distractorItemIds) ? payload.distractorItemIds.length : 0;
+  if (!Array.isArray(payload.correctOrderIds) || (payload.correctOrderIds.length + distractorCount) !== payload.items.length) {
     errors.push({
       field: 'payload.correctOrderIds',
-      message: `correctOrderIds length (${payload.correctOrderIds?.length}) must equal items count (${payload.items.length})`,
+      message: `correctOrderIds length (${payload.correctOrderIds?.length}) plus distractors (${distractorCount}) must equal items count (${payload.items.length})`,
     });
     return;
   }
 
   const orderedSet = new Set(payload.correctOrderIds);
-  if (orderedSet.size !== payload.items.length) {
+  if (orderedSet.size !== payload.correctOrderIds.length) {
     errors.push({ field: 'payload.correctOrderIds', message: 'correctOrderIds must contain unique item ids' });
   }
 
   for (const id of payload.correctOrderIds) {
     if (!itemIds.has(id)) {
       errors.push({ field: 'payload.correctOrderIds', message: `correctOrderId "${id}" does not exist in items` });
+    }
+  }
+
+  if (Array.isArray(payload.distractorItemIds)) {
+    for (const dId of payload.distractorItemIds) {
+      if (!itemIds.has(dId)) {
+        errors.push({ field: 'payload.distractorItemIds', message: `distractorItemId "${dId}" does not exist in items` });
+      }
     }
   }
 }
