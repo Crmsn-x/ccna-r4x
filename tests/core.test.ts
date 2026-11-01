@@ -278,7 +278,7 @@ describe('5. Store Reliability & Idempotency', () => {
   it('loads seed questions correctly', async () => {
     const store = new JsonStore();
     const questions = await store.getQuestions();
-    assert.ok(questions.length === 476 || questions.length === 400 || questions.length === 276 || questions.length === 200 || questions.length === 76, `Expected 476, 400, 276, 200, or 76 questions, found ${questions.length}`);
+    assert.ok(questions.length === 546 || questions.length === 476 || questions.length === 400 || questions.length === 276 || questions.length === 200 || questions.length === 76, `Expected 546, 476, 400, 276, 200, or 76 questions, found ${questions.length}`);
 
     // Check known items
     if (questions.length === 76) {

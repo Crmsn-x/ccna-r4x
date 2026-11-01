@@ -1,0 +1,3784 @@
+{
+  "schemaVersion": "2.0",
+  "purpose": "Standalone single import of CCNA 1 v7 Modules 4–7 Ethernet Concepts (70 questions); not a cumulative 520-question seed.",
+  "source": {
+    "questionsPDF": "CCNA 1 v7 Modules 4 – 7_ Ethernet Concepts questions.pdf",
+    "answersPDF": "CCNA 1 v7 Modules 4 - 7_ Ethernet Concepts Exam Answers.pdf"
+  },
+  "questionCount": 70,
+  "notes": "Contains the original 34-question selection plus 36 recovered questions, with source answer keys and provisional explanations. Includes single-choice, multi-choice, matching, and image-based records. Independent primary-documentation audit is incomplete. Import once by stable ID; preserve existing question-bank records and progress. Copy the included assets to Next.js public/.",
+  "questions": [
+    {
+      "id": "ITN-M4-7-001",
+      "type": "single_choice",
+      "question": "What is the purpose of the OSI physical layer?",
+      "options": [
+        {
+          "id": "A",
+          "text": "controlling access to media"
+        },
+        {
+          "id": "B",
+          "text": "transmitting bits across the local media"
+        },
+        {
+          "id": "C",
+          "text": "performing error detection on received frames"
+        },
+        {
+          "id": "D",
+          "text": "exchanging frames between nodes over physical network media"
+        }
+      ],
+      "correctAnswers": [
+        "B"
+      ],
+      "explanation": "The physical layer (OSI Layer 1) encodes frames as signals and transmits the resulting bits over copper, fiber or radio. Framing and media access belong to Layer 2.",
+      "optionExplanations": {
+        "A": "Media access control is a responsibility of the data link layer, rather than Layer 1.",
+        "B": "Layer 1 represents bit values as physical signals and sends them across the medium.",
+        "C": "Ethernet error checking using an FCS is associated with the data link layer.",
+        "D": "Exchanging complete frames is a data link layer function; the physical layer transports their bits."
+      },
+      "domainTopic": "Physical layer",
+      "sourceQuestionNumber": 1,
+      "sourceAnswer": "B",
+      "verificationStatus": "source_key_matched_technical_review_documentation_audit_pending",
+      "trialOnly": true,
+      "source": {
+        "curriculum": "CCNA 1 v7 Introduction to Networks",
+        "moduleRange": "4–7 Ethernet Concepts",
+        "questionPDFPages": [
+          2,
+          3
+        ],
+        "answerPDFPages": [
+          2
+        ],
+        "answerPDFQuestionNumber": 1,
+        "answerMatch": "highlighted_source_key_matches_choice"
+      }
+    },
+    {
+      "id": "ITN-M4-7-002",
+      "type": "single_choice",
+      "question": "Why are two strands of fiber used for a single fiber optic connection?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The two strands allow the data to travel for longer distances without degrading."
+        },
+        {
+          "id": "B",
+          "text": "They prevent crosstalk from causing interference on the connection."
+        },
+        {
+          "id": "C",
+          "text": "They increase the speed at which the data can travel."
+        },
+        {
+          "id": "D",
+          "text": "They allow for full-duplex connectivity."
+        }
+      ],
+      "correctAnswers": [
+        "D"
+      ],
+      "explanation": "A conventional two-fiber duplex link dedicates one strand to transmit and the other to receive, allowing simultaneous bidirectional communication. Single-fiber bidirectional optics also exist, so this describes the usual two-strand arrangement.",
+      "optionExplanations": {
+        "A": "Optical attenuation and transceiver capability determine range; adding a second strand does not by itself extend distance.",
+        "B": "Fiber is inherently resistant to electrical crosstalk and EMI; two strands are not needed for this reason.",
+        "C": "The number of strands does not directly determine the bit rate of a transceiver.",
+        "D": "Separate transmit and receive paths allow traffic to flow in both directions at the same time."
+      },
+      "domainTopic": "Fiber optics",
+      "sourceQuestionNumber": 2,
+      "sourceAnswer": "D",
+      "verificationStatus": "source_key_matched_technical_review_documentation_audit_pending",
+      "trialOnly": true,
+      "source": {
+        "curriculum": "CCNA 1 v7 Introduction to Networks",
+        "moduleRange": "4–7 Ethernet Concepts",
+        "questionPDFPages": [
+          3
+        ],
+        "answerPDFPages": [
+          2,
+          3
+        ],
+        "answerPDFQuestionNumber": 2,
+        "answerMatch": "highlighted_source_key_matches_choice"
+      }
+    },
+    {
+      "id": "ITN-M4-7-003",
+      "type": "single_choice",
+      "question": "Which characteristic describes crosstalk?",
+      "options": [
+        {
+          "id": "A",
+          "text": "the distortion of the network signal from fluorescent lighting"
+        },
+        {
+          "id": "B",
+          "text": "the distortion of the transmitted messages from signals carried in adjacent wires"
+        },
+        {
+          "id": "C",
+          "text": "the weakening of the network signal over long cable lengths"
+        },
+        {
+          "id": "D",
+          "text": "the loss of wireless signal over excessive distance from the access point"
+        }
+      ],
+      "correctAnswers": [
+        "B"
+      ],
+      "explanation": "Crosstalk is electromagnetic coupling between nearby conductors: a changing signal on one pair induces interference in an adjacent pair. Twisting conductor pairs helps cancel this interference.",
+      "optionExplanations": {
+        "A": "Fluorescent lighting is an external EMI source, not interference between adjacent cable pairs.",
+        "B": "Adjacent pairs carrying signals can electromagnetically interfere with one another; this is crosstalk.",
+        "C": "Signal weakening over distance is attenuation, not crosstalk.",
+        "D": "Weaker radio reception with distance relates to propagation loss, not copper-pair crosstalk."
+      },
+      "domainTopic": "Copper cabling",
+      "sourceQuestionNumber": 3,
+      "sourceAnswer": "B",
+      "verificationStatus": "source_key_matched_technical_review_documentation_audit_pending",
+      "trialOnly": true,
+      "source": {
+        "curriculum": "CCNA 1 v7 Introduction to Networks",
+        "moduleRange": "4–7 Ethernet Concepts",
+        "questionPDFPages": [
+          3
+        ],
+        "answerPDFPages": [
+          3
+        ],
+        "answerPDFQuestionNumber": 3,
+        "answerMatch": "highlighted_source_key_matches_choice"
+      }
+    },
+    {
+      "id": "ITN-M4-7-004",
+      "type": "single_choice",
+      "question": "Which procedure is used to reduce the effect of crosstalk in copper cables?",
+      "options": [
+        {
+          "id": "A",
+          "text": "requiring proper grounding connections"
+        },
+        {
+          "id": "B",
+          "text": "twisting opposing circuit wire pairs together"
+        },
+        {
+          "id": "C",
+          "text": "wrapping the bundle of wires with metallic shielding"
+        },
+        {
+          "id": "D",
+          "text": "designing a cable infrastructure to avoid crosstalk interference"
+        },
+        {
+          "id": "E",
+          "text": "avoiding sharp bends during installation"
+        }
+      ],
+      "correctAnswers": [
+        "B"
+      ],
+      "requiredSelectionCount": 1,
+      "explanation": "Twisting the conductor pairs reduces electromagnetic coupling between adjacent circuits, which lowers crosstalk in UTP.",
+      "optionExplanations": {
+        "A": "Grounding protects against some external electrical interference but does not directly cancel coupling between adjacent twisted-pair conductors.",
+        "B": "Twisting pairs reverses their relative positions repeatedly, helping induced interference cancel and reducing crosstalk.",
+        "C": "External shielding can reduce electromagnetic interference, but this question tests the inherent twisted-pair method for minimizing coupling between pairs.",
+        "D": "Cable layout can reduce interference risk but does not describe the pair-level construction that suppresses crosstalk.",
+        "E": "Excessive bends can damage cabling, but avoiding bends does not explain the standard crosstalk-reduction mechanism."
+      },
+      "domainTopic": "Physical layer",
+      "sourceQuestionNumber": 4,
+      "sourceAnswer": "B",
+      "verificationStatus": "source_key_matched_preliminary_technical_review",
+      "trialOnly": true,
+      "source": {
+        "curriculum": "CCNA 1 v7 Introduction to Networks",
+        "moduleRange": "4–7 Ethernet Concepts",
+        "questionPDFPages": [
+          3,
+          4
+        ],
+        "answersPDF": "CCNA 1 v7 Modules 4 - 7_ Ethernet Concepts Exam Answers.pdf",
+        "answerMatch": "red_highlight_source_pdf"
+      }
+    },
+    {
+      "id": "ITN-M4-7-005",
+      "type": "matching",
+      "question": "Match each network installation scenario to the most appropriate network medium.",
+      "options": [],
+      "matchingTargets": [
+        {
+          "id": "copper",
+          "text": "Copper cables"
+        },
+        {
+          "id": "fiber",
+          "text": "Fiber optic"
+        },
+        {
+          "id": "wireless",
+          "text": "Wireless"
+        }
+      ],
+      "matchingPairs": [
+        {
+          "id": "m1",
+          "prompt": "Horizontal cabling structure",
+          "correctTargetId": "copper",
+          "explanation": "UTP copper is commonly used for short structured cabling runs."
+        },
+        {
+          "id": "m2",
+          "prompt": "Desktop PCs in offices in an enterprise",
+          "correctTargetId": "copper",
+          "explanation": "Office workstations generally connect using affordable Ethernet copper links."
+        },
+        {
+          "id": "m3",
+          "prompt": "Backbone cabling in an enterprise",
+          "correctTargetId": "fiber",
+          "explanation": "Fiber is well suited to high-bandwidth building and campus backbone links."
+        },
+        {
+          "id": "m4",
+          "prompt": "Long-haul networks",
+          "correctTargetId": "fiber",
+          "explanation": "Optical fiber supports high bandwidth over long distances."
+        },
+        {
+          "id": "m5",
+          "prompt": "Guest access in a coffee shop",
+          "correctTargetId": "wireless",
+          "explanation": "Wireless access lets customers connect without individual Ethernet drops."
+        },
+        {
+          "id": "m6",
+          "prompt": "Waiting rooms in a hospital",
+          "correctTargetId": "wireless",
+          "explanation": "Wireless supports mobile client access in shared public waiting spaces."
+        }
+      ],
+      "correctAnswers": [],
+      "requiredSelectionCount": 6,
+      "explanation": "Copper is usually chosen for short fixed desk/structured cabling, fiber for backbone and long-haul high-capacity links, and wireless for mobile/shared guest access.",
+      "optionExplanations": {},
+      "domainTopic": "Physical layer",
+      "sourceQuestionNumber": 5,
+      "sourceAnswer": "matching_pairs",
+      "verificationStatus": "reconstructed_from_source_answer_table_preliminary_review",
+      "trialOnly": true,
+      "referenceAssets": [
+        {
+          "src": "/question-assets/ethernet-concepts/itn-m4-7-005.jpeg",
+          "alt": "Original network media matching exercise with six scenarios and three media types",
+          "mimeType": "image/jpeg",
+          "sha256": "7c572a7295457652ceb672528859a3d821778de99fefdc92adbf121349ebd3cb"
+        }
+      ],
+      "source": {
+        "curriculum": "CCNA 1 v7 Introduction to Networks",
+        "moduleRange": "4–7 Ethernet Concepts",
+        "questionPDFPages": [
+          4
+        ],
+        "answerPDFPages": [
+          4,
+          5
+        ],
+        "answerMatch": "answer_table_mapping"
+      }
+    },
+    {
+      "id": "ITN-M4-7-006",
+      "type": "multiple_choice",
+      "question": "A network administrator is measuring the transfer of bits across the company backbone for a mission critical financial application. The administrator notices that the network throughput appears lower than the bandwidth expected. Which three factors could influence the differences in throughput? (Choose three.)",
+      "options": [
+        {
+          "id": "A",
+          "text": "the amount of traffic that is currently crossing the network"
+        },
+        {
+          "id": "B",
+          "text": "the sophistication of the encapsulation method applied to the data"
+        },
+        {
+          "id": "C",
+          "text": "the type of traffic that is crossing the network"
+        },
+        {
+          "id": "D",
+          "text": "the latency that is created by the number of network devices that the data is crossing"
+        },
+        {
+          "id": "E",
+          "text": "the bandwidth of the WAN connection to the Internet"
+        },
+        {
+          "id": "F",
+          "text": "the reliability of the gigabit Ethernet infrastructure of the backbone"
+        }
+      ],
+      "correctAnswers": [
+        "A",
+        "C",
+        "D"
+      ],
+      "requiredSelectionCount": 3,
+      "explanation": "Actual throughput is influenced by competing traffic load, the kind of traffic in use, and delays through intermediate network devices.",
+      "optionExplanations": {
+        "A": "Other traffic shares interfaces and queues, consuming capacity that the application cannot use.",
+        "B": "Encapsulation overhead can influence goodput, but the source identifies traffic amount, traffic type, and intermediary latency as the requested three factors.",
+        "C": "Different traffic patterns, packet sizes, and congestion behaviors affect observed throughput.",
+        "D": "Forwarding, queuing, and processing delay across intermediate devices reduce end-to-end performance.",
+        "E": "An unrelated Internet WAN link does not necessarily affect a measurement across the company backbone.",
+        "F": "Infrastructure reliability can affect connectivity, but the source question asks specifically for traffic load, traffic mix, and latency."
+      },
+      "domainTopic": "Physical layer",
+      "sourceQuestionNumber": 6,
+      "sourceAnswer": "A,C,D",
+      "verificationStatus": "source_key_matched_preliminary_technical_review",
+      "trialOnly": true,
+      "source": {
+        "curriculum": "CCNA 1 v7 Introduction to Networks",
+        "moduleRange": "4–7 Ethernet Concepts",
+        "questionPDFPages": [
+          4,
+          5
+        ],
+        "answersPDF": "CCNA 1 v7 Modules 4 - 7_ Ethernet Concepts Exam Answers.pdf",
+        "answerMatch": "red_highlight_source_pdf"
+      }
+    },
+    {
+      "id": "ITN-M4-7-007",
+      "type": "multiple_choice",
+      "question": "What are two characteristics of fiber-optic cable? (Choose two.)",
+      "options": [
+        {
+          "id": "A",
+          "text": "It is not affected by EMI or RFI."
+        },
+        {
+          "id": "B",
+          "text": "Each pair of cables is wrapped in metallic foil."
+        },
+        {
+          "id": "C",
+          "text": "It combines the technique of cancellation, shielding, and twisting to protect data."
+        },
+        {
+          "id": "D",
+          "text": "It typically contains 4 pairs of fiber-optic wires."
+        },
+        {
+          "id": "E",
+          "text": "It is more expensive than UTP cabling is."
+        }
+      ],
+      "correctAnswers": [
+        "A",
+        "E"
+      ],
+      "requiredSelectionCount": 2,
+      "explanation": "Fiber carries signals as light, so it is not susceptible to EMI/RFI; compared with UTP it generally costs more to install and terminate.",
+      "optionExplanations": {
+        "A": "Glass or plastic optical fiber transports light rather than electrical current, so it is immune to electromagnetic and radio-frequency interference.",
+        "B": "Metal foil wrapping is associated with shielded copper cable, not optical fiber.",
+        "C": "Twisting and electrical cancellation are design techniques for copper pairs rather than light-carrying fiber.",
+        "D": "Four twisted pairs are a feature of common copper Ethernet cables, not fiber-optic construction.",
+        "E": "Fiber links generally require more costly media, transceivers, termination equipment, and installation expertise than UTP."
+      },
+      "domainTopic": "Physical layer",
+      "sourceQuestionNumber": 7,
+      "sourceAnswer": "A,E",
+      "verificationStatus": "source_key_matched_preliminary_technical_review",
+      "trialOnly": true,
+      "source": {
+        "curriculum": "CCNA 1 v7 Introduction to Networks",
+        "moduleRange": "4–7 Ethernet Concepts",
+        "questionPDFPages": [
+          5
+        ],
+        "answersPDF": "CCNA 1 v7 Modules 4 - 7_ Ethernet Concepts Exam Answers.pdf",
+        "answerMatch": "red_highlight_source_pdf"
+      }
+    },
+    {
+      "id": "ITN-M4-7-008",
+      "type": "single_choice",
+      "question": "What is a primary role of the Physical layer in transmitting data on the network?",
+      "options": [
+        {
+          "id": "A",
+          "text": "create the signals that represent the bits in each frame on to the media"
+        },
+        {
+          "id": "B",
+          "text": "provide physical addressing to the devices"
+        },
+        {
+          "id": "C",
+          "text": "determine the path packets take through the network"
+        },
+        {
+          "id": "D",
+          "text": "control data access to the media"
+        }
+      ],
+      "correctAnswers": [
+        "A"
+      ],
+      "explanation": "The physical layer accepts a frame from Layer 2, encodes its bits as electrical, optical or radio signals, and transmits them through the medium.",
+      "optionExplanations": {
+        "A": "Physical-layer signaling represents and transmits the individual bits of a received frame.",
+        "B": "Physical or MAC addressing is used in the data link layer.",
+        "C": "IP routing and path selection occur at the network layer.",
+        "D": "Controlling access to a shared medium is a data link MAC-sublayer function."
+      },
+      "domainTopic": "Physical layer",
+      "sourceQuestionNumber": 8,
+      "sourceAnswer": "A",
+      "verificationStatus": "source_key_matched_technical_review_documentation_audit_pending",
+      "trialOnly": true,
+      "source": {
+        "curriculum": "CCNA 1 v7 Introduction to Networks",
+        "moduleRange": "4–7 Ethernet Concepts",
+        "questionPDFPages": [
+          5
+        ],
+        "answerPDFPages": [
+          6
+        ],
+        "answerPDFQuestionNumber": 8,
+        "answerMatch": "highlighted_source_key_matches_choice"
+      }
+    },
+    {
+      "id": "ITN-M4-7-009",
+      "type": "single_choice",
+      "question": "With the use of unshielded twisted-pair copper wire in a network, what causes crosstalk within the cable pairs?",
+      "options": [
+        {
+          "id": "A",
+          "text": "the magnetic field around the adjacent pairs of wire"
+        },
+        {
+          "id": "B",
+          "text": "the use of braided wire to shield the adjacent wire pairs"
+        },
+        {
+          "id": "C",
+          "text": "the reflection of the electrical wave back from the far end of the cable"
+        },
+        {
+          "id": "D",
+          "text": "the collision caused by two nodes trying to use the media simultaneously"
+        }
+      ],
+      "correctAnswers": [
+        "A"
+      ],
+      "explanation": "A varying electrical current creates electromagnetic fields. Interference induced between neighboring twisted pairs of a UTP cable produces crosstalk.",
+      "optionExplanations": {
+        "A": "Signals on adjacent pairs can couple magnetically and electrically into another pair.",
+        "B": "Braided shielding is intended to reduce interference and is not the normal cause of UTP crosstalk.",
+        "C": "Reflected waves caused by impedance mismatch describe reflections or return loss.",
+        "D": "A medium-access collision is not the interference between adjacent wire pairs known as crosstalk."
+      },
+      "domainTopic": "Copper cabling",
+      "sourceQuestionNumber": 9,
+      "sourceAnswer": "A",
+      "verificationStatus": "source_key_matched_technical_review_documentation_audit_pending",
+      "trialOnly": true,
+      "source": {
+        "curriculum": "CCNA 1 v7 Introduction to Networks",
+        "moduleRange": "4–7 Ethernet Concepts",
+        "questionPDFPages": [
+          5,
+          6
+        ],
+        "answerPDFPages": [
+          7
+        ],
+        "answerPDFQuestionNumber": 9,
+        "answerMatch": "highlighted_source_key_matches_choice"
+      }
+    },
+    {
+      "id": "ITN-M4-7-010",
+      "type": "single_choice",
+      "question": "Refer to the graphic. What type of cabling is shown?",
+      "options": [
+        {
+          "id": "A",
+          "text": "STP"
+        },
+        {
+          "id": "B",
+          "text": "UTP"
+        },
+        {
+          "id": "C",
+          "text": "coax"
+        },
+        {
+          "id": "D",
+          "text": "fiber"
+        }
+      ],
+      "correctAnswers": [
+        "D"
+      ],
+      "requiredSelectionCount": 1,
+      "explanation": "The exhibit shows fiber-optic cabling. Its connectors and light-conducting media distinguish it from twisted-pair and coaxial copper.",
+      "optionExplanations": {
+        "A": "The pictured cable does not show the foil or braided shielding enclosing copper pairs characteristic of STP.",
+        "B": "The pictured cable does not contain four color-coded twisted copper pairs characteristic of UTP.",
+        "C": "Coaxial cable uses a central copper conductor and metallic shield, which is different from the pictured fiber termination.",
+        "D": "The pictured connectors and cable are fiber-optic termination hardware, which transports data as light."
+      },
+      "domainTopic": "Physical layer",
+      "sourceQuestionNumber": 10,
+      "sourceAnswer": "D",
+      "verificationStatus": "source_key_matched_preliminary_technical_review",
+      "trialOnly": true,
+      "source": {
+        "curriculum": "CCNA 1 v7 Introduction to Networks",
+        "moduleRange": "4–7 Ethernet Concepts",
+        "questionPDFPages": [
+          6
+        ],
+        "answersPDF": "CCNA 1 v7 Modules 4 - 7_ Ethernet Concepts Exam Answers.pdf",
+        "answerMatch": "red_highlight_source_pdf"
+      },
+      "exhibitAssets": [
+        {
+          "src": "/question-assets/ethernet-concepts/itn-m4-7-010.jpeg",
+          "alt": "Fiber optic cable and connectors shown in the question",
+          "mimeType": "image/jpeg",
+          "sha256": "6ff51ae8a4fc0d69cddfe5a5e48ec3c8910dd5b8dba80d41710b97f0fd30b4f3"
+        }
+      ],
+      "conceptGroup": "ethernet_media_identification",
+      "variantOfSameConcept": true
+    },
+    {
+      "id": "ITN-M4-7-011",
+      "type": "multiple_choice",
+      "question": "In addition to the cable length, what two factors could interfere with the communication carried over UTP cables? (Choose two.)",
+      "options": [
+        {
+          "id": "A",
+          "text": "crosstalk"
+        },
+        {
+          "id": "B",
+          "text": "bandwidth"
+        },
+        {
+          "id": "C",
+          "text": "size of the network"
+        },
+        {
+          "id": "D",
+          "text": "signal modulation technique"
+        },
+        {
+          "id": "E",
+          "text": "electromagnetic interference"
+        }
+      ],
+      "correctAnswers": [
+        "A",
+        "E"
+      ],
+      "requiredSelectionCount": 2,
+      "explanation": "UTP carries electrical signals and can be disrupted by adjacent-pair crosstalk and environmental electromagnetic interference.",
+      "optionExplanations": {
+        "A": "Crosstalk is electromagnetic coupling between conductors that corrupts signals on adjacent pairs.",
+        "B": "Bandwidth is a capacity measure, not in itself an external disturbance that corrupts a UTP signal.",
+        "C": "Total network size does not directly create interference in the copper pair.",
+        "D": "Modulation affects signaling but is not the external interference source identified here.",
+        "E": "EMI from electrical equipment and nearby conductors can distort electrical signals in UTP."
+      },
+      "domainTopic": "Physical layer",
+      "sourceQuestionNumber": 11,
+      "sourceAnswer": "A,E",
+      "verificationStatus": "source_key_matched_preliminary_technical_review",
+      "trialOnly": true,
+      "source": {
+        "curriculum": "CCNA 1 v7 Introduction to Networks",
+        "moduleRange": "4–7 Ethernet Concepts",
+        "questionPDFPages": [
+          6,
+          7
+        ],
+        "answersPDF": "CCNA 1 v7 Modules 4 - 7_ Ethernet Concepts Exam Answers.pdf",
+        "answerMatch": "red_highlight_source_pdf"
+      }
+    },
+    {
+      "id": "ITN-M4-7-012",
+      "type": "single_choice",
+      "question": "Refer to the graphic. What type of cabling is shown?",
+      "options": [
+        {
+          "id": "A",
+          "text": "STP"
+        },
+        {
+          "id": "B",
+          "text": "UTP"
+        },
+        {
+          "id": "C",
+          "text": "coax"
+        },
+        {
+          "id": "D",
+          "text": "fiber"
+        }
+      ],
+      "correctAnswers": [
+        "B"
+      ],
+      "requiredSelectionCount": 1,
+      "explanation": "The exhibit shows unshielded twisted-pair (UTP) cabling: four color-coded twisted pairs without individual metallic shielding.",
+      "optionExplanations": {
+        "A": "STP incorporates additional shields; the pictured pairs are not shielded.",
+        "B": "The image shows four pairs of color-coded copper conductors twisted together without individual shielding, characteristic of UTP.",
+        "C": "Coaxial cable has a central conductor and concentric insulation/shield rather than four twisted pairs.",
+        "D": "Fiber-optic strands carry optical signals, not twisted copper conductors."
+      },
+      "domainTopic": "Physical layer",
+      "sourceQuestionNumber": 12,
+      "sourceAnswer": "B",
+      "verificationStatus": "source_key_matched_preliminary_technical_review",
+      "trialOnly": true,
+      "source": {
+        "curriculum": "CCNA 1 v7 Introduction to Networks",
+        "moduleRange": "4–7 Ethernet Concepts",
+        "questionPDFPages": [
+          7
+        ],
+        "answersPDF": "CCNA 1 v7 Modules 4 - 7_ Ethernet Concepts Exam Answers.pdf",
+        "answerMatch": "red_highlight_source_pdf"
+      },
+      "exhibitAssets": [
+        {
+          "src": "/question-assets/ethernet-concepts/itn-m4-7-012.jpeg",
+          "alt": "Four color-coded twisted copper pairs emerging from blue UTP jacket",
+          "mimeType": "image/jpeg",
+          "sha256": "8fee00ddac6419eb4fae5dda6d8569ae57253f2dc4233ab7f485444872998901"
+        }
+      ],
+      "conceptGroup": "ethernet_media_identification",
+      "variantOfSameConcept": true
+    },
+    {
+      "id": "ITN-M4-7-013",
+      "type": "multiple_choice",
+      "question": "Which two devices commonly affect wireless networks? (Choose two.)",
+      "options": [
+        {
+          "id": "A",
+          "text": "Blu-ray players"
+        },
+        {
+          "id": "B",
+          "text": "home theaters"
+        },
+        {
+          "id": "C",
+          "text": "cordless phones"
+        },
+        {
+          "id": "D",
+          "text": "microwaves"
+        },
+        {
+          "id": "E",
+          "text": "incandescent light bulbs"
+        },
+        {
+          "id": "F",
+          "text": "external hard drives"
+        }
+      ],
+      "correctAnswers": [
+        "C",
+        "D"
+      ],
+      "requiredSelectionCount": 2,
+      "explanation": "Microwave ovens and some cordless telephones can interfere with 2.4 GHz wireless networks.",
+      "optionExplanations": {
+        "A": "A Blu-ray player as such is not a common 2.4 GHz interference source; a separate wireless feature would require additional context.",
+        "B": "A home-theater device without specified wireless radios is not one of the commonly identified interference sources here.",
+        "C": "Certain cordless telephones operate in frequency bands that overlap Wi-Fi and can interfere with it.",
+        "D": "Microwave ovens can emit interference near the 2.4 GHz Wi-Fi band.",
+        "E": "Ordinary incandescent bulbs are not usually major sources of Wi-Fi radio-frequency interference.",
+        "F": "An ordinary external hard drive is not inherently a Wi-Fi-frequency transmitter; specific USB 3 interference is a separate contextual issue."
+      },
+      "domainTopic": "Physical layer",
+      "sourceQuestionNumber": 13,
+      "sourceAnswer": "C,D",
+      "verificationStatus": "source_key_matched_preliminary_technical_review",
+      "trialOnly": true,
+      "source": {
+        "curriculum": "CCNA 1 v7 Introduction to Networks",
+        "moduleRange": "4–7 Ethernet Concepts",
+        "questionPDFPages": [
+          7,
+          8
+        ],
+        "answersPDF": "CCNA 1 v7 Modules 4 - 7_ Ethernet Concepts Exam Answers.pdf",
+        "answerMatch": "red_highlight_source_pdf"
+      }
+    },
+    {
+      "id": "ITN-M4-7-014",
+      "type": "multiple_choice",
+      "question": "Which two statements describe the services provided by the data link layer? (Choose two.)",
+      "options": [
+        {
+          "id": "A",
+          "text": "It defines the end-to-end delivery addressing scheme."
+        },
+        {
+          "id": "B",
+          "text": "It maintains the path between the source and destination devices during the data transmission."
+        },
+        {
+          "id": "C",
+          "text": "It manages the access of frames to the network media."
+        },
+        {
+          "id": "D",
+          "text": "It provides reliable delivery through link establishment and flow control."
+        },
+        {
+          "id": "E",
+          "text": "It ensures that application data will be transmitted according to the prioritization."
+        },
+        {
+          "id": "F",
+          "text": "It packages various Layer 3 PDUs into a frame format that is compatible with the network interface."
+        }
+      ],
+      "correctAnswers": [
+        "C",
+        "F"
+      ],
+      "requiredSelectionCount": 2,
+      "explanation": "The data link layer manages access to the local medium and encapsulates Layer 3 data into frames appropriate for the network interface.",
+      "optionExplanations": {
+        "A": "End-to-end logical addressing is primarily a network-layer function, not a data-link service.",
+        "B": "Maintaining an end-to-end path is not a data-link-layer responsibility.",
+        "C": "The MAC sublayer coordinates how frames access the local transmission medium.",
+        "D": "Some data-link protocols provide local link control, but universal end-to-end reliable delivery is not provided by this layer.",
+        "E": "Application-level transmission priority is not a generic data-link function as described.",
+        "F": "The LLC/data-link encapsulation process packages Layer 3 packets into frames suitable for the interface."
+      },
+      "domainTopic": "Data link layer",
+      "sourceQuestionNumber": 14,
+      "sourceAnswer": "C,F",
+      "verificationStatus": "source_key_matched_preliminary_technical_review",
+      "trialOnly": true,
+      "source": {
+        "curriculum": "CCNA 1 v7 Introduction to Networks",
+        "moduleRange": "4–7 Ethernet Concepts",
+        "questionPDFPages": [
+          8
+        ],
+        "answersPDF": "CCNA 1 v7 Modules 4 - 7_ Ethernet Concepts Exam Answers.pdf",
+        "answerMatch": "red_highlight_source_pdf"
+      }
+    },
+    {
+      "id": "ITN-M4-7-015",
+      "type": "single_choice",
+      "question": "What is the function of the CRC value that is found in the FCS field of a frame?",
+      "options": [
+        {
+          "id": "A",
+          "text": "to verify the integrity of the received frame"
+        },
+        {
+          "id": "B",
+          "text": "to verify the physical address in the frame"
+        },
+        {
+          "id": "C",
+          "text": "to verify the logical address in the frame"
+        },
+        {
+          "id": "D",
+          "text": "to compute the checksum header for the data field in the frame"
+        }
+      ],
+      "correctAnswers": [
+        "A"
+      ],
+      "explanation": "The receiver calculates a cyclic redundancy check over the received frame and compares it with the FCS field. A mismatch signals frame corruption and normally causes the frame to be discarded.",
+      "optionExplanations": {
+        "A": "The CRC carried in the Frame Check Sequence lets the receiver check frame integrity.",
+        "B": "MAC addresses identify Layer 2 endpoints; the CRC does not validate whether an address is correct.",
+        "C": "Logical IP addressing is not the function of an Ethernet FCS.",
+        "D": "The FCS is a trailer-based error-detection value, not a checksum header for the payload."
+      },
+      "domainTopic": "Ethernet frame",
+      "sourceQuestionNumber": 15,
+      "sourceAnswer": "A",
+      "verificationStatus": "source_key_matched_technical_review_documentation_audit_pending",
+      "trialOnly": true,
+      "source": {
+        "curriculum": "CCNA 1 v7 Introduction to Networks",
+        "moduleRange": "4–7 Ethernet Concepts",
+        "questionPDFPages": [
+          8
+        ],
+        "answerPDFPages": [
+          11
+        ],
+        "answerPDFQuestionNumber": 15,
+        "answerMatch": "highlighted_source_key_matches_choice"
+      }
+    },
+    {
+      "id": "ITN-M4-7-016",
+      "type": "single_choice",
+      "question": "What is contained in the trailer of a data-link frame?",
+      "options": [
+        {
+          "id": "A",
+          "text": "logical address"
+        },
+        {
+          "id": "B",
+          "text": "physical address"
+        },
+        {
+          "id": "C",
+          "text": "data"
+        },
+        {
+          "id": "D",
+          "text": "error detection"
+        }
+      ],
+      "correctAnswers": [
+        "D"
+      ],
+      "explanation": "An Ethernet data-link trailer carries the Frame Check Sequence (FCS), which is used to detect transmission errors. MAC addresses appear in the header, while payload data appears between header and trailer.",
+      "optionExplanations": {
+        "A": "Logical Layer 3 addresses are part of the encapsulated network-layer packet.",
+        "B": "Ethernet source and destination MAC addresses are in the frame header.",
+        "C": "The payload/data portion is separate from the trailer.",
+        "D": "The Ethernet FCS in the trailer enables error detection."
+      },
+      "domainTopic": "Ethernet frame",
+      "sourceQuestionNumber": 16,
+      "sourceAnswer": "D",
+      "verificationStatus": "source_key_matched_technical_review_documentation_audit_pending",
+      "trialOnly": true,
+      "source": {
+        "curriculum": "CCNA 1 v7 Introduction to Networks",
+        "moduleRange": "4–7 Ethernet Concepts",
+        "questionPDFPages": [
+          8,
+          9
+        ],
+        "answerPDFPages": [
+          11,
+          12
+        ],
+        "answerPDFQuestionNumber": 16,
+        "answerMatch": "highlighted_source_key_matches_choice"
+      }
+    },
+    {
+      "id": "ITN-M4-7-017",
+      "type": "single_choice",
+      "question": "Which statement describes a characteristic of the frame header fields of the data link layer?",
+      "options": [
+        {
+          "id": "A",
+          "text": "They all include the flow control and logical connection fields."
+        },
+        {
+          "id": "B",
+          "text": "Ethernet frame header fields contain Layer 3 source and destination addresses."
+        },
+        {
+          "id": "C",
+          "text": "They vary depending on protocols."
+        },
+        {
+          "id": "D",
+          "text": "They include information on user applications."
+        }
+      ],
+      "correctAnswers": [
+        "C"
+      ],
+      "explanation": "Different data link protocols define different headers. Ethernet, PPP and 802.11 frames need not use the same field structure or control information.",
+      "optionExplanations": {
+        "A": "Not all Layer 2 protocols include the same optional flow-control or logical-connection fields.",
+        "B": "Ethernet header addresses are Layer 2 MAC addresses, not IP source and destination addresses.",
+        "C": "Frame-header layouts differ between data-link protocols and media.",
+        "D": "Application information is generally part of the encapsulated higher-layer payload, not a generic Layer 2 header."
+      },
+      "domainTopic": "Data link layer",
+      "sourceQuestionNumber": 17,
+      "sourceAnswer": "C",
+      "verificationStatus": "source_key_matched_technical_review_documentation_audit_pending",
+      "trialOnly": true,
+      "source": {
+        "curriculum": "CCNA 1 v7 Introduction to Networks",
+        "moduleRange": "4–7 Ethernet Concepts",
+        "questionPDFPages": [
+          9
+        ],
+        "answerPDFPages": [
+          12
+        ],
+        "answerPDFQuestionNumber": 17,
+        "answerMatch": "highlighted_source_key_matches_choice"
+      }
+    },
+    {
+      "id": "ITN-M4-7-018",
+      "type": "single_choice",
+      "question": "A network team is comparing physical WAN topologies for connecting remote sites to a headquarters building. Which topology provides high availability and connects some, but not all, remote sites?",
+      "options": [
+        {
+          "id": "A",
+          "text": "mesh"
+        },
+        {
+          "id": "B",
+          "text": "partial mesh"
+        },
+        {
+          "id": "C",
+          "text": "hub and spoke"
+        },
+        {
+          "id": "D",
+          "text": "point-to-point"
+        }
+      ],
+      "correctAnswers": [
+        "B"
+      ],
+      "explanation": "A partial-mesh WAN connects selected sites directly, providing multiple paths without requiring every site to connect to every other site.",
+      "optionExplanations": {
+        "A": "A full mesh connects each participating site to every other site; it exceeds the stated partial-connectivity requirement.",
+        "B": "A partial mesh offers selective inter-site links and redundancy without a complete full mesh.",
+        "C": "Hub-and-spoke relies on a central hub and does not directly interconnect selected spokes as a partial mesh does.",
+        "D": "A point-to-point topology is a direct connection between two endpoints, not a multi-site partial mesh."
+      },
+      "domainTopic": "WAN topology",
+      "sourceQuestionNumber": 18,
+      "sourceAnswer": "B",
+      "verificationStatus": "source_key_matched_technical_review_documentation_audit_pending",
+      "trialOnly": true,
+      "source": {
+        "curriculum": "CCNA 1 v7 Introduction to Networks",
+        "moduleRange": "4–7 Ethernet Concepts",
+        "questionPDFPages": [
+          9
+        ],
+        "answerPDFPages": [
+          12,
+          13
+        ],
+        "answerPDFQuestionNumber": 18,
+        "answerMatch": "highlighted_source_key_matches_choice"
+      }
+    },
+    {
+      "id": "ITN-M4-7-019",
+      "type": "multiple_choice",
+      "question": "Which two fields or features does Ethernet examine to determine if a received frame is passed to the data link layer or discarded by the NIC? (Choose two.)",
+      "options": [
+        {
+          "id": "A",
+          "text": "auto-MDIX"
+        },
+        {
+          "id": "B",
+          "text": "CEF"
+        },
+        {
+          "id": "C",
+          "text": "Frame Check Sequence"
+        },
+        {
+          "id": "D",
+          "text": "minimum frame size"
+        },
+        {
+          "id": "E",
+          "text": "source MAC address"
+        }
+      ],
+      "correctAnswers": [
+        "C",
+        "D"
+      ],
+      "requiredSelectionCount": 2,
+      "explanation": "NICs reject invalid Ethernet frames when the FCS/CRC detects corruption or the frame is below the valid minimum size.",
+      "optionExplanations": {
+        "A": "Auto-MDIX determines cable pair wiring compatibility rather than validating the integrity of a received Ethernet frame.",
+        "B": "Cisco Express Forwarding is a Layer 3 forwarding optimization, not an Ethernet NIC frame-validity test.",
+        "C": "The FCS carries the CRC information used to detect corruption of the received frame.",
+        "D": "Ethernet enforces a minimum valid frame length; undersized frames are discarded as runts.",
+        "E": "The source MAC helps learning and identity but does not by itself validate the frame FCS and length."
+      },
+      "domainTopic": "Data link layer",
+      "sourceQuestionNumber": 19,
+      "sourceAnswer": "C,D",
+      "verificationStatus": "source_key_matched_preliminary_technical_review",
+      "trialOnly": true,
+      "source": {
+        "curriculum": "CCNA 1 v7 Introduction to Networks",
+        "moduleRange": "4–7 Ethernet Concepts",
+        "questionPDFPages": [
+          9,
+          10
+        ],
+        "answersPDF": "CCNA 1 v7 Modules 4 - 7_ Ethernet Concepts Exam Answers.pdf",
+        "answerMatch": "red_highlight_source_pdf"
+      }
+    },
+    {
+      "id": "ITN-M4-7-020",
+      "type": "single_choice",
+      "question": "Which media communication type does not require media arbitration in the data link layer?",
+      "options": [
+        {
+          "id": "A",
+          "text": "deterministic"
+        },
+        {
+          "id": "B",
+          "text": "half-duplex"
+        },
+        {
+          "id": "C",
+          "text": "full-duplex"
+        },
+        {
+          "id": "D",
+          "text": "controlled access"
+        }
+      ],
+      "correctAnswers": [
+        "C"
+      ],
+      "explanation": "Full-duplex Ethernet uses separate simultaneous transmit/receive paths, so there is no shared-medium contention and CSMA/CD arbitration is not needed.",
+      "optionExplanations": {
+        "A": "Deterministic describes a controlled-access scheme; it does not by itself mean there is no arbitration.",
+        "B": "Half-duplex shared-media links must coordinate access because only one side can transmit at a time.",
+        "C": "Full-duplex links can send and receive simultaneously without collision-domain contention.",
+        "D": "Controlled access is itself a way of arbitrating a shared medium."
+      },
+      "domainTopic": "Duplex and media access",
+      "sourceQuestionNumber": 20,
+      "sourceAnswer": "C",
+      "verificationStatus": "source_key_matched_technical_review_documentation_audit_pending",
+      "trialOnly": true,
+      "source": {
+        "curriculum": "CCNA 1 v7 Introduction to Networks",
+        "moduleRange": "4–7 Ethernet Concepts",
+        "questionPDFPages": [
+          10
+        ],
+        "answerPDFPages": [
+          13,
+          14
+        ],
+        "answerPDFQuestionNumber": 20,
+        "answerMatch": "highlighted_source_key_matches_choice"
+      }
+    },
+    {
+      "id": "ITN-M4-7-021",
+      "type": "single_choice",
+      "question": "Which statement describes an extended star topology?",
+      "options": [
+        {
+          "id": "A",
+          "text": "End devices connect to a central intermediate device, which in turn connects to other central intermediate devices."
+        },
+        {
+          "id": "B",
+          "text": "End devices are connected together by a bus and each bus connects to a central intermediate device."
+        },
+        {
+          "id": "C",
+          "text": "Each end system is connected to its respective neighbor via an intermediate device."
+        },
+        {
+          "id": "D",
+          "text": "All end and intermediate devices are connected in a chain to each other."
+        }
+      ],
+      "correctAnswers": [
+        "A"
+      ],
+      "explanation": "An extended star contains multiple interconnected star segments: endpoints connect to an access device, and those access devices interconnect through other central devices.",
+      "optionExplanations": {
+        "A": "Interconnected central devices extend the basic star topology into multiple star segments.",
+        "B": "A bus of endpoints linked to a hub is a hybrid bus arrangement, not the specified extended star.",
+        "C": "A succession of neighbors describes a chain or point-to-point arrangement, not a hierarchical star.",
+        "D": "Daisy-chaining every device is a linear/chain topology rather than an extended star."
+      },
+      "domainTopic": "LAN topology",
+      "sourceQuestionNumber": 21,
+      "sourceAnswer": "A",
+      "verificationStatus": "source_key_matched_technical_review_documentation_audit_pending",
+      "trialOnly": true,
+      "source": {
+        "curriculum": "CCNA 1 v7 Introduction to Networks",
+        "moduleRange": "4–7 Ethernet Concepts",
+        "questionPDFPages": [
+          10
+        ],
+        "answerPDFPages": [
+          14,
+          15
+        ],
+        "answerPDFQuestionNumber": 21,
+        "answerMatch": "highlighted_source_key_matches_choice"
+      }
+    },
+    {
+      "id": "ITN-M4-7-022",
+      "type": "single_choice",
+      "question": "What is a characteristic of the LLC sublayer?",
+      "options": [
+        {
+          "id": "A",
+          "text": "It provides the logical addressing required that identifies the device."
+        },
+        {
+          "id": "B",
+          "text": "It provides delimitation of data according to the physical signaling requirements of the medium."
+        },
+        {
+          "id": "C",
+          "text": "It places information in the frame allowing multiple Layer 3 protocols to use the same network interface and media."
+        },
+        {
+          "id": "D",
+          "text": "It defines software processes that provide services to the physical layer."
+        }
+      ],
+      "correctAnswers": [
+        "C"
+      ],
+      "explanation": "The IEEE 802 Logical Link Control (LLC) sublayer provides an interface to Layer 3 and identifies the network-layer protocol carried in the frame, enabling more than one Layer 3 protocol to use the same link.",
+      "optionExplanations": {
+        "A": "Device identification through MAC addressing is primarily associated with the MAC sublayer, not LLC.",
+        "B": "Physical-media delimitation is associated with MAC/framing and physical signaling rather than LLC protocol identification.",
+        "C": "LLC information permits different Layer 3 protocols to share one network interface.",
+        "D": "LLC interfaces upward to network-layer protocols; the MAC sublayer interfaces toward the physical medium."
+      },
+      "domainTopic": "LLC and MAC",
+      "sourceQuestionNumber": 22,
+      "sourceAnswer": "C",
+      "verificationStatus": "source_key_matched_technical_review_documentation_audit_pending",
+      "trialOnly": true,
+      "source": {
+        "curriculum": "CCNA 1 v7 Introduction to Networks",
+        "moduleRange": "4–7 Ethernet Concepts",
+        "questionPDFPages": [
+          11
+        ],
+        "answerPDFPages": [
+          15
+        ],
+        "answerPDFQuestionNumber": 22,
+        "answerMatch": "highlighted_source_key_matches_choice"
+      }
+    },
+    {
+      "id": "ITN-M4-7-023",
+      "type": "multiple_choice",
+      "question": "What are three ways that media access control is used in networking? (Choose three.)",
+      "options": [
+        {
+          "id": "A",
+          "text": "Ethernet utilizes CSMA/CD."
+        },
+        {
+          "id": "B",
+          "text": "Media access control provides placement of data frames onto the media."
+        },
+        {
+          "id": "C",
+          "text": "Contention-based access is also known as deterministic."
+        },
+        {
+          "id": "D",
+          "text": "802.11 utilizes CSMA/CD."
+        },
+        {
+          "id": "E",
+          "text": "Data link layer protocols define the rules for access to different media."
+        },
+        {
+          "id": "F",
+          "text": "Networks with controlled access have reduced performance due to data collisions."
+        }
+      ],
+      "correctAnswers": [
+        "A",
+        "B",
+        "E"
+      ],
+      "requiredSelectionCount": 3,
+      "explanation": "Media-access control specifies how frames use the medium; older half-duplex Ethernet uses CSMA/CD, whereas Wi-Fi uses CSMA/CA.",
+      "optionExplanations": {
+        "A": "Classic shared half-duplex Ethernet uses CSMA/CD as its contention-based media-access method; modern full-duplex switched Ethernet does not use collisions.",
+        "B": "The MAC sublayer controls when and how frames are placed onto the physical medium.",
+        "C": "Contention-based access competes for the medium; deterministic access uses an organized permission or scheduling method.",
+        "D": "IEEE 802.11 wireless uses CSMA/CA rather than collision detection.",
+        "E": "Data-link protocols specify rules for accessing the physical medium.",
+        "F": "Controlled access is designed to avoid collisions rather than suffer collisions as a defining limitation."
+      },
+      "domainTopic": "Data link layer",
+      "sourceQuestionNumber": 23,
+      "sourceAnswer": "A,B,E",
+      "verificationStatus": "source_key_matched_preliminary_technical_review",
+      "trialOnly": true,
+      "source": {
+        "curriculum": "CCNA 1 v7 Introduction to Networks",
+        "moduleRange": "4–7 Ethernet Concepts",
+        "questionPDFPages": [
+          11
+        ],
+        "answersPDF": "CCNA 1 v7 Modules 4 - 7_ Ethernet Concepts Exam Answers.pdf",
+        "answerMatch": "red_highlight_source_pdf"
+      },
+      "historicalContext": "CSMA/CD applies to shared half-duplex Ethernet, not normal modern full-duplex switched Ethernet."
+    },
+    {
+      "id": "ITN-M4-7-024",
+      "type": "single_choice",
+      "question": "During the encapsulation process, what occurs at the data link layer for a PC connected to an Ethernet network?",
+      "options": [
+        {
+          "id": "A",
+          "text": "An IP address is added."
+        },
+        {
+          "id": "B",
+          "text": "The logical address is added."
+        },
+        {
+          "id": "C",
+          "text": "The physical address is added."
+        },
+        {
+          "id": "D",
+          "text": "The process port number is added."
+        }
+      ],
+      "correctAnswers": [
+        "C"
+      ],
+      "explanation": "Ethernet Layer 2 encapsulation adds a frame header containing source and destination MAC addresses, along with a trailer containing an FCS. IP addresses are added by Layer 3 and transport ports by Layer 4.",
+      "optionExplanations": {
+        "A": "Source and destination IP addresses are in the Layer 3 packet, not added by Ethernet framing.",
+        "B": "Although IP addresses are logical addresses, Ethernet specifically adds Layer 2 physical/MAC addresses.",
+        "C": "The Layer 2 header adds physical MAC addresses for local-link delivery.",
+        "D": "TCP and UDP port numbers are transport-layer information, not Ethernet header fields."
+      },
+      "domainTopic": "Ethernet encapsulation",
+      "sourceQuestionNumber": 24,
+      "sourceAnswer": "C",
+      "verificationStatus": "source_key_matched_technical_review_documentation_audit_pending",
+      "trialOnly": true,
+      "source": {
+        "curriculum": "CCNA 1 v7 Introduction to Networks",
+        "moduleRange": "4–7 Ethernet Concepts",
+        "questionPDFPages": [
+          11,
+          12
+        ],
+        "answerPDFPages": [
+          16,
+          17
+        ],
+        "answerPDFQuestionNumber": 24,
+        "answerMatch": "highlighted_source_key_matches_choice"
+      }
+    },
+    {
+      "id": "ITN-M4-7-025",
+      "type": "multiple_choice",
+      "question": "What three items are contained in an Ethernet header and trailer? (Choose three.)",
+      "options": [
+        {
+          "id": "A",
+          "text": "source IP address"
+        },
+        {
+          "id": "B",
+          "text": "source MAC address"
+        },
+        {
+          "id": "C",
+          "text": "destination IP address"
+        },
+        {
+          "id": "D",
+          "text": "destination MAC address"
+        },
+        {
+          "id": "E",
+          "text": "error-checking information"
+        }
+      ],
+      "correctAnswers": [
+        "B",
+        "D",
+        "E"
+      ],
+      "requiredSelectionCount": 3,
+      "explanation": "Ethernet frames carry source and destination MAC addresses in the header and an FCS for error detection in the trailer.",
+      "optionExplanations": {
+        "A": "IPv4 source addresses reside within the Layer 3 packet payload, not Ethernet header or trailer.",
+        "B": "The Ethernet header contains the sender’s MAC address.",
+        "C": "The IPv4 destination address belongs in the encapsulated IP packet.",
+        "D": "The Ethernet header includes the destination MAC address for local delivery.",
+        "E": "The Ethernet trailer includes FCS/CRC error-detection information."
+      },
+      "domainTopic": "Data link layer",
+      "sourceQuestionNumber": 25,
+      "sourceAnswer": "B,D,E",
+      "verificationStatus": "source_key_matched_preliminary_technical_review",
+      "trialOnly": true,
+      "source": {
+        "curriculum": "CCNA 1 v7 Introduction to Networks",
+        "moduleRange": "4–7 Ethernet Concepts",
+        "questionPDFPages": [
+          12
+        ],
+        "answersPDF": "CCNA 1 v7 Modules 4 - 7_ Ethernet Concepts Exam Answers.pdf",
+        "answerMatch": "red_highlight_source_pdf"
+      }
+    },
+    {
+      "id": "ITN-M4-7-026",
+      "type": "single_choice",
+      "question": "What type of communication rule would best describe CSMA/CD?",
+      "options": [
+        {
+          "id": "A",
+          "text": "access method"
+        },
+        {
+          "id": "B",
+          "text": "flow control"
+        },
+        {
+          "id": "C",
+          "text": "message encapsulation"
+        },
+        {
+          "id": "D",
+          "text": "message encoding"
+        }
+      ],
+      "correctAnswers": [
+        "A"
+      ],
+      "explanation": "Carrier Sense Multiple Access with Collision Detection (CSMA/CD) is the access-control method for legacy shared, half-duplex Ethernet. It specifies listening, collision detection and retry/backoff.",
+      "optionExplanations": {
+        "A": "CSMA/CD defines how stations contend for a shared Ethernet medium.",
+        "B": "Flow control manages transmission rates or congestion rather than collisions on a shared cable.",
+        "C": "Encapsulation defines how protocol data is wrapped with headers and trailers.",
+        "D": "Message encoding represents bits as signals; CSMA/CD governs access to the medium."
+      },
+      "domainTopic": "Ethernet media access",
+      "sourceQuestionNumber": 26,
+      "sourceAnswer": "A",
+      "verificationStatus": "source_key_matched_technical_review_documentation_audit_pending",
+      "trialOnly": true,
+      "source": {
+        "curriculum": "CCNA 1 v7 Introduction to Networks",
+        "moduleRange": "4–7 Ethernet Concepts",
+        "questionPDFPages": [
+          12
+        ],
+        "answerPDFPages": [
+          17,
+          18
+        ],
+        "answerPDFQuestionNumber": 26,
+        "answerMatch": "highlighted_source_key_matches_choice"
+      }
+    },
+    {
+      "id": "ITN-M4-7-027",
+      "type": "multiple_choice",
+      "question": "Which three basic parts are common to all frame types supported by the data link layer? (Choose three.)",
+      "options": [
+        {
+          "id": "A",
+          "text": "header"
+        },
+        {
+          "id": "B",
+          "text": "type field"
+        },
+        {
+          "id": "C",
+          "text": "MTU size"
+        },
+        {
+          "id": "D",
+          "text": "data"
+        },
+        {
+          "id": "E",
+          "text": "trailer"
+        },
+        {
+          "id": "F",
+          "text": "CRC value"
+        }
+      ],
+      "correctAnswers": [
+        "A",
+        "D",
+        "E"
+      ],
+      "requiredSelectionCount": 3,
+      "explanation": "Data-link frames generally contain a header, a data/payload section, and a trailer, while specific field names vary by framing protocol.",
+      "optionExplanations": {
+        "A": "Frames use a header for protocol-dependent control and addressing fields.",
+        "B": "Not every data-link framing protocol has a field literally called type.",
+        "C": "MTU is a frame-related size limit, not one of the universal framing sections.",
+        "D": "Frames carry a data payload, typically an encapsulated higher-layer PDU.",
+        "E": "A trailer provides final control or checking information; its exact fields vary by protocol.",
+        "F": "CRC is a particular error-checking mechanism rather than a universally named structural part of all frames."
+      },
+      "domainTopic": "Data link layer",
+      "sourceQuestionNumber": 27,
+      "sourceAnswer": "A,D,E",
+      "verificationStatus": "source_key_matched_preliminary_technical_review",
+      "trialOnly": true,
+      "source": {
+        "curriculum": "CCNA 1 v7 Introduction to Networks",
+        "moduleRange": "4–7 Ethernet Concepts",
+        "questionPDFPages": [
+          12,
+          13
+        ],
+        "answersPDF": "CCNA 1 v7 Modules 4 - 7_ Ethernet Concepts Exam Answers.pdf",
+        "answerMatch": "red_highlight_source_pdf"
+      }
+    },
+    {
+      "id": "ITN-M4-7-028",
+      "type": "single_choice",
+      "question": "Which statement is true about the CSMA/CD access method that is used in Ethernet?",
+      "options": [
+        {
+          "id": "A",
+          "text": "When a device hears a carrier signal and transmits, a collision cannot occur."
+        },
+        {
+          "id": "B",
+          "text": "A jamming signal causes only devices that caused the collision to execute a backoff algorithm."
+        },
+        {
+          "id": "C",
+          "text": "All network devices must listen before transmitting."
+        },
+        {
+          "id": "D",
+          "text": "Devices involved in a collision get priority to transmit after the backoff period."
+        }
+      ],
+      "correctAnswers": [
+        "C"
+      ],
+      "explanation": "In a shared half-duplex Ethernet collision domain using CSMA/CD, stations listen for a carrier before transmitting. Collisions remain possible because propagation delay can let stations start simultaneously. Modern full-duplex switched Ethernet does not use CSMA/CD.",
+      "optionExplanations": {
+        "A": "Carrier sensing reduces collisions but cannot eliminate them because signals take time to propagate.",
+        "B": "The collision backoff process applies to stations participating in the collision domain, not only the original pair in a simplified exclusive sense.",
+        "C": "Carrier sensing requires checking whether the shared medium is in use before transmission.",
+        "D": "Backoff is randomized; previously collided stations do not receive transmission priority."
+      },
+      "domainTopic": "Ethernet media access",
+      "sourceQuestionNumber": 28,
+      "sourceAnswer": "C",
+      "verificationStatus": "source_key_matched_technical_review_documentation_audit_pending",
+      "trialOnly": true,
+      "source": {
+        "curriculum": "CCNA 1 v7 Introduction to Networks",
+        "moduleRange": "4–7 Ethernet Concepts",
+        "questionPDFPages": [
+          13
+        ],
+        "answerPDFPages": [
+          18,
+          19
+        ],
+        "answerPDFQuestionNumber": 28,
+        "answerMatch": "highlighted_source_key_matches_choice"
+      }
+    },
+    {
+      "id": "ITN-M4-7-029",
+      "type": "single_choice",
+      "question": "What is the auto-MDIX feature on a switch?",
+      "options": [
+        {
+          "id": "A",
+          "text": "the automatic configuration of an interface for 10/100/1000 Mb/s operation"
+        },
+        {
+          "id": "B",
+          "text": "the automatic configuration of an interface for a straight- through or a crossover Ethernet cable connection"
+        },
+        {
+          "id": "C",
+          "text": "the automatic configuration of full-duplex operation over a single Ethernet copper or optical cable"
+        },
+        {
+          "id": "D",
+          "text": "the ability to turn a switch interface on or off accordingly if an active connection is detected"
+        }
+      ],
+      "correctAnswers": [
+        "B"
+      ],
+      "explanation": "Auto-MDIX automatically accommodates the required transmit/receive pin pairing on copper Ethernet, allowing either a straight-through or a crossover cable between compatible devices.",
+      "optionExplanations": {
+        "A": "Speed negotiation concerns link data rate; auto-MDIX handles transmit/receive pair crossover.",
+        "B": "Auto-MDIX detects the cable pinout needed and supports both straight-through and crossover copper connections.",
+        "C": "Duplex negotiation is separate from cable-pair crossover selection.",
+        "D": "Interface operational state can follow link detection, but that is not the definition of auto-MDIX."
+      },
+      "domainTopic": "Copper Ethernet",
+      "sourceQuestionNumber": 29,
+      "sourceAnswer": "B",
+      "verificationStatus": "source_key_matched_technical_review_documentation_audit_pending",
+      "trialOnly": true,
+      "source": {
+        "curriculum": "CCNA 1 v7 Introduction to Networks",
+        "moduleRange": "4–7 Ethernet Concepts",
+        "questionPDFPages": [
+          13
+        ],
+        "answerPDFPages": [
+          19,
+          20
+        ],
+        "answerPDFQuestionNumber": 29,
+        "answerMatch": "highlighted_source_key_matches_choice"
+      }
+    },
+    {
+      "id": "ITN-M4-7-030",
+      "type": "single_choice",
+      "question": "Refer to the exhibit. What is the destination MAC address of the Ethernet frame as it leaves the web server if the final destination is PC1?",
+      "options": [
+        {
+          "id": "A",
+          "text": "00-60-2F-3A-07-AA"
+        },
+        {
+          "id": "B",
+          "text": "00-60-2F-3A-07-BB"
+        },
+        {
+          "id": "C",
+          "text": "00-60-2F-3A-07-CC"
+        },
+        {
+          "id": "D",
+          "text": "00-60-2F-3A-07-DD"
+        }
+      ],
+      "correctAnswers": [
+        "C"
+      ],
+      "requiredSelectionCount": 1,
+      "explanation": "A host sending to a remote network addresses the outgoing Ethernet frame to its local default-gateway MAC, not directly to the distant host.",
+      "optionExplanations": {
+        "A": "This MAC belongs to a different interface from the web server’s local default-gateway next hop in the pictured routed path.",
+        "B": "This address is not the LAN-facing router interface used as the immediate next hop in the diagram.",
+        "C": "The server sends the Ethernet frame to its directly connected router’s MAC address, shown as 00-60-2F-3A-07-CC.",
+        "D": "This address is associated with a different device/interface; Ethernet destination addressing changes at each routed hop."
+      },
+      "domainTopic": "Ethernet switching",
+      "sourceQuestionNumber": 30,
+      "sourceAnswer": "C",
+      "verificationStatus": "source_key_matched_preliminary_technical_review",
+      "trialOnly": true,
+      "source": {
+        "curriculum": "CCNA 1 v7 Introduction to Networks",
+        "moduleRange": "4–7 Ethernet Concepts",
+        "questionPDFPages": [
+          14
+        ],
+        "answersPDF": "CCNA 1 v7 Modules 4 - 7_ Ethernet Concepts Exam Answers.pdf",
+        "answerMatch": "red_highlight_source_pdf"
+      },
+      "exhibitAssets": [
+        {
+          "src": "/question-assets/ethernet-concepts/itn-m4-7-030.png",
+          "alt": "Network topology with a web server, routed hops, PC1, and annotated interface MAC addresses",
+          "mimeType": "image/png",
+          "sha256": "d9e658e2e13bdd8c224e806470178cb439dfa62d30ef38dbc37a6c8048396ead"
+        }
+      ]
+    },
+    {
+      "id": "ITN-M4-7-031",
+      "type": "single_choice",
+      "question": "A Layer 2 switch is used to switch incoming frames from a 1000BASE-T port to a port connected to a 100Base-T network. Which method of memory buffering would work best for this task?",
+      "options": [
+        {
+          "id": "A",
+          "text": "port-based buffering"
+        },
+        {
+          "id": "B",
+          "text": "level 1 cache buffering"
+        },
+        {
+          "id": "C",
+          "text": "shared memory buffering"
+        },
+        {
+          "id": "D",
+          "text": "fixed configuration buffering"
+        }
+      ],
+      "correctAnswers": [
+        "C"
+      ],
+      "explanation": "Shared-memory buffering draws from a common buffer pool and allows switches to cope flexibly with ports operating at different speeds, reducing the limits of fixed buffers tied to individual ingress ports.",
+      "optionExplanations": {
+        "A": "Port-based buffering allocates fixed memory per port and can be less adaptable when ports operate at different rates.",
+        "B": "CPU cache levels are not the frame-buffering scheme being tested for switching ports.",
+        "C": "Shared memory can dynamically allocate frame storage across ports with different line rates.",
+        "D": "A fixed configuration buffer does not describe the flexible shared-memory approach."
+      },
+      "domainTopic": "Ethernet switching",
+      "sourceQuestionNumber": 31,
+      "sourceAnswer": "C",
+      "verificationStatus": "source_key_matched_technical_review_documentation_audit_pending",
+      "trialOnly": true,
+      "source": {
+        "curriculum": "CCNA 1 v7 Introduction to Networks",
+        "moduleRange": "4–7 Ethernet Concepts",
+        "questionPDFPages": [
+          14
+        ],
+        "answerPDFPages": [
+          20,
+          21
+        ],
+        "answerPDFQuestionNumber": 31,
+        "answerMatch": "highlighted_source_key_matches_choice"
+      }
+    },
+    {
+      "id": "ITN-M4-7-032",
+      "type": "multiple_choice",
+      "question": "What are two examples of the cut-through switching method? (Choose two.)",
+      "options": [
+        {
+          "id": "A",
+          "text": "store-and-forward switching"
+        },
+        {
+          "id": "B",
+          "text": "fast-forward switching"
+        },
+        {
+          "id": "C",
+          "text": "CRC switching"
+        },
+        {
+          "id": "D",
+          "text": "fragment-free switching"
+        },
+        {
+          "id": "E",
+          "text": "QOS switching"
+        }
+      ],
+      "correctAnswers": [
+        "B",
+        "D"
+      ],
+      "requiredSelectionCount": 2,
+      "explanation": "Fast-forward and fragment-free are cut-through switching variants; one forwards after the destination MAC is read, while the other waits for the first 64 bytes.",
+      "optionExplanations": {
+        "A": "Store-and-forward receives and checks the whole frame rather than forwarding early.",
+        "B": "Fast-forward begins forwarding once the destination MAC has been read and is a cut-through variant.",
+        "C": "CRC checking characterizes store-and-forward, not a distinct cut-through subtype called CRC switching.",
+        "D": "Fragment-free is a cut-through variant that waits for the initial 64 bytes before forwarding.",
+        "E": "QoS scheduling is a traffic-management function, not a named Ethernet cut-through switching subtype."
+      },
+      "domainTopic": "Ethernet switching",
+      "sourceQuestionNumber": 32,
+      "sourceAnswer": "B,D",
+      "verificationStatus": "source_key_matched_preliminary_technical_review",
+      "trialOnly": true,
+      "source": {
+        "curriculum": "CCNA 1 v7 Introduction to Networks",
+        "moduleRange": "4–7 Ethernet Concepts",
+        "questionPDFPages": [
+          15
+        ],
+        "answersPDF": "CCNA 1 v7 Modules 4 - 7_ Ethernet Concepts Exam Answers.pdf",
+        "answerMatch": "red_highlight_source_pdf"
+      }
+    },
+    {
+      "id": "ITN-M4-7-033",
+      "type": "single_choice",
+      "question": "Which frame forwarding method receives the entire frame and performs a CRC check to detect errors before forwarding the frame?",
+      "options": [
+        {
+          "id": "A",
+          "text": "cut-through switching"
+        },
+        {
+          "id": "B",
+          "text": "store-and-forward switching"
+        },
+        {
+          "id": "C",
+          "text": "fragment-free switching"
+        },
+        {
+          "id": "D",
+          "text": "fast-forward switching"
+        }
+      ],
+      "correctAnswers": [
+        "B"
+      ],
+      "explanation": "Store-and-forward switching receives the complete frame, checks its CRC/FCS, and only then forwards valid frames. Cut-through modes begin forwarding before the whole frame is received.",
+      "optionExplanations": {
+        "A": "Cut-through can start forwarding before the FCS is received, so it cannot reject the frame based on a completed CRC check beforehand.",
+        "B": "Store-and-forward waits for and verifies the entire received frame.",
+        "C": "Fragment-free is a cut-through variant that waits for an initial portion, not the whole frame and FCS.",
+        "D": "Fast-forward is a low-latency cut-through variant; it does not perform the full pre-forward CRC validation."
+      },
+      "domainTopic": "Switching methods",
+      "sourceQuestionNumber": 33,
+      "sourceAnswer": "B",
+      "verificationStatus": "source_key_matched_technical_review_documentation_audit_pending",
+      "trialOnly": true,
+      "source": {
+        "curriculum": "CCNA 1 v7 Introduction to Networks",
+        "moduleRange": "4–7 Ethernet Concepts",
+        "questionPDFPages": [
+          15
+        ],
+        "answerPDFPages": [
+          22
+        ],
+        "answerPDFQuestionNumber": 33,
+        "answerMatch": "highlighted_source_key_matches_choice"
+      }
+    },
+    {
+      "id": "ITN-M4-7-034",
+      "type": "single_choice",
+      "question": "What is the purpose of the FCS field in a frame?",
+      "options": [
+        {
+          "id": "A",
+          "text": "to obtain the MAC address of the sending node"
+        },
+        {
+          "id": "B",
+          "text": "to verify the logical address of the sending node"
+        },
+        {
+          "id": "C",
+          "text": "to compute the CRC header for the data field"
+        },
+        {
+          "id": "D",
+          "text": "to determine if errors occurred in the transmission and reception"
+        }
+      ],
+      "correctAnswers": [
+        "D"
+      ],
+      "requiredSelectionCount": 1,
+      "explanation": "The Frame Check Sequence carries a CRC value for detecting transmission errors in an Ethernet frame.",
+      "optionExplanations": {
+        "A": "The FCS is not used to retrieve a sender MAC address; the source address is stored in the header.",
+        "B": "Logical addressing such as IPv4 is part of Layer 3, not the function of the Ethernet frame check.",
+        "C": "The FCS carries a CRC value, not a separate CRC header for the data field.",
+        "D": "The receiver checks the FCS to detect whether bits changed during the link transmission."
+      },
+      "domainTopic": "Data link layer",
+      "sourceQuestionNumber": 34,
+      "sourceAnswer": "D",
+      "verificationStatus": "source_key_matched_preliminary_technical_review",
+      "trialOnly": true,
+      "source": {
+        "curriculum": "CCNA 1 v7 Introduction to Networks",
+        "moduleRange": "4–7 Ethernet Concepts",
+        "questionPDFPages": [
+          15
+        ],
+        "answersPDF": "CCNA 1 v7 Modules 4 - 7_ Ethernet Concepts Exam Answers.pdf",
+        "answerMatch": "red_highlight_source_pdf"
+      },
+      "conceptGroup": "ethernet_crc_fcs",
+      "variantOfSameConcept": true
+    },
+    {
+      "id": "ITN-M4-7-036",
+      "type": "multiple_choice",
+      "question": "A network administrator is connecting two modern switches using a straight-through cable. The switches are new and have never been configured. Which three statements are correct about the final result of the connection? (Choose three.)",
+      "options": [
+        {
+          "id": "A",
+          "text": "The link between the switches will work at the fastest speed that is supported by both switches."
+        },
+        {
+          "id": "B",
+          "text": "The link between switches will work as full-duplex."
+        },
+        {
+          "id": "C",
+          "text": "If both switches support different speeds, they will each work at their own fastest speed."
+        },
+        {
+          "id": "D",
+          "text": "The auto-MDIX feature will configure the interfaces eliminating the need for a crossover cable."
+        },
+        {
+          "id": "E",
+          "text": "The connection will not be possible unless the administrator changes the cable to a crossover cable."
+        },
+        {
+          "id": "F",
+          "text": "The duplex capability has to be manually configured because it cannot be negotiated."
+        }
+      ],
+      "correctAnswers": [
+        "A",
+        "B",
+        "D"
+      ],
+      "requiredSelectionCount": 3,
+      "explanation": "Modern switches typically negotiate a common speed and full-duplex operation, and auto-MDIX removes the need for a special crossover cable.",
+      "optionExplanations": {
+        "A": "With compatible advertised rates and standard auto-negotiation, the link operates at the highest mutually supported speed.",
+        "B": "Under normal auto-negotiation between modern full-duplex-capable switches, a mutually supported full-duplex mode is selected.",
+        "C": "The devices must agree on a single link speed; they cannot run different line rates at the same ends of one Ethernet link.",
+        "D": "Auto-MDIX adapts transmit/receive pair assignments, removing the old crossover-cable requirement.",
+        "E": "A straight-through cable works between modern auto-MDIX-capable switches; a crossover is not mandatory.",
+        "F": "When auto-negotiation is enabled, duplex can normally be negotiated without manual configuration."
+      },
+      "domainTopic": "Ethernet switching",
+      "sourceQuestionNumber": 36,
+      "sourceAnswer": "A,B,D",
+      "verificationStatus": "source_key_matched_preliminary_technical_review",
+      "trialOnly": true,
+      "source": {
+        "curriculum": "CCNA 1 v7 Introduction to Networks",
+        "moduleRange": "4–7 Ethernet Concepts",
+        "questionPDFPages": [
+          16
+        ],
+        "answersPDF": "CCNA 1 v7 Modules 4 - 7_ Ethernet Concepts Exam Answers.pdf",
+        "answerMatch": "red_highlight_source_pdf"
+      }
+    },
+    {
+      "id": "ITN-M4-7-037",
+      "type": "single_choice",
+      "question": "Which advantage does the store-and-forward switching method have compared with the cut-through switching method?",
+      "options": [
+        {
+          "id": "A",
+          "text": "collision detecting"
+        },
+        {
+          "id": "B",
+          "text": "frame error checking"
+        },
+        {
+          "id": "C",
+          "text": "faster frame forwarding"
+        },
+        {
+          "id": "D",
+          "text": "frame forwarding using IPv4 Layer 3 and 4 information"
+        }
+      ],
+      "correctAnswers": [
+        "B"
+      ],
+      "requiredSelectionCount": 1,
+      "explanation": "Store-and-forward switching checks the received full frame’s FCS before forwarding, preventing frames known to be corrupt from being relayed.",
+      "optionExplanations": {
+        "A": "Store-and-forward itself does not specifically detect Ethernet collisions as the method’s comparative advantage.",
+        "B": "Store-and-forward receives the full frame and verifies its FCS before forwarding, allowing corrupted frames to be dropped.",
+        "C": "Cut-through normally has lower latency because it does not wait for the complete frame.",
+        "D": "Store-and-forward is a Layer 2 frame handling method, not IPv4 Layer 3/4 forwarding."
+      },
+      "domainTopic": "Ethernet switching",
+      "sourceQuestionNumber": 37,
+      "sourceAnswer": "B",
+      "verificationStatus": "source_key_matched_preliminary_technical_review",
+      "trialOnly": true,
+      "source": {
+        "curriculum": "CCNA 1 v7 Introduction to Networks",
+        "moduleRange": "4–7 Ethernet Concepts",
+        "questionPDFPages": [
+          16,
+          17
+        ],
+        "answersPDF": "CCNA 1 v7 Modules 4 - 7_ Ethernet Concepts Exam Answers.pdf",
+        "answerMatch": "red_highlight_source_pdf"
+      },
+      "conceptGroup": "ethernet_switching_methods",
+      "variantOfSameConcept": true
+    },
+    {
+      "id": "ITN-M4-7-038",
+      "type": "single_choice",
+      "question": "When the store-and-forward method of switching is in use, what part of the Ethernet frame is used to perform an error check?",
+      "options": [
+        {
+          "id": "A",
+          "text": "CRC in the trailer"
+        },
+        {
+          "id": "B",
+          "text": "source MAC address in the header"
+        },
+        {
+          "id": "C",
+          "text": "destination MAC address in the header"
+        },
+        {
+          "id": "D",
+          "text": "protocol type in the header"
+        }
+      ],
+      "correctAnswers": [
+        "A"
+      ],
+      "requiredSelectionCount": 1,
+      "explanation": "Store-and-forward checks the CRC contained in the Ethernet trailer’s Frame Check Sequence field.",
+      "optionExplanations": {
+        "A": "The Ethernet trailer contains the FCS/CRC used by store-and-forward switching for frame integrity checks.",
+        "B": "The source MAC is used for address learning, not error checking.",
+        "C": "The destination MAC is used for forwarding lookup, not detecting corrupted bits.",
+        "D": "The EtherType/length field identifies encapsulated content and is not the integrity check."
+      },
+      "domainTopic": "Ethernet switching",
+      "sourceQuestionNumber": 38,
+      "sourceAnswer": "A",
+      "verificationStatus": "source_key_matched_preliminary_technical_review",
+      "trialOnly": true,
+      "source": {
+        "curriculum": "CCNA 1 v7 Introduction to Networks",
+        "moduleRange": "4–7 Ethernet Concepts",
+        "questionPDFPages": [
+          17
+        ],
+        "answersPDF": "CCNA 1 v7 Modules 4 - 7_ Ethernet Concepts Exam Answers.pdf",
+        "answerMatch": "red_highlight_source_pdf"
+      },
+      "conceptGroup": "ethernet_crc_fcs",
+      "variantOfSameConcept": true
+    },
+    {
+      "id": "ITN-M4-7-039",
+      "type": "single_choice",
+      "question": "Which switching method uses the CRC value in a frame?",
+      "options": [
+        {
+          "id": "A",
+          "text": "cut-through"
+        },
+        {
+          "id": "B",
+          "text": "fast-forward"
+        },
+        {
+          "id": "C",
+          "text": "fragment-free"
+        },
+        {
+          "id": "D",
+          "text": "store-and-forward"
+        }
+      ],
+      "correctAnswers": [
+        "D"
+      ],
+      "requiredSelectionCount": 1,
+      "explanation": "Only store-and-forward waits for a complete Ethernet frame so it can validate the CRC before sending it onward.",
+      "optionExplanations": {
+        "A": "Generic cut-through forwards before receiving the full frame and cannot check the complete FCS first.",
+        "B": "Fast-forward is a low-latency cut-through method, so it does not wait for the FCS.",
+        "C": "Fragment-free waits for an initial fragment, not the entire frame and trailer CRC.",
+        "D": "Store-and-forward buffers the complete frame, checks the CRC/FCS, then forwards it if valid."
+      },
+      "domainTopic": "Ethernet switching",
+      "sourceQuestionNumber": 39,
+      "sourceAnswer": "D",
+      "verificationStatus": "source_key_matched_preliminary_technical_review",
+      "trialOnly": true,
+      "source": {
+        "curriculum": "CCNA 1 v7 Introduction to Networks",
+        "moduleRange": "4–7 Ethernet Concepts",
+        "questionPDFPages": [
+          17
+        ],
+        "answersPDF": "CCNA 1 v7 Modules 4 - 7_ Ethernet Concepts Exam Answers.pdf",
+        "answerMatch": "red_highlight_source_pdf"
+      },
+      "conceptGroup": "ethernet_switching_methods",
+      "variantOfSameConcept": true
+    },
+    {
+      "id": "ITN-M4-7-040",
+      "type": "multiple_choice",
+      "question": "What are two actions performed by a Cisco switch? (Choose two.)",
+      "options": [
+        {
+          "id": "A",
+          "text": "building a routing table that is based on the first IP address in the frame header"
+        },
+        {
+          "id": "B",
+          "text": "using the source MAC addresses of frames to build and maintain a MAC address table"
+        },
+        {
+          "id": "C",
+          "text": "forwarding frames with unknown destination IP addresses to the default gateway"
+        },
+        {
+          "id": "D",
+          "text": "utilizing the MAC address table to forward frames via the destination MAC address"
+        },
+        {
+          "id": "E",
+          "text": "examining the destination MAC address to add new entries to the MAC address table"
+        }
+      ],
+      "correctAnswers": [
+        "B",
+        "D"
+      ],
+      "requiredSelectionCount": 2,
+      "explanation": "An Ethernet switch learns from source MAC addresses and forwards by looking up destination MAC addresses in its MAC/CAM table.",
+      "optionExplanations": {
+        "A": "A Layer 2 switch learns MAC addresses, not a routing table from IP addresses.",
+        "B": "The switch reads incoming source MAC addresses to populate and refresh its MAC table.",
+        "C": "Unknown Layer 2 destinations are flooded within a VLAN; a switch does not blindly send unknown destination IP traffic to a router.",
+        "D": "The switch checks destination MAC addresses against the MAC table to choose an outgoing interface.",
+        "E": "Learning uses source MAC addresses, not the destination MAC address."
+      },
+      "domainTopic": "Data link layer",
+      "sourceQuestionNumber": 40,
+      "sourceAnswer": "B,D",
+      "verificationStatus": "source_key_matched_preliminary_technical_review",
+      "trialOnly": true,
+      "source": {
+        "curriculum": "CCNA 1 v7 Introduction to Networks",
+        "moduleRange": "4–7 Ethernet Concepts",
+        "questionPDFPages": [
+          17,
+          18
+        ],
+        "answersPDF": "CCNA 1 v7 Modules 4 - 7_ Ethernet Concepts Exam Answers.pdf",
+        "answerMatch": "red_highlight_source_pdf"
+      }
+    },
+    {
+      "id": "ITN-M4-7-041",
+      "type": "multiple_choice",
+      "question": "Which two statements describe features or functions of the logical link control sublayer in Ethernet standards? (Choose two.)",
+      "options": [
+        {
+          "id": "A",
+          "text": "Logical link control is implemented in software."
+        },
+        {
+          "id": "B",
+          "text": "Logical link control is specified in the IEEE 802.3 standard."
+        },
+        {
+          "id": "C",
+          "text": "The LLC sublayer adds a header and a trailer to the data."
+        },
+        {
+          "id": "D",
+          "text": "The data link layer uses LLC to communicate with the upper layers of the protocol suite."
+        },
+        {
+          "id": "E",
+          "text": "The LLC sublayer is responsible for the placement and retrieval of frames on and off the media."
+        }
+      ],
+      "correctAnswers": [
+        "A",
+        "D"
+      ],
+      "requiredSelectionCount": 2,
+      "explanation": "LLC is software-facing and identifies/services upper-layer protocols; MAC handles direct access to the physical medium.",
+      "optionExplanations": {
+        "A": "LLC is a software-oriented sublayer that interfaces the data-link service with upper-layer protocols.",
+        "B": "LLC was standardized under IEEE 802.2; IEEE 802.3 specifies Ethernet MAC/physical aspects.",
+        "C": "The LLC sublayer provides protocol-identification/control information, while the MAC/framing implementation handles the complete frame trailer.",
+        "D": "LLC offers a service interface between Layer 2 and the network-layer protocols.",
+        "E": "Actual placement and retrieval of frames on the physical medium are MAC responsibilities."
+      },
+      "domainTopic": "Data link layer",
+      "sourceQuestionNumber": 41,
+      "sourceAnswer": "A,D",
+      "verificationStatus": "source_key_matched_preliminary_technical_review",
+      "trialOnly": true,
+      "source": {
+        "curriculum": "CCNA 1 v7 Introduction to Networks",
+        "moduleRange": "4–7 Ethernet Concepts",
+        "questionPDFPages": [
+          18
+        ],
+        "answersPDF": "CCNA 1 v7 Modules 4 - 7_ Ethernet Concepts Exam Answers.pdf",
+        "answerMatch": "red_highlight_source_pdf"
+      }
+    },
+    {
+      "id": "ITN-M4-7-042",
+      "type": "single_choice",
+      "question": "What is the auto-MDIX feature?",
+      "options": [
+        {
+          "id": "A",
+          "text": "It enables a device to automatically configure an interface to use a straight-through or a crossover cable."
+        },
+        {
+          "id": "B",
+          "text": "It enables a device to automatically configure the duplex settings of a segment."
+        },
+        {
+          "id": "C",
+          "text": "It enables a device to automatically configure the speed of its interface."
+        },
+        {
+          "id": "D",
+          "text": "It enables a switch to dynamically select the forwarding method."
+        }
+      ],
+      "correctAnswers": [
+        "A"
+      ],
+      "requiredSelectionCount": 1,
+      "explanation": "Auto-MDIX automatically swaps transmit/receive pair assignments to work with either straight-through or crossover copper Ethernet cables.",
+      "optionExplanations": {
+        "A": "Auto-MDIX automatically adjusts transmit/receive pin pairing to support straight-through or crossover cabling.",
+        "B": "Duplex negotiation is a separate interface feature, not auto-MDIX.",
+        "C": "Speed negotiation is separate from auto-MDIX.",
+        "D": "Switch forwarding modes are unrelated to Ethernet pair wiring detection."
+      },
+      "domainTopic": "Ethernet switching",
+      "sourceQuestionNumber": 42,
+      "sourceAnswer": "A",
+      "verificationStatus": "source_key_matched_preliminary_technical_review",
+      "trialOnly": true,
+      "source": {
+        "curriculum": "CCNA 1 v7 Introduction to Networks",
+        "moduleRange": "4–7 Ethernet Concepts",
+        "questionPDFPages": [
+          18,
+          19
+        ],
+        "answersPDF": "CCNA 1 v7 Modules 4 - 7_ Ethernet Concepts Exam Answers.pdf",
+        "answerMatch": "red_highlight_source_pdf"
+      },
+      "conceptGroup": "ethernet_auto_mdix",
+      "variantOfSameConcept": true
+    },
+    {
+      "id": "ITN-M4-7-043",
+      "type": "single_choice",
+      "question": "What is one advantage of using the cut-through switching method instead of the store-and-forward switching method?",
+      "options": [
+        {
+          "id": "A",
+          "text": "has a positive impact on bandwidth by dropping most of the invalid frames"
+        },
+        {
+          "id": "B",
+          "text": "makes a fast forwarding decision based on the source MAC address of the frame"
+        },
+        {
+          "id": "C",
+          "text": "has a lower latency appropriate for high-performance computing applications​"
+        },
+        {
+          "id": "D",
+          "text": "provides the flexibility to support any mix of Ethernet speeds"
+        }
+      ],
+      "correctAnswers": [
+        "C"
+      ],
+      "explanation": "Cut-through switches may begin forwarding after reading the destination MAC address without waiting for the full frame. This reduces forwarding latency compared with store-and-forward but trades away pre-forward CRC checking.",
+      "optionExplanations": {
+        "A": "Discarding most invalid frames is more associated with store-and-forward CRC verification.",
+        "B": "Forwarding decisions are based on the destination MAC address, not the source MAC address.",
+        "C": "Cut-through reduces switching latency by forwarding before the entire frame has arrived.",
+        "D": "Store-and-forward is generally more flexible when bridging different link speeds, so this is not a cut-through advantage."
+      },
+      "domainTopic": "Switching methods",
+      "sourceQuestionNumber": 43,
+      "sourceAnswer": "C",
+      "verificationStatus": "source_key_matched_technical_review_documentation_audit_pending",
+      "trialOnly": true,
+      "source": {
+        "curriculum": "CCNA 1 v7 Introduction to Networks",
+        "moduleRange": "4–7 Ethernet Concepts",
+        "questionPDFPages": [
+          19
+        ],
+        "answerPDFPages": [
+          28,
+          29
+        ],
+        "answerPDFQuestionNumber": 43,
+        "answerMatch": "highlighted_source_key_matches_choice"
+      }
+    },
+    {
+      "id": "ITN-M4-7-044",
+      "type": "single_choice",
+      "question": "Which is a multicast MAC address?",
+      "options": [
+        {
+          "id": "A",
+          "text": "FF-FF-FF-FF-FF-FF"
+        },
+        {
+          "id": "B",
+          "text": "5C-26-0A-4B-19-3E"
+        },
+        {
+          "id": "C",
+          "text": "01-00-5E-00-00-03"
+        },
+        {
+          "id": "D",
+          "text": "00-26-0F-4B-00-3E"
+        }
+      ],
+      "correctAnswers": [
+        "C"
+      ],
+      "explanation": "IPv4 multicast Ethernet destinations commonly begin with 01:00:5E. Broadcast uses FF:FF:FF:FF:FF:FF, while ordinary unicast MAC addresses do not have the multicast group-address pattern.",
+      "optionExplanations": {
+        "A": "All-FF is the Ethernet broadcast address, not a multicast group address.",
+        "B": "The leading first octet 5C has its individual/group bit clear, indicating an individual address.",
+        "C": "01-00-5E is the well-known IPv4 multicast MAC address prefix.",
+        "D": "The first octet 00 has the group-address bit clear, so this is a unicast address."
+      },
+      "domainTopic": "Ethernet addressing",
+      "sourceQuestionNumber": 44,
+      "sourceAnswer": "C",
+      "verificationStatus": "source_key_matched_technical_review_documentation_audit_pending",
+      "trialOnly": true,
+      "source": {
+        "curriculum": "CCNA 1 v7 Introduction to Networks",
+        "moduleRange": "4–7 Ethernet Concepts",
+        "questionPDFPages": [
+          19
+        ],
+        "answerPDFPages": [
+          29
+        ],
+        "answerPDFQuestionNumber": 44,
+        "answerMatch": "highlighted_source_key_matches_choice"
+      }
+    },
+    {
+      "id": "ITN-M4-7-045",
+      "type": "single_choice",
+      "question": "Refer to the exhibit. What is wrong with the displayed termination?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The woven copper braid should not have been removed."
+        },
+        {
+          "id": "B",
+          "text": "The wrong type of connector is being used."
+        },
+        {
+          "id": "C",
+          "text": "The untwisted length of each wire is too long."
+        },
+        {
+          "id": "D",
+          "text": "The wires are too thick for the connector that is used."
+        }
+      ],
+      "correctAnswers": [
+        "C"
+      ],
+      "requiredSelectionCount": 1,
+      "explanation": "Twisted pairs must remain twisted close to the connector; excessive untwisting introduces unwanted crosstalk.",
+      "optionExplanations": {
+        "A": "The photo shows a twisted-pair termination, not a cable with a woven coaxial braid that should have been left intact.",
+        "B": "The problem is excessive untwisting near the plug, not a fundamentally incompatible connector type.",
+        "C": "The wire pairs have been untwisted too far before the connector, raising crosstalk and performance risk.",
+        "D": "The problem seen is the untwist length rather than excessive conductor gauge."
+      },
+      "domainTopic": "Ethernet switching",
+      "sourceQuestionNumber": 45,
+      "sourceAnswer": "C",
+      "verificationStatus": "source_key_matched_preliminary_technical_review",
+      "trialOnly": true,
+      "source": {
+        "curriculum": "CCNA 1 v7 Introduction to Networks",
+        "moduleRange": "4–7 Ethernet Concepts",
+        "questionPDFPages": [
+          19,
+          20
+        ],
+        "answersPDF": "CCNA 1 v7 Modules 4 - 7_ Ethernet Concepts Exam Answers.pdf",
+        "answerMatch": "red_highlight_source_pdf"
+      },
+      "exhibitAssets": [
+        {
+          "src": "/question-assets/ethernet-concepts/itn-m4-7-045.png",
+          "alt": "RJ-45 twisted-pair cable termination showing conductors untwisted too far",
+          "mimeType": "image/png",
+          "sha256": "cc68a72a31b305e3d64b94e4676db69b0fc80e3ce3feffb2ea92ccdf2ed74752"
+        }
+      ]
+    },
+    {
+      "id": "ITN-M4-7-046",
+      "type": "single_choice",
+      "question": "Refer to the exhibit. The PC is connected to the console port of the switch. All the other connections are made through FastEthernet links. Which types of UTP cables can be used to connect the devices?​",
+      "options": [
+        {
+          "id": "A",
+          "text": "1 – rollover, 2 – crossover, 3 – straight-through"
+        },
+        {
+          "id": "B",
+          "text": "1 – rollover, 2 – straight-through, 3 – crossover"
+        },
+        {
+          "id": "C",
+          "text": "1 – crossover, 2 – straight-through, 3 – rollover"
+        },
+        {
+          "id": "D",
+          "text": "1 – crossover, 2 – rollover, 3 – straight-through"
+        }
+      ],
+      "correctAnswers": [
+        "B"
+      ],
+      "requiredSelectionCount": 1,
+      "explanation": "For the depicted classic Ethernet connections, PC-to-console uses rollover, switch-to-router uses straight-through, and same-type Ethernet endpoints use crossover.",
+      "optionExplanations": {
+        "A": "This alternative incorrectly uses a crossover between the switch and router and a straight-through cable for the final similar-device link.",
+        "B": "Console-to-switch uses rollover; switch-to-router uses straight-through; router-to-router FastEthernet uses crossover under the conventional cable-selection rule.",
+        "C": "This places crossover at the console connection, which requires a rollover cable.",
+        "D": "This reverses the crossover and rollover cable placements for the depicted links."
+      },
+      "domainTopic": "Ethernet switching",
+      "sourceQuestionNumber": 46,
+      "sourceAnswer": "B",
+      "verificationStatus": "source_key_matched_preliminary_technical_review",
+      "trialOnly": true,
+      "source": {
+        "curriculum": "CCNA 1 v7 Introduction to Networks",
+        "moduleRange": "4–7 Ethernet Concepts",
+        "questionPDFPages": [
+          20
+        ],
+        "answersPDF": "CCNA 1 v7 Modules 4 - 7_ Ethernet Concepts Exam Answers.pdf",
+        "answerMatch": "red_highlight_source_pdf"
+      },
+      "exhibitAssets": [
+        {
+          "src": "/question-assets/ethernet-concepts/itn-m4-7-046.png",
+          "alt": "Network topology identifying three UTP cable connections from console and Ethernet interfaces",
+          "mimeType": "image/png",
+          "sha256": "f225c7f2f6005ec419a521fa321935acd1b6be7bfa592adba84f88b45cf1f38f"
+        }
+      ],
+      "historicalContext": "Cable choice assumes conventional devices without auto-MDIX on the interdevice link."
+    },
+    {
+      "id": "ITN-M4-7-048",
+      "type": "single_choice",
+      "question": "What does the term “attenuation” mean in data communication?",
+      "options": [
+        {
+          "id": "A",
+          "text": "loss of signal strength as distance increases"
+        },
+        {
+          "id": "B",
+          "text": "time for a signal to reach its destination"
+        },
+        {
+          "id": "C",
+          "text": "leakage of signals from one cable pair to another"
+        },
+        {
+          "id": "D",
+          "text": "strengthening of a signal by a networking device"
+        }
+      ],
+      "correctAnswers": [
+        "A"
+      ],
+      "explanation": "Attenuation is the reduction of signal amplitude or power as a signal propagates through a medium. Longer cable runs ordinarily cause more loss.",
+      "optionExplanations": {
+        "A": "Signal strength decreases as propagation distance increases; this is attenuation.",
+        "B": "Time taken to reach the destination is latency or propagation delay.",
+        "C": "Interference between adjacent pairs is crosstalk.",
+        "D": "Increasing signal strength is amplification or regeneration rather than attenuation."
+      },
+      "domainTopic": "Physical layer",
+      "sourceQuestionNumber": 48,
+      "sourceAnswer": "A",
+      "verificationStatus": "source_key_matched_technical_review_documentation_audit_pending",
+      "trialOnly": true,
+      "source": {
+        "curriculum": "CCNA 1 v7 Introduction to Networks",
+        "moduleRange": "4–7 Ethernet Concepts",
+        "questionPDFPages": [
+          21
+        ],
+        "answerPDFPages": [
+          32,
+          33
+        ],
+        "answerPDFQuestionNumber": 48,
+        "answerMatch": "highlighted_source_key_matches_choice"
+      }
+    },
+    {
+      "id": "ITN-M4-7-049",
+      "type": "multiple_choice",
+      "question": "What makes fiber preferable to copper cabling for interconnecting buildings? (Choose three.)",
+      "options": [
+        {
+          "id": "A",
+          "text": "greater distances per cable run"
+        },
+        {
+          "id": "B",
+          "text": "lower installation cost"
+        },
+        {
+          "id": "C",
+          "text": "limited susceptibility to EMI/RFI"
+        },
+        {
+          "id": "D",
+          "text": "durable connections"
+        },
+        {
+          "id": "E",
+          "text": "greater bandwidth potential"
+        },
+        {
+          "id": "F",
+          "text": "easily terminated"
+        }
+      ],
+      "correctAnswers": [
+        "A",
+        "C",
+        "E"
+      ],
+      "requiredSelectionCount": 3,
+      "explanation": "Fiber supports longer distances, reduced EMI/RFI sensitivity, and greater bandwidth potential than conventional copper building links.",
+      "optionExplanations": {
+        "A": "Fiber commonly permits longer link distances than copper UTP without repeaters.",
+        "B": "Fiber hardware and skilled termination typically cost more rather than less than basic copper installations.",
+        "C": "Optical signaling resists electromagnetic and radio-frequency interference between buildings.",
+        "D": "Fibers can be fragile and require careful termination; durability alone is not the stated deciding advantage.",
+        "E": "Fiber provides high-capacity bandwidth options suitable for building backbones.",
+        "F": "Optical fiber is generally more specialized to splice and terminate than UTP."
+      },
+      "domainTopic": "Physical layer",
+      "sourceQuestionNumber": 49,
+      "sourceAnswer": "A,C,E",
+      "verificationStatus": "source_key_matched_preliminary_technical_review",
+      "trialOnly": true,
+      "source": {
+        "curriculum": "CCNA 1 v7 Introduction to Networks",
+        "moduleRange": "4–7 Ethernet Concepts",
+        "questionPDFPages": [
+          21,
+          22
+        ],
+        "answersPDF": "CCNA 1 v7 Modules 4 - 7_ Ethernet Concepts Exam Answers.pdf",
+        "answerMatch": "red_highlight_source_pdf"
+      }
+    },
+    {
+      "id": "ITN-M4-7-050",
+      "type": "single_choice",
+      "question": "What OSI physical layer term describes the process by which one wave modifies another wave?",
+      "options": [
+        {
+          "id": "A",
+          "text": "modulation"
+        },
+        {
+          "id": "B",
+          "text": "IEEE"
+        },
+        {
+          "id": "C",
+          "text": "EIA/TIA"
+        },
+        {
+          "id": "D",
+          "text": "air"
+        }
+      ],
+      "correctAnswers": [
+        "A"
+      ],
+      "explanation": "Modulation changes a property of a carrier wave, such as amplitude, frequency or phase, according to an information-bearing signal so data can be conveyed.",
+      "optionExplanations": {
+        "A": "Modulation varies a carrier property to convey information.",
+        "B": "IEEE is a standards organization and not a wave-modification process.",
+        "C": "EIA/TIA refers to industry standards organizations rather than a signal modulation process.",
+        "D": "Air is a wireless transmission medium, not the name of the modulation operation."
+      },
+      "domainTopic": "Physical layer",
+      "sourceQuestionNumber": 50,
+      "sourceAnswer": "A",
+      "verificationStatus": "source_key_matched_technical_review_documentation_audit_pending",
+      "trialOnly": true,
+      "source": {
+        "curriculum": "CCNA 1 v7 Introduction to Networks",
+        "moduleRange": "4–7 Ethernet Concepts",
+        "questionPDFPages": [
+          22
+        ],
+        "answerPDFPages": [
+          33
+        ],
+        "answerPDFQuestionNumber": 50,
+        "answerMatch": "highlighted_source_key_matches_choice"
+      }
+    },
+    {
+      "id": "ITN-M4-7-051",
+      "type": "single_choice",
+      "question": "What OSI physical layer term describes the capacity at which a medium can carry data?",
+      "options": [
+        {
+          "id": "A",
+          "text": "bandwidth"
+        },
+        {
+          "id": "B",
+          "text": "IEEE"
+        },
+        {
+          "id": "C",
+          "text": "EIA/TIA"
+        },
+        {
+          "id": "D",
+          "text": "air"
+        }
+      ],
+      "correctAnswers": [
+        "A"
+      ],
+      "explanation": "Bandwidth is the theoretical or rated data-carrying capacity of a medium or link. Actual measured throughput is often lower, while goodput measures useful application payload.",
+      "optionExplanations": {
+        "A": "Bandwidth characterizes the maximum data-carrying capacity of a link under the specified definition.",
+        "B": "IEEE is a standards body, not a rate or capacity measure.",
+        "C": "EIA/TIA denotes standards organizations, not a link capacity metric.",
+        "D": "Air can carry wireless signals but is a medium, not the metric asked for."
+      },
+      "domainTopic": "Network performance",
+      "sourceQuestionNumber": 51,
+      "sourceAnswer": "A",
+      "verificationStatus": "source_key_matched_technical_review_documentation_audit_pending",
+      "trialOnly": true,
+      "source": {
+        "curriculum": "CCNA 1 v7 Introduction to Networks",
+        "moduleRange": "4–7 Ethernet Concepts",
+        "questionPDFPages": [
+          22
+        ],
+        "answerPDFPages": [
+          34
+        ],
+        "answerPDFQuestionNumber": 51,
+        "answerMatch": "highlighted_source_key_matches_choice"
+      }
+    },
+    {
+      "id": "ITN-M4-7-053",
+      "type": "single_choice",
+      "question": "What OSI physical layer term describes the measure of the transfer of bits across a medium over a given period of time?",
+      "options": [
+        {
+          "id": "A",
+          "text": "throughput"
+        },
+        {
+          "id": "B",
+          "text": "bandwidth"
+        },
+        {
+          "id": "C",
+          "text": "latency"
+        },
+        {
+          "id": "D",
+          "text": "goodput"
+        }
+      ],
+      "correctAnswers": [
+        "A"
+      ],
+      "explanation": "Throughput is the amount of data actually transferred per unit time across a link or path. It may be below the nominal bandwidth because of overhead, contention or network conditions.",
+      "optionExplanations": {
+        "A": "Throughput measures the achieved amount of transfer over a time interval.",
+        "B": "Bandwidth describes a rated or theoretical capacity, not the measured transfer in this question.",
+        "C": "Latency measures delay, not transferred data per unit time.",
+        "D": "Goodput counts useful payload delivery rather than all transferred bits including overhead."
+      },
+      "domainTopic": "Network performance",
+      "sourceQuestionNumber": 53,
+      "sourceAnswer": "A",
+      "verificationStatus": "source_key_matched_technical_review_documentation_audit_pending",
+      "trialOnly": true,
+      "source": {
+        "curriculum": "CCNA 1 v7 Introduction to Networks",
+        "moduleRange": "4–7 Ethernet Concepts",
+        "questionPDFPages": [
+          23
+        ],
+        "answerPDFPages": [
+          34,
+          35
+        ],
+        "answerPDFQuestionNumber": 53,
+        "answerMatch": "highlighted_source_key_matches_choice"
+      }
+    },
+    {
+      "id": "ITN-M4-7-054",
+      "type": "single_choice",
+      "question": "What OSI physical layer term describes the amount of time, including delays, for data to travel from one point to another?",
+      "options": [
+        {
+          "id": "A",
+          "text": "latency"
+        },
+        {
+          "id": "B",
+          "text": "bandwidth"
+        },
+        {
+          "id": "C",
+          "text": "throughput"
+        },
+        {
+          "id": "D",
+          "text": "goodput"
+        }
+      ],
+      "correctAnswers": [
+        "A"
+      ],
+      "explanation": "Latency describes the total delay for data to travel between two points. It can include propagation, transmission, queueing and processing delays.",
+      "optionExplanations": {
+        "A": "Latency is the elapsed travel time including intermediate delays.",
+        "B": "Bandwidth measures capacity, usually in bits per second, not elapsed time.",
+        "C": "Throughput measures actual transferred data per unit time.",
+        "D": "Goodput measures useful payload delivery rate, not end-to-end delay."
+      },
+      "domainTopic": "Network performance",
+      "sourceQuestionNumber": 54,
+      "sourceAnswer": "A",
+      "verificationStatus": "source_key_matched_technical_review_documentation_audit_pending",
+      "trialOnly": true,
+      "source": {
+        "curriculum": "CCNA 1 v7 Introduction to Networks",
+        "moduleRange": "4–7 Ethernet Concepts",
+        "questionPDFPages": [
+          23
+        ],
+        "answerPDFPages": [
+          35
+        ],
+        "answerPDFQuestionNumber": 54,
+        "answerMatch": "highlighted_source_key_matches_choice"
+      }
+    },
+    {
+      "id": "ITN-M4-7-056",
+      "type": "single_choice",
+      "question": "What OSI physical layer term describes the measure of usable data transferred over a given period of time?",
+      "options": [
+        {
+          "id": "A",
+          "text": "goodput"
+        },
+        {
+          "id": "B",
+          "text": "fiber-optic cable"
+        },
+        {
+          "id": "C",
+          "text": "air"
+        },
+        {
+          "id": "D",
+          "text": "copper cable"
+        }
+      ],
+      "correctAnswers": [
+        "A"
+      ],
+      "explanation": "Goodput is the rate at which useful application data is successfully delivered, excluding protocol headers, control overhead and retransmissions. It is usually less than throughput.",
+      "optionExplanations": {
+        "A": "Goodput isolates useful delivered data from overhead and retries.",
+        "B": "Fiber optic cable is a physical transmission medium, not a data rate measure.",
+        "C": "Air is a wireless transmission medium, not a goodput metric.",
+        "D": "Copper cable is a physical medium rather than a measure of usable transferred data."
+      },
+      "domainTopic": "Network performance",
+      "sourceQuestionNumber": 56,
+      "sourceAnswer": "A",
+      "verificationStatus": "source_key_matched_technical_review_documentation_audit_pending",
+      "trialOnly": true,
+      "source": {
+        "curriculum": "CCNA 1 v7 Introduction to Networks",
+        "moduleRange": "4–7 Ethernet Concepts",
+        "questionPDFPages": [
+          24
+        ],
+        "answerPDFPages": [
+          36
+        ],
+        "answerPDFQuestionNumber": 56,
+        "answerMatch": "highlighted_source_key_matches_choice"
+      }
+    },
+    {
+      "id": "ITN-M4-7-057",
+      "type": "single_choice",
+      "question": "What OSI physical layer term describes the physical medium which uses electrical pulses?",
+      "options": [
+        {
+          "id": "A",
+          "text": "copper cable"
+        },
+        {
+          "id": "B",
+          "text": "fiber-optic cable"
+        },
+        {
+          "id": "C",
+          "text": "air"
+        },
+        {
+          "id": "D",
+          "text": "goodput"
+        }
+      ],
+      "correctAnswers": [
+        "A"
+      ],
+      "explanation": "Copper Ethernet cabling carries information as changing electrical signals. Fiber uses light pulses, while wireless links propagate electromagnetic radio waves through space.",
+      "optionExplanations": {
+        "A": "Copper conductors carry electrical voltage/current variations representing bits.",
+        "B": "Fiber optic links use light, not electrical pulses in the fiber core.",
+        "C": "Air is the transmission path for radio signals rather than a conductive cable.",
+        "D": "Goodput is a performance measure, not a physical transmission medium."
+      },
+      "domainTopic": "Physical media",
+      "sourceQuestionNumber": 57,
+      "sourceAnswer": "A",
+      "verificationStatus": "source_key_matched_technical_review_documentation_audit_pending",
+      "trialOnly": true,
+      "source": {
+        "curriculum": "CCNA 1 v7 Introduction to Networks",
+        "moduleRange": "4–7 Ethernet Concepts",
+        "questionPDFPages": [
+          24
+        ],
+        "answerPDFPages": [
+          37
+        ],
+        "answerPDFQuestionNumber": 57,
+        "answerMatch": "highlighted_source_key_matches_choice"
+      }
+    },
+    {
+      "id": "ITN-M4-7-058",
+      "type": "single_choice",
+      "question": "What OSI physical layer term describes the physical medium that uses the propagation of light?",
+      "options": [
+        {
+          "id": "A",
+          "text": "fiber-optic cable"
+        },
+        {
+          "id": "B",
+          "text": "goodput"
+        },
+        {
+          "id": "C",
+          "text": "latency"
+        },
+        {
+          "id": "D",
+          "text": "throughput"
+        }
+      ],
+      "correctAnswers": [
+        "A"
+      ],
+      "explanation": "Fiber-optic cabling encodes data into light pulses that propagate along a glass or plastic core. Unlike copper it is not susceptible to electromagnetic interference.",
+      "optionExplanations": {
+        "A": "Light propagation through fiber is the defining signaling method of fiber-optic links.",
+        "B": "Goodput is the useful data delivery rate, not a physical medium.",
+        "C": "Latency is time delay, not a type of cabling.",
+        "D": "Throughput is achieved transfer rate, not a medium that transmits light."
+      },
+      "domainTopic": "Physical media",
+      "sourceQuestionNumber": 58,
+      "sourceAnswer": "A",
+      "verificationStatus": "source_key_matched_technical_review_documentation_audit_pending",
+      "trialOnly": true,
+      "source": {
+        "curriculum": "CCNA 1 v7 Introduction to Networks",
+        "moduleRange": "4–7 Ethernet Concepts",
+        "questionPDFPages": [
+          24
+        ],
+        "answerPDFPages": [
+          37,
+          38
+        ],
+        "answerPDFQuestionNumber": 58,
+        "answerMatch": "highlighted_source_key_matches_choice"
+      }
+    },
+    {
+      "id": "ITN-M4-7-059",
+      "type": "single_choice",
+      "question": "What OSI physical layer term describes the physical medium for microwave transmissions?",
+      "options": [
+        {
+          "id": "A",
+          "text": "air"
+        },
+        {
+          "id": "B",
+          "text": "goodput"
+        },
+        {
+          "id": "C",
+          "text": "latency"
+        },
+        {
+          "id": "D",
+          "text": "throughput"
+        }
+      ],
+      "correctAnswers": [
+        "A"
+      ],
+      "explanation": "Terrestrial microwave wireless links transmit radio-frequency electromagnetic energy through free space or air; they do not require copper or glass cabling along the path.",
+      "optionExplanations": {
+        "A": "Air or free space is the propagation medium for microwave wireless transmissions.",
+        "B": "Goodput is an amount of useful data per second, not the wireless medium.",
+        "C": "Latency is the delivery delay, not a transmission medium.",
+        "D": "Throughput is a transfer rate rather than the propagation medium."
+      },
+      "domainTopic": "Physical media",
+      "sourceQuestionNumber": 59,
+      "sourceAnswer": "A",
+      "verificationStatus": "source_key_matched_technical_review_documentation_audit_pending",
+      "trialOnly": true,
+      "source": {
+        "curriculum": "CCNA 1 v7 Introduction to Networks",
+        "moduleRange": "4–7 Ethernet Concepts",
+        "questionPDFPages": [
+          24,
+          25
+        ],
+        "answerPDFPages": [
+          38
+        ],
+        "answerPDFQuestionNumber": 59,
+        "answerMatch": "highlighted_source_key_matches_choice"
+      }
+    },
+    {
+      "id": "ITN-M4-7-060",
+      "type": "multiple_choice",
+      "question": "Which two functions are performed at the MAC sublayer of the OSI data link layer? (Choose two.)",
+      "options": [
+        {
+          "id": "A",
+          "text": "Implements a trailer to detect transmission errors."
+        },
+        {
+          "id": "B",
+          "text": "Controls the NIC responsible for sending and receiving data on the physical medium."
+        },
+        {
+          "id": "C",
+          "text": "Places information in the frame that identifies which network layer protocol is being used for the frame."
+        },
+        {
+          "id": "D",
+          "text": "Adds Layer 2 control information to network protocol data."
+        },
+        {
+          "id": "E",
+          "text": "Enables IPv4 and IPv6 to utilize the same network interface and media."
+        }
+      ],
+      "correctAnswers": [
+        "A",
+        "B"
+      ],
+      "requiredSelectionCount": 2,
+      "explanation": "The MAC sublayer deals with media access, NIC-facing framing, synchronization, and Ethernet error checking; LLC identifies and supports upper-layer protocols.",
+      "optionExplanations": {
+        "A": "The MAC sublayer forms or checks Ethernet frame-trailer FCS information for link-layer error detection.",
+        "B": "The MAC sublayer controls hardware-facing network interface operation and how frames are sent and received.",
+        "C": "LLC identifies or multiplexes upper-layer protocols such as IPv4 and IPv6 over a shared data-link service. This belongs to a different sublayer or is not one of the two requested functions.",
+        "D": "LLC adds the information needed to interface or classify upper-layer data for Layer 2 transport. This belongs to a different sublayer or is not one of the two requested functions.",
+        "E": "LLC enables different Layer 3 protocols to share the same network interface. This belongs to a different sublayer or is not one of the two requested functions."
+      },
+      "domainTopic": "Data link layer",
+      "sourceQuestionNumber": 60,
+      "sourceAnswer": "A,B",
+      "verificationStatus": "source_key_matched_preliminary_technical_review",
+      "trialOnly": true,
+      "source": {
+        "curriculum": "CCNA 1 v7 Introduction to Networks",
+        "moduleRange": "4–7 Ethernet Concepts",
+        "questionPDFPages": [
+          25
+        ],
+        "answersPDF": "CCNA 1 v7 Modules 4 - 7_ Ethernet Concepts Exam Answers.pdf",
+        "answerMatch": "highlighted_case_variant_matching_option_set"
+      },
+      "conceptGroup": "mac_llc_functions",
+      "variantOfSameConcept": true
+    },
+    {
+      "id": "ITN-M4-7-061",
+      "type": "multiple_choice",
+      "question": "Which two functions are performed at the LLC sublayer of the OSI data link layer? (Choose two.)",
+      "options": [
+        {
+          "id": "A",
+          "text": "Enables IPv4 and IPv6 to utilize the same network interface and media."
+        },
+        {
+          "id": "B",
+          "text": "Places information in the frame that identifies which network layer protocol is being used for the frame."
+        },
+        {
+          "id": "C",
+          "text": "Integrates various physical technologies."
+        },
+        {
+          "id": "D",
+          "text": "Implements a process to delimit fields within a Layer 2 frame."
+        },
+        {
+          "id": "E",
+          "text": "Controls the NIC responsible for sending and receiving data on the physical medium."
+        }
+      ],
+      "correctAnswers": [
+        "A",
+        "B"
+      ],
+      "requiredSelectionCount": 2,
+      "explanation": "The LLC sublayer provides the interface with upper-layer protocols, carrying or identifying network-layer payloads on a shared data-link interface.",
+      "optionExplanations": {
+        "A": "LLC enables different Layer 3 protocols to share the same network interface.",
+        "B": "LLC identifies or multiplexes upper-layer protocols such as IPv4 and IPv6 over a shared data-link service.",
+        "C": "In the curriculum’s MAC/LLC division, MAC provides the hardware-facing interface to physical technologies. This belongs to a different sublayer or is not one of the two requested functions.",
+        "D": "Frame delimitation and physical framing belong to the MAC framing mechanisms rather than the LLC protocol interface. This belongs to a different sublayer or is not one of the two requested functions.",
+        "E": "The MAC sublayer controls hardware-facing network interface operation and how frames are sent and received. This belongs to a different sublayer or is not one of the two requested functions."
+      },
+      "domainTopic": "Data link layer",
+      "sourceQuestionNumber": 61,
+      "sourceAnswer": "A,B",
+      "verificationStatus": "source_key_matched_preliminary_technical_review",
+      "trialOnly": true,
+      "source": {
+        "curriculum": "CCNA 1 v7 Introduction to Networks",
+        "moduleRange": "4–7 Ethernet Concepts",
+        "questionPDFPages": [
+          25,
+          26
+        ],
+        "answersPDF": "CCNA 1 v7 Modules 4 - 7_ Ethernet Concepts Exam Answers.pdf",
+        "answerMatch": "highlighted_case_variant_matching_option_set"
+      },
+      "conceptGroup": "mac_llc_functions",
+      "variantOfSameConcept": true
+    },
+    {
+      "id": "ITN-M4-7-062",
+      "type": "multiple_choice",
+      "question": "Which two functions are performed at the MAC sublayer of the OSI data link layer? (Choose two.)",
+      "options": [
+        {
+          "id": "A",
+          "text": "Provides a mechanism to allow multiple devices to communicate over a shared medium."
+        },
+        {
+          "id": "B",
+          "text": "Controls the NIC responsible for sending and receiving data on the physical medium."
+        },
+        {
+          "id": "C",
+          "text": "Places information in the frame that identifies which network layer protocol is being used for the frame."
+        },
+        {
+          "id": "D",
+          "text": "Adds Layer 2 control information to network protocol data."
+        },
+        {
+          "id": "E",
+          "text": "Communicates between the networking software at the upper layers and the device hardware at the lower layers."
+        }
+      ],
+      "correctAnswers": [
+        "A",
+        "B"
+      ],
+      "requiredSelectionCount": 2,
+      "explanation": "The MAC sublayer deals with media access, NIC-facing framing, synchronization, and Ethernet error checking; LLC identifies and supports upper-layer protocols.",
+      "optionExplanations": {
+        "A": "MAC media-access rules determine how multiple devices can share a communication medium.",
+        "B": "The MAC sublayer controls hardware-facing network interface operation and how frames are sent and received.",
+        "C": "LLC identifies or multiplexes upper-layer protocols such as IPv4 and IPv6 over a shared data-link service. This belongs to a different sublayer or is not one of the two requested functions.",
+        "D": "LLC adds the information needed to interface or classify upper-layer data for Layer 2 transport. This belongs to a different sublayer or is not one of the two requested functions.",
+        "E": "LLC is the software-facing service interface between Layer 3 and the underlying data-link implementation. This belongs to a different sublayer or is not one of the two requested functions."
+      },
+      "domainTopic": "Data link layer",
+      "sourceQuestionNumber": 62,
+      "sourceAnswer": "A,B",
+      "verificationStatus": "source_key_matched_preliminary_technical_review",
+      "trialOnly": true,
+      "source": {
+        "curriculum": "CCNA 1 v7 Introduction to Networks",
+        "moduleRange": "4–7 Ethernet Concepts",
+        "questionPDFPages": [
+          26
+        ],
+        "answersPDF": "CCNA 1 v7 Modules 4 - 7_ Ethernet Concepts Exam Answers.pdf",
+        "answerMatch": "highlighted_case_variant_matching_option_set"
+      },
+      "conceptGroup": "mac_llc_functions",
+      "variantOfSameConcept": true
+    },
+    {
+      "id": "ITN-M4-7-063",
+      "type": "multiple_choice",
+      "question": "Which two functions are performed at the MAC sublayer of the OSI data link layer? (Choose two.)",
+      "options": [
+        {
+          "id": "A",
+          "text": "Controls the NIC responsible for sending and receiving data on the physical medium."
+        },
+        {
+          "id": "B",
+          "text": "Integrates various physical technologies."
+        },
+        {
+          "id": "C",
+          "text": "Communicates between the networking software at the upper layers and the device hardware at the lower layers."
+        },
+        {
+          "id": "D",
+          "text": "Adds Layer 2 control information to network protocol data."
+        },
+        {
+          "id": "E",
+          "text": "Places information in the frame that identifies which network layer protocol is being used for the frame."
+        }
+      ],
+      "correctAnswers": [
+        "A",
+        "B"
+      ],
+      "requiredSelectionCount": 2,
+      "explanation": "The MAC sublayer deals with media access, NIC-facing framing, synchronization, and Ethernet error checking; LLC identifies and supports upper-layer protocols.",
+      "optionExplanations": {
+        "A": "The MAC sublayer controls hardware-facing network interface operation and how frames are sent and received.",
+        "B": "In the curriculum’s MAC/LLC division, MAC provides the hardware-facing interface to physical technologies.",
+        "C": "LLC is the software-facing service interface between Layer 3 and the underlying data-link implementation. This belongs to a different sublayer or is not one of the two requested functions.",
+        "D": "LLC adds the information needed to interface or classify upper-layer data for Layer 2 transport. This belongs to a different sublayer or is not one of the two requested functions.",
+        "E": "LLC identifies or multiplexes upper-layer protocols such as IPv4 and IPv6 over a shared data-link service. This belongs to a different sublayer or is not one of the two requested functions."
+      },
+      "domainTopic": "Data link layer",
+      "sourceQuestionNumber": 63,
+      "sourceAnswer": "A,B",
+      "verificationStatus": "source_key_matched_preliminary_technical_review",
+      "trialOnly": true,
+      "source": {
+        "curriculum": "CCNA 1 v7 Introduction to Networks",
+        "moduleRange": "4–7 Ethernet Concepts",
+        "questionPDFPages": [
+          26
+        ],
+        "answersPDF": "CCNA 1 v7 Modules 4 - 7_ Ethernet Concepts Exam Answers.pdf",
+        "answerMatch": "highlighted_case_variant_matching_option_set"
+      },
+      "conceptGroup": "mac_llc_functions",
+      "variantOfSameConcept": true
+    },
+    {
+      "id": "ITN-M4-7-064",
+      "type": "multiple_choice",
+      "question": "Which two functions are performed at the LLC sublayer of the OSI data link layer? (Choose two.)",
+      "options": [
+        {
+          "id": "A",
+          "text": "Adds Layer 2 control information to network protocol data."
+        },
+        {
+          "id": "B",
+          "text": "Places information in the frame that identifies which network layer protocol is being used for the frame."
+        },
+        {
+          "id": "C",
+          "text": "Performs data encapsulation."
+        },
+        {
+          "id": "D",
+          "text": "Controls the NIC responsible for sending and receiving data on the physical medium."
+        },
+        {
+          "id": "E",
+          "text": "Integrates various physical technologies."
+        }
+      ],
+      "correctAnswers": [
+        "A",
+        "B"
+      ],
+      "requiredSelectionCount": 2,
+      "explanation": "The LLC sublayer provides the interface with upper-layer protocols, carrying or identifying network-layer payloads on a shared data-link interface.",
+      "optionExplanations": {
+        "A": "LLC adds the information needed to interface or classify upper-layer data for Layer 2 transport.",
+        "B": "LLC identifies or multiplexes upper-layer protocols such as IPv4 and IPv6 over a shared data-link service.",
+        "C": "Data-link encapsulation broadly spans Layer 2; this general statement is not one of the two specific LLC functions requested by the source key. This belongs to a different sublayer or is not one of the two requested functions.",
+        "D": "The MAC sublayer controls hardware-facing network interface operation and how frames are sent and received. This belongs to a different sublayer or is not one of the two requested functions.",
+        "E": "In the curriculum’s MAC/LLC division, MAC provides the hardware-facing interface to physical technologies. This belongs to a different sublayer or is not one of the two requested functions."
+      },
+      "domainTopic": "Data link layer",
+      "sourceQuestionNumber": 64,
+      "sourceAnswer": "A,B",
+      "verificationStatus": "source_key_matched_preliminary_technical_review",
+      "trialOnly": true,
+      "source": {
+        "curriculum": "CCNA 1 v7 Introduction to Networks",
+        "moduleRange": "4–7 Ethernet Concepts",
+        "questionPDFPages": [
+          26,
+          27
+        ],
+        "answersPDF": "CCNA 1 v7 Modules 4 - 7_ Ethernet Concepts Exam Answers.pdf",
+        "answerMatch": "highlighted_case_variant_matching_option_set"
+      },
+      "conceptGroup": "mac_llc_functions",
+      "variantOfSameConcept": true
+    },
+    {
+      "id": "ITN-M4-7-065",
+      "type": "multiple_choice",
+      "question": "Which two functions are performed at the MAC sublayer of the OSI data link layer? (Choose two.)",
+      "options": [
+        {
+          "id": "A",
+          "text": "Provides synchronization between source and target nodes."
+        },
+        {
+          "id": "B",
+          "text": "Integrates various physical technologies."
+        },
+        {
+          "id": "C",
+          "text": "Communicates between the networking software at the upper layers and the device hardware at the lower layers."
+        },
+        {
+          "id": "D",
+          "text": "Adds Layer 2 control information to network protocol data."
+        },
+        {
+          "id": "E",
+          "text": "Enables IPv4 and IPv6 to utilize the same network interface and media."
+        }
+      ],
+      "correctAnswers": [
+        "A",
+        "B"
+      ],
+      "requiredSelectionCount": 2,
+      "explanation": "The MAC sublayer deals with media access, NIC-facing framing, synchronization, and Ethernet error checking; LLC identifies and supports upper-layer protocols.",
+      "optionExplanations": {
+        "A": "The MAC/physical Ethernet framing mechanism uses synchronization signaling so receivers recognize frame boundaries.",
+        "B": "In the curriculum’s MAC/LLC division, MAC provides the hardware-facing interface to physical technologies.",
+        "C": "LLC is the software-facing service interface between Layer 3 and the underlying data-link implementation. This belongs to a different sublayer or is not one of the two requested functions.",
+        "D": "LLC adds the information needed to interface or classify upper-layer data for Layer 2 transport. This belongs to a different sublayer or is not one of the two requested functions.",
+        "E": "LLC enables different Layer 3 protocols to share the same network interface. This belongs to a different sublayer or is not one of the two requested functions."
+      },
+      "domainTopic": "Data link layer",
+      "sourceQuestionNumber": 65,
+      "sourceAnswer": "A,B",
+      "verificationStatus": "source_key_matched_preliminary_technical_review",
+      "trialOnly": true,
+      "source": {
+        "curriculum": "CCNA 1 v7 Introduction to Networks",
+        "moduleRange": "4–7 Ethernet Concepts",
+        "questionPDFPages": [
+          27
+        ],
+        "answersPDF": "CCNA 1 v7 Modules 4 - 7_ Ethernet Concepts Exam Answers.pdf",
+        "answerMatch": "highlighted_case_variant_matching_option_set"
+      },
+      "conceptGroup": "mac_llc_functions",
+      "variantOfSameConcept": true
+    },
+    {
+      "id": "ITN-M4-7-066",
+      "type": "multiple_choice",
+      "question": "Which two functions are performed at the LLC sublayer of the OSI data link layer? (Choose two.)",
+      "options": [
+        {
+          "id": "A",
+          "text": "Adds Layer 2 control information to network protocol data."
+        },
+        {
+          "id": "B",
+          "text": "Enables IPv4 and IPv6 to utilize the same network interface and media."
+        },
+        {
+          "id": "C",
+          "text": "Provides data link layer addressing."
+        },
+        {
+          "id": "D",
+          "text": "Implements a trailer to detect transmission errors."
+        },
+        {
+          "id": "E",
+          "text": "Provides synchronization between source and target nodes."
+        }
+      ],
+      "correctAnswers": [
+        "A",
+        "B"
+      ],
+      "requiredSelectionCount": 2,
+      "explanation": "The LLC sublayer provides the interface with upper-layer protocols, carrying or identifying network-layer payloads on a shared data-link interface.",
+      "optionExplanations": {
+        "A": "LLC adds the information needed to interface or classify upper-layer data for Layer 2 transport.",
+        "B": "LLC enables different Layer 3 protocols to share the same network interface.",
+        "C": "MAC addressing is part of the media-access framing function rather than this LLC-specific choice. This belongs to a different sublayer or is not one of the two requested functions.",
+        "D": "The MAC sublayer forms or checks Ethernet frame-trailer FCS information for link-layer error detection. This belongs to a different sublayer or is not one of the two requested functions.",
+        "E": "The MAC/physical Ethernet framing mechanism uses synchronization signaling so receivers recognize frame boundaries. This belongs to a different sublayer or is not one of the two requested functions."
+      },
+      "domainTopic": "Data link layer",
+      "sourceQuestionNumber": 66,
+      "sourceAnswer": "A,B",
+      "verificationStatus": "source_key_matched_preliminary_technical_review",
+      "trialOnly": true,
+      "source": {
+        "curriculum": "CCNA 1 v7 Introduction to Networks",
+        "moduleRange": "4–7 Ethernet Concepts",
+        "questionPDFPages": [
+          27,
+          28
+        ],
+        "answersPDF": "CCNA 1 v7 Modules 4 - 7_ Ethernet Concepts Exam Answers.pdf",
+        "answerMatch": "highlighted_case_variant_matching_option_set"
+      },
+      "conceptGroup": "mac_llc_functions",
+      "variantOfSameConcept": true
+    },
+    {
+      "id": "ITN-M4-7-067",
+      "type": "multiple_choice",
+      "question": "Which two functions are performed at the MAC sublayer of the OSI data link layer? (Choose two.)",
+      "options": [
+        {
+          "id": "A",
+          "text": "Implements a trailer to detect transmission errors."
+        },
+        {
+          "id": "B",
+          "text": "Provides synchronization between source and target nodes."
+        },
+        {
+          "id": "C",
+          "text": "Places information in the frame that identifies which network layer protocol is being used for the frame."
+        },
+        {
+          "id": "D",
+          "text": "Enables IPv4 and IPv6 to utilize the same network interface and media."
+        },
+        {
+          "id": "E",
+          "text": "Adds Layer 2 control information to network protocol data."
+        }
+      ],
+      "correctAnswers": [
+        "A",
+        "B"
+      ],
+      "requiredSelectionCount": 2,
+      "explanation": "The MAC sublayer deals with media access, NIC-facing framing, synchronization, and Ethernet error checking; LLC identifies and supports upper-layer protocols.",
+      "optionExplanations": {
+        "A": "The MAC sublayer forms or checks Ethernet frame-trailer FCS information for link-layer error detection.",
+        "B": "The MAC/physical Ethernet framing mechanism uses synchronization signaling so receivers recognize frame boundaries.",
+        "C": "LLC identifies or multiplexes upper-layer protocols such as IPv4 and IPv6 over a shared data-link service. This belongs to a different sublayer or is not one of the two requested functions.",
+        "D": "LLC enables different Layer 3 protocols to share the same network interface. This belongs to a different sublayer or is not one of the two requested functions.",
+        "E": "LLC adds the information needed to interface or classify upper-layer data for Layer 2 transport. This belongs to a different sublayer or is not one of the two requested functions."
+      },
+      "domainTopic": "Data link layer",
+      "sourceQuestionNumber": 67,
+      "sourceAnswer": "A,B",
+      "verificationStatus": "source_key_matched_preliminary_technical_review",
+      "trialOnly": true,
+      "source": {
+        "curriculum": "CCNA 1 v7 Introduction to Networks",
+        "moduleRange": "4–7 Ethernet Concepts",
+        "questionPDFPages": [
+          28
+        ],
+        "answersPDF": "CCNA 1 v7 Modules 4 - 7_ Ethernet Concepts Exam Answers.pdf",
+        "answerMatch": "highlighted_case_variant_matching_option_set"
+      },
+      "conceptGroup": "mac_llc_functions",
+      "variantOfSameConcept": true
+    },
+    {
+      "id": "ITN-M4-7-068",
+      "type": "multiple_choice",
+      "question": "Which two functions are performed at the LLC sublayer of the OSI data link layer? (Choose two.)",
+      "options": [
+        {
+          "id": "A",
+          "text": "Enables IPv4 and IPv6 to utilize the same network interface and media."
+        },
+        {
+          "id": "B",
+          "text": "Adds Layer 2 control information to network protocol data."
+        },
+        {
+          "id": "C",
+          "text": "Integrates various physical technologies."
+        },
+        {
+          "id": "D",
+          "text": "Implements a trailer to detect transmission errors."
+        },
+        {
+          "id": "E",
+          "text": "Provides synchronization between source and target nodes."
+        }
+      ],
+      "correctAnswers": [
+        "A",
+        "B"
+      ],
+      "requiredSelectionCount": 2,
+      "explanation": "The LLC sublayer provides the interface with upper-layer protocols, carrying or identifying network-layer payloads on a shared data-link interface.",
+      "optionExplanations": {
+        "A": "LLC enables different Layer 3 protocols to share the same network interface.",
+        "B": "LLC adds the information needed to interface or classify upper-layer data for Layer 2 transport.",
+        "C": "In the curriculum’s MAC/LLC division, MAC provides the hardware-facing interface to physical technologies. This belongs to a different sublayer or is not one of the two requested functions.",
+        "D": "The MAC sublayer forms or checks Ethernet frame-trailer FCS information for link-layer error detection. This belongs to a different sublayer or is not one of the two requested functions.",
+        "E": "The MAC/physical Ethernet framing mechanism uses synchronization signaling so receivers recognize frame boundaries. This belongs to a different sublayer or is not one of the two requested functions."
+      },
+      "domainTopic": "Data link layer",
+      "sourceQuestionNumber": 68,
+      "sourceAnswer": "A,B",
+      "verificationStatus": "source_key_matched_preliminary_technical_review",
+      "trialOnly": true,
+      "source": {
+        "curriculum": "CCNA 1 v7 Introduction to Networks",
+        "moduleRange": "4–7 Ethernet Concepts",
+        "questionPDFPages": [
+          28
+        ],
+        "answersPDF": "CCNA 1 v7 Modules 4 - 7_ Ethernet Concepts Exam Answers.pdf",
+        "answerMatch": "highlighted_case_variant_matching_option_set"
+      },
+      "conceptGroup": "mac_llc_functions",
+      "variantOfSameConcept": true
+    },
+    {
+      "id": "ITN-M4-7-069",
+      "type": "multiple_choice",
+      "question": "Which two functions are performed at the MAC sublayer of the OSI data link layer? (Choose two.)",
+      "options": [
+        {
+          "id": "A",
+          "text": "Provides a mechanism to allow multiple devices to communicate over a shared medium."
+        },
+        {
+          "id": "B",
+          "text": "Controls the NIC responsible for sending and receiving data on the physical medium."
+        },
+        {
+          "id": "C",
+          "text": "Places information in the frame that identifies which network layer protocol is being used for the frame."
+        },
+        {
+          "id": "D",
+          "text": "Adds Layer 2 control information to network protocol data."
+        },
+        {
+          "id": "E",
+          "text": "Enables IPv4 and IPv6 to utilize the same network interface and media."
+        }
+      ],
+      "correctAnswers": [
+        "A",
+        "B"
+      ],
+      "requiredSelectionCount": 2,
+      "explanation": "The MAC sublayer deals with media access, NIC-facing framing, synchronization, and Ethernet error checking; LLC identifies and supports upper-layer protocols.",
+      "optionExplanations": {
+        "A": "MAC media-access rules determine how multiple devices can share a communication medium.",
+        "B": "The MAC sublayer controls hardware-facing network interface operation and how frames are sent and received.",
+        "C": "LLC identifies or multiplexes upper-layer protocols such as IPv4 and IPv6 over a shared data-link service. This belongs to a different sublayer or is not one of the two requested functions.",
+        "D": "LLC adds the information needed to interface or classify upper-layer data for Layer 2 transport. This belongs to a different sublayer or is not one of the two requested functions.",
+        "E": "LLC enables different Layer 3 protocols to share the same network interface. This belongs to a different sublayer or is not one of the two requested functions."
+      },
+      "domainTopic": "Data link layer",
+      "sourceQuestionNumber": 69,
+      "sourceAnswer": "A,B",
+      "verificationStatus": "source_key_matched_preliminary_technical_review",
+      "trialOnly": true,
+      "source": {
+        "curriculum": "CCNA 1 v7 Introduction to Networks",
+        "moduleRange": "4–7 Ethernet Concepts",
+        "questionPDFPages": [
+          28,
+          29
+        ],
+        "answersPDF": "CCNA 1 v7 Modules 4 - 7_ Ethernet Concepts Exam Answers.pdf",
+        "answerMatch": "highlighted_case_variant_matching_option_set"
+      },
+      "conceptGroup": "mac_llc_functions",
+      "variantOfSameConcept": true
+    },
+    {
+      "id": "ITN-M4-7-071",
+      "type": "single_choice",
+      "question": "What action will occur if a switch receives a frame with the destination MAC address FF:FF:FF:FF:FF:FF?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The switch forwards it out all ports except the ingress port."
+        },
+        {
+          "id": "B",
+          "text": "The switch shares the MAC address table entry with any connected switches."
+        },
+        {
+          "id": "C",
+          "text": "The switch does not forward the frame."
+        },
+        {
+          "id": "D",
+          "text": "The switch sends the frame to a connected router because the destination MAC address is not local."
+        }
+      ],
+      "correctAnswers": [
+        "A"
+      ],
+      "explanation": "FF:FF:FF:FF:FF:FF is the Ethernet broadcast MAC address. A typical Layer 2 switch floods a broadcast frame to other forwarding ports in the same VLAN, excluding the port on which it arrived.",
+      "optionExplanations": {
+        "A": "The broadcast frame is flooded within the VLAN to all other eligible forwarding ports.",
+        "B": "Ordinary Ethernet switches do not need to exchange full MAC tables to forward a broadcast.",
+        "C": "Switches generally forward, rather than discard, a valid local broadcast.",
+        "D": "A switch does not redirect an Ethernet broadcast to a router merely because the destination is not unicast."
+      },
+      "domainTopic": "Ethernet switching",
+      "sourceQuestionNumber": 71,
+      "sourceAnswer": "A",
+      "verificationStatus": "source_key_matched_technical_review_documentation_audit_pending",
+      "trialOnly": true,
+      "source": {
+        "curriculum": "CCNA 1 v7 Introduction to Networks",
+        "moduleRange": "4–7 Ethernet Concepts",
+        "questionPDFPages": [
+          29
+        ],
+        "answerPDFPages": [
+          45,
+          46
+        ],
+        "answerPDFQuestionNumber": 71,
+        "answerMatch": "highlighted_source_key_matches_choice"
+      }
+    },
+    {
+      "id": "ITN-M4-7-074",
+      "type": "single_choice",
+      "question": "What action will occur if a host receives a frame with a destination MAC address of FF:FF:FF:FF:FF:FF?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The host will process the frame."
+        },
+        {
+          "id": "B",
+          "text": "The host forwards the frame to the router."
+        },
+        {
+          "id": "C",
+          "text": "The host sends the frame to the switch to update the MAC address table."
+        },
+        {
+          "id": "D",
+          "text": "The host forwards the frame to all other hosts."
+        }
+      ],
+      "correctAnswers": [
+        "A"
+      ],
+      "explanation": "A host normally accepts a valid frame with destination MAC FF:FF:FF:FF:FF:FF because this is the broadcast address for its local Ethernet segment; subsequent protocol processing depends on frame contents.",
+      "optionExplanations": {
+        "A": "The host recognizes the all-FF Layer 2 address as broadcast and accepts the frame for local processing.",
+        "B": "An end host does not automatically route received Layer 2 broadcasts.",
+        "C": "Hosts do not send broadcast frames back to switches to update switch MAC tables.",
+        "D": "Forwarding broadcasts to all local hosts is a switch behavior, not the receiving host’s role."
+      },
+      "domainTopic": "Ethernet addressing",
+      "sourceQuestionNumber": 74,
+      "sourceAnswer": "A",
+      "verificationStatus": "source_key_matched_technical_review_documentation_audit_pending",
+      "trialOnly": true,
+      "source": {
+        "curriculum": "CCNA 1 v7 Introduction to Networks",
+        "moduleRange": "4–7 Ethernet Concepts",
+        "questionPDFPages": [
+          30
+        ],
+        "answerPDFPages": [
+          46,
+          47
+        ],
+        "answerPDFQuestionNumber": 74,
+        "answerMatch": "highlighted_source_key_matches_choice"
+      }
+    },
+    {
+      "id": "ITN-M4-7-075",
+      "type": "single_choice",
+      "question": "What action will occur if a switch receives a frame and does have the source MAC address in the MAC table?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The switch refreshes the timer on that entry."
+        },
+        {
+          "id": "B",
+          "text": "The switch adds it to its MAC address table associated with the port number."
+        },
+        {
+          "id": "C",
+          "text": "The switch forwards the frame to the associated port."
+        },
+        {
+          "id": "D",
+          "text": "The switch sends the frame to a connected router because the destination MAC address is not local."
+        }
+      ],
+      "correctAnswers": [
+        "A"
+      ],
+      "explanation": "When a switch receives a frame whose source MAC is already learned on the incoming port, it refreshes that MAC table entry’s aging timer. Forwarding is determined separately using the destination MAC address.",
+      "optionExplanations": {
+        "A": "Receiving traffic from an already learned source refreshes its MAC entry aging timer.",
+        "B": "A new source-to-port entry is typically created when the source MAC is unknown; an already known unchanged entry is refreshed.",
+        "C": "Forwarding decisions depend on the destination MAC, not merely the already learned source MAC.",
+        "D": "The switch does not send the frame to a router simply because the source was already learned."
+      },
+      "domainTopic": "MAC address table",
+      "sourceQuestionNumber": 75,
+      "sourceAnswer": "A",
+      "verificationStatus": "source_key_matched_technical_review_documentation_audit_pending",
+      "trialOnly": true,
+      "source": {
+        "curriculum": "CCNA 1 v7 Introduction to Networks",
+        "moduleRange": "4–7 Ethernet Concepts",
+        "questionPDFPages": [
+          31
+        ],
+        "answerPDFPages": [
+          47,
+          48
+        ],
+        "answerPDFQuestionNumber": 75,
+        "answerMatch": "highlighted_source_key_matches_choice"
+      }
+    },
+    {
+      "id": "ITN-M4-7-078",
+      "type": "single_choice",
+      "question": "What action will occur if a host receives a frame with a destination MAC address it does not recognize?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The host will discard the frame."
+        },
+        {
+          "id": "B",
+          "text": "The host replies to the switch with its own IP address."
+        },
+        {
+          "id": "C",
+          "text": "The host forwards the frame to all other hosts."
+        },
+        {
+          "id": "D",
+          "text": "The host returns the frame to the switch."
+        }
+      ],
+      "correctAnswers": [
+        "A"
+      ],
+      "explanation": "A host’s NIC normally discards a received Ethernet frame if the destination MAC is neither its own unicast address, a broadcast address, nor a multicast address the host accepts. Promiscuous-mode capture is an exception.",
+      "optionExplanations": {
+        "A": "A frame not addressed to the host or an applicable group is ordinarily discarded by its NIC.",
+        "B": "A host does not send its IP address to a switch in response to an unknown destination MAC.",
+        "C": "End hosts do not flood frames on behalf of an Ethernet switch.",
+        "D": "Returning the frame to the switch is not normal handling of a nonmatching MAC destination."
+      },
+      "domainTopic": "Ethernet addressing",
+      "sourceQuestionNumber": 78,
+      "sourceAnswer": "A",
+      "verificationStatus": "source_key_matched_technical_review_documentation_audit_pending",
+      "trialOnly": true,
+      "source": {
+        "curriculum": "CCNA 1 v7 Introduction to Networks",
+        "moduleRange": "4–7 Ethernet Concepts",
+        "questionPDFPages": [
+          31,
+          32
+        ],
+        "answerPDFPages": [
+          48,
+          49
+        ],
+        "answerPDFQuestionNumber": 78,
+        "answerMatch": "highlighted_source_key_matches_choice"
+      }
+    },
+    {
+      "id": "ITN-M4-7-080",
+      "type": "single_choice",
+      "question": "Which type of UTP cable is used to connect a PC to a switch port?",
+      "options": [
+        {
+          "id": "A",
+          "text": "console"
+        },
+        {
+          "id": "B",
+          "text": "rollover"
+        },
+        {
+          "id": "C",
+          "text": "crossover"
+        },
+        {
+          "id": "D",
+          "text": "straight-through"
+        }
+      ],
+      "correctAnswers": [
+        "D"
+      ],
+      "explanation": "A traditional copper Ethernet connection from a PC NIC to a switch access port uses a straight-through UTP patch cable. Modern auto-MDIX ports can often accept crossover cabling as well.",
+      "optionExplanations": {
+        "A": "A console cable connects an administrator terminal to a device console, not the PC’s Ethernet NIC to a switch port.",
+        "B": "Rollover wiring is used for classic Cisco serial-console connections, not ordinary Ethernet switch access.",
+        "C": "Crossover cables were traditionally used between similar device types; auto-MDIX can remove this constraint.",
+        "D": "A straight-through patch cable is the standard conventional choice for connecting a PC to a switch."
+      },
+      "domainTopic": "Copper Ethernet",
+      "sourceQuestionNumber": 80,
+      "sourceAnswer": "D",
+      "verificationStatus": "source_key_matched_technical_review_documentation_audit_pending",
+      "trialOnly": true,
+      "source": {
+        "curriculum": "CCNA 1 v7 Introduction to Networks",
+        "moduleRange": "4–7 Ethernet Concepts",
+        "questionPDFPages": [
+          32
+        ],
+        "answerPDFPages": [
+          49
+        ],
+        "answerPDFQuestionNumber": 79,
+        "answerMatch": "highlighted_source_key_matches_choice"
+      }
+    }
+  ]
+}
